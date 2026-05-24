@@ -2519,7 +2519,18 @@
     if (pop) {
       pop.style.maxHeight = "";
       pop.style.overflowY = "";
+      pop.style.left = "";
+      pop.style.right = "";
+      pop.style.marginTop = "";
+      pop.style.removeProperty("--popover-arrow-shift");
     }
+  }
+
+  /* Detect side-attached popovers (e.g. inside quality-detail-card or visual-step
+     where the popover is anchored left/right of the chip, not below). For those
+     the horizontal nudge logic must not run, but vertical clamping still helps. */
+  function isSideAttached(chip) {
+    return !!chip.closest(".quality-detail-card, .visual-step");
   }
 
   function fitPopover(chip) {
@@ -2529,39 +2540,87 @@
     if (!popover || !slide) return;
     clearFit(chip);
 
-    var popRect = popover.getBoundingClientRect();
     var slideRect = slide.getBoundingClientRect();
     var chipRect = chip.getBoundingClientRect();
     var pad = 14;
+    var sideAttached = isSideAttached(chip);
 
-    /* Horizontale Ausrichtung */
-    if (popRect.left < slideRect.left + pad) chip.classList.add("popover-align-left");
-    else if (popRect.right > slideRect.right - pad) chip.classList.add("popover-align-right");
-
-    /* Vertikale Ausrichtung */
-    popRect = popover.getBoundingClientRect();
+    /* Vertikale Ausrichtung — zuerst, damit horizontale Messung danach stimmt.
+       Wir wählen die Seite (oben/unten), die mehr Platz bietet, und cappen
+       die Höhe auf den verfügbaren Raum — Scrollen ist besser als Überlauf. */
+    var popRect = popover.getBoundingClientRect();
     var popH = popRect.height;
     var spaceBelow = slideRect.bottom - chipRect.bottom - 14 - pad;
     var spaceAbove = chipRect.top - slideRect.top - 14 - pad;
     var hardCap = slideRect.height - 2 * pad;
-    var minH = 200;
 
     var chooseAbove = false;
-    if (popH <= spaceBelow) {
-      /* passt vollständig darunter */
-    } else if (popH <= spaceAbove) {
-      chooseAbove = true;
-    } else {
-      chooseAbove = spaceAbove > spaceBelow;
+    if (!sideAttached) {
+      if (popH <= spaceBelow) {
+        /* passt vollständig darunter */
+      } else if (popH <= spaceAbove) {
+        chooseAbove = true;
+      } else {
+        chooseAbove = spaceAbove > spaceBelow;
+      }
+      if (chooseAbove) chip.classList.add("popover-above");
     }
-    if (chooseAbove) chip.classList.add("popover-above");
 
-    /* Immer max-height setzen, damit der Popover nie aus dem Slide herausragt */
-    var available = chooseAbove ? spaceAbove : spaceBelow;
-    var cap = Math.min(hardCap, Math.max(minH, available));
-    if (popH > cap) {
-      popover.style.maxHeight = cap + "px";
+    /* Vertikale Höhenbegrenzung — IMMER auf verfügbaren Raum cappen, niemals
+       einen "minH-Bodensatz" setzen, der über die Slide-Grenze hinausragt. */
+    var availableV;
+    if (sideAttached) {
+      availableV = slideRect.height - 2 * pad;
+    } else {
+      availableV = chooseAbove ? spaceAbove : spaceBelow;
+    }
+    var capV = Math.max(60, Math.min(hardCap, availableV));
+    if (popH > capV) {
+      /* Skalierung wegen deck-stage transform: rendered px ↦ intrinsic px */
+      var vScale = popover.offsetHeight / (popRect.height || 1);
+      popover.style.maxHeight = (capV * vScale) + "px";
       popover.style.overflowY = "auto";
+    }
+
+    /* Horizontale Ausrichtung — präzise inline-Korrektur statt grober CSS-Klasse.
+       Wir messen das aktuelle Overflow und schieben den Popover exakt um diesen
+       Betrag in den sichtbaren Bereich. Funktioniert für links- wie rechts-Überstand. */
+    if (!sideAttached) {
+      popRect = popover.getBoundingClientRect();
+      var dx = 0;
+      if (popRect.left < slideRect.left + pad) {
+        dx = (slideRect.left + pad) - popRect.left;
+      } else if (popRect.right > slideRect.right - pad) {
+        dx = (slideRect.right - pad) - popRect.right;
+      }
+      if (dx !== 0) {
+        var hScale = popover.offsetWidth / (popRect.width || 1);
+        var dxInner = dx * hScale;
+        /* Default-CSS positioniert den Popover mit `left:50%` + `transform:translate(-50%,…)`.
+           Wir ergänzen den Shift über calc(50% + dx). */
+        popover.style.left = "calc(50% + " + dxInner.toFixed(1) + "px)";
+        popover.style.right = "auto";
+        /* Pfeil dort verankern, wo der Chip steht (Mitte des Popovers minus dx) */
+        popover.style.setProperty("--popover-arrow-shift", (-dxInner).toFixed(1) + "px");
+      }
+    }
+
+    /* Side-attached Popovers (in .visual-step / .quality-detail-card) sind links/rechts
+       am Chip verankert und mit translateY zentriert. Sie können oben/unten überlaufen,
+       wenn der Chip nahe der Slide-Ober- oder Unterkante sitzt. Hier mit margin-top
+       nachschieben. */
+    if (sideAttached) {
+      var popRectV = popover.getBoundingClientRect();
+      var dyV = 0;
+      if (popRectV.top < slideRect.top + pad) {
+        dyV = (slideRect.top + pad) - popRectV.top;
+      } else if (popRectV.bottom > slideRect.bottom - pad) {
+        dyV = (slideRect.bottom - pad) - popRectV.bottom;
+      }
+      if (dyV !== 0) {
+        var vScale2 = popover.offsetHeight / (popRectV.height || 1);
+        popover.style.marginTop = (dyV * vScale2).toFixed(1) + "px";
+      }
     }
   }
 

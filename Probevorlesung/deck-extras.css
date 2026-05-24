@@ -1047,7 +1047,9 @@ strong.metric-chip,
   background: #fff;
   border-left: 1px solid rgba(10,18,34,0.14);
   border-bottom: 1px solid rgba(10,18,34,0.14);
-  transform: translateX(-50%) rotate(135deg);
+  /* --popover-arrow-shift wird per JS gesetzt, wenn der Popover horizontal
+     verschoben wurde — der Pfeil zeigt dann weiter auf den Chip. */
+  transform: translateX(calc(-50% + var(--popover-arrow-shift, 0px))) rotate(135deg);
 }
 
 .metric-chip.popover-align-left .metric-popover::before {
@@ -1062,7 +1064,7 @@ strong.metric-chip,
 .metric-chip.popover-above .metric-popover::before {
   top: auto;
   bottom: -8px;
-  transform: translateX(-50%) rotate(315deg);
+  transform: translateX(calc(-50% + var(--popover-arrow-shift, 0px))) rotate(315deg);
 }
 
 .quality-detail-card:nth-child(-n+2) .metric-popover::before {
