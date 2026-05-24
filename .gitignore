@@ -1,0 +1,38 @@
+# Block everything by default; whitelist explicit deck assets below.
+*
+
+# Allow VCS itself
+!.gitignore
+!README.md
+
+# Deck file
+!TH_Luebeck_Gesamtpraesentation_Sans_v2.html
+
+# Probevorlesung assets (CSS, JS, fonts)
+!Probevorlesung/
+Probevorlesung/*
+!Probevorlesung/deck-stage.js
+!Probevorlesung/metric-popovers-v2.js
+!Probevorlesung/colors_and_type.css
+!Probevorlesung/deck-extras.css
+!Probevorlesung/deck-sans-override.css
+!Probevorlesung/deck.css
+!Probevorlesung/fonts/
+Probevorlesung/fonts/*
+!Probevorlesung/fonts/InstrumentSerif-Italic.ttf
+
+# Kolloquium image assets referenced by the deck
+!Kolloquium/
+Kolloquium/*
+!Kolloquium/assets/
+Kolloquium/assets/*
+!Kolloquium/assets/adference-office-lueneburg-headquarter.webp
+!Kolloquium/assets/cvr-prediction-engine-keyvisual.png
+!Kolloquium/assets/from-creator-to-orchestrator-page1.png
+!Kolloquium/assets/healthcare-transfer-amsterdam.jpeg
+!Kolloquium/assets/open-paper-machine-poster-bg.png
+
+# Slide-3 background image
+!images/
+images/*
+!images/folie-03-bahnhof.png

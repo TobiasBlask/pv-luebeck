@@ -1,0 +1,528 @@
+/* ============================================================
+   SVRN ALPHA — Design Tokens v2
+   Source: 2026_svrn_alpha_website (svrnAlphaOS marketing site)
+   See README.md for the full system. Comments in this file
+   document the rules; the rules ARE the file.
+   ============================================================ */
+
+/* Inter + DM Mono pulled from Google Fonts; Instrument Serif loads from
+   local /fonts so the brand has no CDN dependency for its serif. */
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  /* Metric overrides match Google Fonts' served Instrument Serif; without
+     these the raw TTF reports tighter line-box metrics and tall headings
+     collide with the next paragraph. */
+  ascent-override: 88.6%;
+  descent-override: 22.6%;
+  line-gap-override: 0%;
+  src: url("./fonts/InstrumentSerif-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  ascent-override: 88.6%;
+  descent-override: 22.6%;
+  line-gap-override: 0%;
+  src: url("./fonts/InstrumentSerif-Italic.ttf") format("truetype");
+}
+
+:root {
+  /* =========================================================
+     1. TYPE FAMILIES
+     ========================================================= */
+  --font-sans:   "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif:  "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-mono:   "DM Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* =========================================================
+     2. COLOR — RAW PALETTE
+     Slate scale (Tailwind), brand blues, navy variants.
+     ========================================================= */
+  --slate-50:   #f8fafc;
+  --slate-100:  #f1f5f9;
+  --slate-200:  #e2e8f0;
+  --slate-300:  #cbd5e1;
+  --slate-400:  #94a3b8;
+  --slate-500:  #64748b;
+  --slate-600:  #475569;
+  --slate-700:  #334155;
+  --slate-800:  #1e293b;
+  --slate-900:  #0f172a;
+
+  --svrn-blue:    #003357;   /* deep institutional blue */
+  --svrn-dark:    #001F33;   /* near-black navy */
+  --svrn-accent:  #004D80;   /* mid blue / hover */
+
+  --navy:       #0F172B;     /* hero/research dark */
+  --navy-soft:  #12203F;     /* IR-readiness section dark */
+  --ink:        #1A1D23;     /* long-form body ink (research) */
+  --muted:      #5F6672;     /* long-form muted */
+  --border:     #E2E5EA;     /* long-form borders */
+  --surface:    #F8F9FB;     /* long-form soft surface */
+
+  /* =========================================================
+     3. ACCENT — SINGLE-RED SYSTEM
+     The brand previously had two reds (#D9272E and #E20046);
+     they were too close to function as separate signals.
+     RESOLVED: --accent-red is the canonical brand accent.
+     The rose value survives only as --accent-rose-legacy for
+     backwards-compat with research-page tags; do not use in
+     new work. Pair red with slate-900 on light, with white on
+     dark; never on navy-soft (color clashes).
+     ========================================================= */
+  --accent-red:    #D9272E;
+  --accent-red-h:  #B81F25;  /* hover (darker) */
+  --accent-red-a:  #FBE9EA;  /* tint, for hairline backgrounds */
+  --accent-red-fg: #ffffff;  /* text on the red */
+
+  /* Legacy rose — frozen, do not introduce in new surfaces. */
+  --accent-rose-legacy:   #E20046;
+  --accent-rose-legacy-h: #B80239;
+
+  --accent-blue:   #2563eb;  /* link blue (Tailwind blue-600) */
+  --accent-blue-h: #1d4ed8;
+
+  /* Status colors — kept neutral, reserved for app UI */
+  --status-success: #15803d;
+  --status-warn:    #b45309;
+  --status-error:   #b91c1c;
+  --status-info:    var(--accent-blue);
+
+  /* =========================================================
+     4. SEMANTIC TOKENS — LIGHT THEME (default)
+     Use these in components. Switching theme swaps the values,
+     not the names.
+     ========================================================= */
+  --fg-1: var(--slate-900);          /* primary ink */
+  --fg-2: var(--slate-600);          /* body */
+  --fg-3: var(--slate-500);          /* muted body / eyebrow */
+  --fg-4: var(--slate-400);          /* placeholder / faint */
+  --fg-link: var(--accent-blue);
+  --fg-link-h: var(--accent-blue-h);
+  --fg-on-accent: var(--accent-red-fg);
+  --fg-inv: #ffffff;
+  --fg-inv-2: rgba(255,255,255,0.78);
+  --fg-inv-3: rgba(255,255,255,0.55);
+
+  --bg-1: #ffffff;                   /* page */
+  --bg-2: var(--slate-50);           /* soft section */
+  --bg-3: var(--slate-100);          /* tag chip / button-secondary */
+  --bg-dark: var(--slate-900);       /* primary dark band */
+  --bg-deep: var(--navy);            /* research hero dark */
+  --bg-navy: var(--navy-soft);       /* IR-readiness band */
+
+  --border-1: var(--slate-200);      /* default */
+  --border-2: var(--slate-300);      /* emphasised */
+  --border-3: var(--slate-900);      /* high-contrast frame (tier-2 elevation) */
+  --border-dark: var(--slate-700);   /* on dark surfaces */
+
+  /* =========================================================
+     5. SPACING — 4px base, sympathetic with Tailwind
+     ========================================================= */
+  --space-0:  0;
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* Section rhythm — every section should be one of these */
+  --section-y-sm: var(--space-16);   /* 64px — utility/dense */
+  --section-y:    var(--space-24);   /* 96px — default */
+  --section-y-lg: var(--space-32);   /* 128px — hero/proof */
+
+  /* =========================================================
+     6. RADIUS — hard-edge by default
+     The brand runs square; rounding is a deliberate signal.
+     ========================================================= */
+  --radius-0: 0px;          /* default for buttons, cards, chips, panels */
+  --radius-1: 3px;          /* tag pills, eyebrow chips */
+  --radius-2: 8px;          /* form fields on dark surface (one exception) */
+  --radius-3: 16px;         /* form panels on dark — tier-3 only */
+  --radius-pill: 9999px;    /* avatar, status dot, scroll-to-top FAB */
+
+  /* =========================================================
+     7. ELEVATION TIERS
+     The system has three tiers. Each surface picks ONE.
+     Tier-1: hairline border on slate-200 (default — most cards).
+     Tier-2: 1px slate-900 frame (high-contrast, no shadow). Use
+             for "this is a system primitive" surfaces (input
+             groups, audit log rows).
+     Tier-3: slab — 12px down-right slate-900 offset behind a
+             white card. ONE per layout, the brand's signature.
+     The legacy "shadow-2xl rounded-2xl" form panel is a
+     deliberate exception: tier-3-soft, only on dark backgrounds.
+     ========================================================= */
+  --elev-1-border: 1px solid var(--border-1);
+  --elev-1-shadow: 0 1px 2px 0 rgba(15,23,42,0.04);
+
+  --elev-2-border: 1px solid var(--border-3);
+  --elev-2-shadow: none;
+
+  --elev-3-slab:   12px 12px 0 0 var(--slate-900);
+  --elev-3-soft:   0 25px 50px -12px rgba(15,23,42,0.25);
+
+  /* Aliases (back-compat) */
+  --shadow-sm:   var(--elev-1-shadow);
+  --shadow-md:   0 4px 12px -2px rgba(15,23,42,0.08);
+  --shadow-2xl:  var(--elev-3-soft);
+  --shadow-slab: var(--elev-3-slab);
+
+  /* =========================================================
+     8. TYPOGRAPHY — sizes
+     ========================================================= */
+  --fs-mono-xs:  10px;
+  --fs-mono-sm:  11px;
+  --fs-eyebrow:  12px;
+  --fs-body-sm:  14px;
+  --fs-body:     16px;
+  --fs-body-lg:  18px;
+  --fs-body-xl:  20px;
+  --fs-h4:       24px;
+  --fs-h3:       32px;
+  --fs-h2:       48px;
+  --fs-h1:       72px;
+
+  /* Long-form / editorial */
+  --fs-quote:    24px;     /* pull quote */
+  --fs-caption:  13px;     /* image / table captions */
+  --fs-footnote: 12px;     /* footnotes */
+
+  /* Letter spacing */
+  --tracking-mono:    0.04em;
+  --tracking-eyebrow: 0.14em;
+  --tracking-tight:   -0.01em;
+  --tracking-tighter: -0.02em;
+
+  /* Line heights */
+  --lh-tight:   1.15;       /* serif headlines */
+  --lh-snug:    1.3;        /* h4 / large UI */
+  --lh-base:    1.5;        /* body */
+  --lh-relaxed: 1.65;       /* lede / long-form */
+
+  /* =========================================================
+     9. MOTION — durations, easings, state spec
+     RULE: hover changes COLOR, not scale. No bounce on UI.
+     Bounce is reserved for hero entry only.
+     ========================================================= */
+  --dur-instant: 80ms;       /* focus rings, scrubber */
+  --dur-fast:    150ms;      /* hover state changes */
+  --dur-base:    300ms;      /* enter / exit */
+  --dur-slow:    600ms;      /* slab reveal, big transitions */
+  --dur-page:    800ms;      /* hero entry only */
+
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in:     cubic-bezier(0.4, 0, 1, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: spring(0.4, 30, 1, 0.8);   /* hero only */
+
+  /* Focus ring — visible on every interactive surface */
+  --focus-ring: 0 0 0 2px var(--bg-1), 0 0 0 4px var(--accent-red);
+  --focus-ring-on-dark: 0 0 0 2px var(--slate-900), 0 0 0 4px var(--accent-red);
+
+  /* =========================================================
+     10. LAYOUT GRID
+     ========================================================= */
+  --max-w-prose:   65ch;
+  --max-w-content: 1200px;
+  --max-w-wide:    1280px;     /* nav / hero / sections */
+  --gutter:        var(--space-6);
+
+  /* Background grid (signature) */
+  --grid-line:    rgba(0, 0, 0, 0.05);
+  --grid-line-d:  rgba(255, 255, 255, 0.06);
+  --grid-size:    40px;
+  --grid-size-sm: 24px;        /* used at <768px */
+
+  /* =========================================================
+     11. BREAKPOINTS (use as media-query reference; CSS vars
+         can't be used inside @media queries directly)
+     --bp-sm:  640px
+     --bp-md:  768px
+     --bp-lg:  1024px
+     --bp-xl:  1280px
+     ========================================================= */
+}
+
+/* ============================================================
+   DARK THEME — opt-in
+   Add data-theme="dark" to <html> or any subtree.
+   Semantic names stay; values flip.
+   ============================================================ */
+[data-theme="dark"] {
+  --fg-1: #ffffff;
+  --fg-2: rgba(255,255,255,0.78);
+  --fg-3: rgba(255,255,255,0.55);
+  --fg-4: rgba(255,255,255,0.35);
+  --fg-link: #93c5fd;        /* lighter for AA on dark */
+  --fg-link-h: #bfdbfe;
+
+  --bg-1: var(--slate-900);
+  --bg-2: var(--slate-800);
+  --bg-3: var(--slate-700);
+  --bg-dark: #000000;        /* deepest accent on already-dark */
+
+  --border-1: rgba(255,255,255,0.12);
+  --border-2: rgba(255,255,255,0.22);
+  --border-3: #ffffff;
+  --border-dark: rgba(255,255,255,0.06);
+
+  --grid-line: var(--grid-line-d);
+
+  --elev-1-shadow: 0 1px 2px 0 rgba(0,0,0,0.4);
+  --elev-3-soft:   0 25px 50px -12px rgba(0,0,0,0.6);
+}
+
+/* ============================================================
+   ELEMENT STYLES — opt-in via .svrn-* classes
+   ============================================================ */
+
+/* ---- Eyebrow ---- */
+.svrn-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-eyebrow);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-eyebrow);
+  color: var(--fg-3);
+}
+.svrn-eyebrow--inv    { color: var(--fg-inv-3); }
+.svrn-eyebrow--accent { color: var(--accent-red); }
+
+/* ---- Headlines (serif) ---- */
+.svrn-h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(40px, 5vw, var(--fs-h1));
+  font-weight: 400;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-1);
+}
+.svrn-h1 em { font-style: italic; color: var(--fg-2); }
+
+.svrn-h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 4vw, var(--fs-h2));
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-1);
+}
+.svrn-h2 em { font-style: italic; color: var(--fg-2); }
+
+.svrn-h3 {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h3);
+  font-weight: 400;
+  line-height: var(--lh-tight);
+  color: var(--fg-1);
+}
+
+.svrn-h4 {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h4);
+  font-weight: 400;
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+}
+
+/* ---- Body / lede ---- */
+.svrn-p {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-lg);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-2);
+}
+.svrn-p--sm   { font-size: var(--fs-body-sm); line-height: var(--lh-base); }
+.svrn-p--md   { font-size: var(--fs-body); }
+.svrn-p--lead { font-size: var(--fs-body-xl); color: var(--slate-700); }
+
+/* ---- Long-form / editorial ---- */
+.svrn-prose {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-lg);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-2);
+  max-width: var(--max-w-prose);
+}
+.svrn-prose > * + * { margin-top: var(--space-5); }
+.svrn-prose h2,
+.svrn-prose h3 {
+  font-family: var(--font-serif);
+  color: var(--fg-1);
+  font-weight: 400;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+}
+.svrn-prose h2 { font-size: var(--fs-h3); margin-top: var(--space-12); }
+.svrn-prose h3 { font-size: var(--fs-h4); margin-top: var(--space-10); }
+.svrn-prose a {
+  color: var(--fg-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.svrn-prose a:hover { color: var(--fg-link-h); }
+
+.svrn-prose ul,
+.svrn-prose ol { padding-left: var(--space-6); }
+.svrn-prose li { margin-top: var(--space-2); }
+.svrn-prose ul > li::marker { color: var(--fg-3); }
+.svrn-prose ol > li::marker { color: var(--fg-3); font-variant-numeric: tabular-nums; }
+
+.svrn-prose blockquote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--fs-quote);
+  line-height: 1.4;
+  color: var(--fg-1);
+  border-left: 2px solid var(--fg-1);
+  padding-left: var(--space-6);
+  margin-block: var(--space-10);
+}
+
+.svrn-prose code,
+.svrn-code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: var(--bg-3);
+  border: 1px solid var(--border-1);
+  padding: 1px 6px;
+  border-radius: var(--radius-1);
+}
+
+.svrn-prose pre {
+  font-family: var(--font-mono);
+  font-size: var(--fs-body-sm);
+  line-height: 1.55;
+  background: var(--slate-900);
+  color: var(--fg-inv);
+  padding: var(--space-5) var(--space-6);
+  overflow-x: auto;
+  border: 1px solid var(--slate-900);
+}
+.svrn-prose pre code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}
+
+.svrn-prose dl { display: grid; grid-template-columns: max-content 1fr; gap: var(--space-2) var(--space-6); }
+.svrn-prose dt { font-family: var(--font-mono); font-size: var(--fs-mono-sm); text-transform: uppercase; letter-spacing: var(--tracking-eyebrow); color: var(--fg-3); padding-top: 4px; }
+.svrn-prose dd { color: var(--fg-2); }
+
+.svrn-caption {
+  font-family: var(--font-sans);
+  font-size: var(--fs-caption);
+  line-height: var(--lh-snug);
+  color: var(--fg-3);
+  margin-top: var(--space-3);
+}
+
+.svrn-footnote {
+  font-family: var(--font-sans);
+  font-size: var(--fs-footnote);
+  line-height: var(--lh-snug);
+  color: var(--fg-3);
+}
+.svrn-footnote-ref {
+  font-feature-settings: "sups";
+  font-size: 0.7em;
+  vertical-align: super;
+  color: var(--fg-link);
+  margin-left: 1px;
+}
+
+/* ---- Inline link ---- */
+.svrn-link {
+  color: var(--fg-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.svrn-link:hover { color: var(--fg-link-h); }
+.svrn-link--ghost {
+  color: var(--fg-1);
+  text-decoration: none;
+  border-bottom: 1px solid var(--fg-1);
+  padding-bottom: 1px;
+}
+
+/* ---- Mono utility ---- */
+.svrn-mono {
+  font-family: var(--font-mono);
+  letter-spacing: var(--tracking-mono);
+}
+
+/* ---- Wordmark ---- */
+.svrn-wordmark {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: var(--tracking-tighter);
+  color: var(--fg-1);
+}
+
+/* ============================================================
+   GRID BACKGROUND — responsive
+   40×40 on desktop, 24×24 on tablet, off on mobile.
+   The grid is a brand cue at scale and visual noise small.
+   ============================================================ */
+.svrn-grid-bg {
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+  background-color: var(--bg-1);
+}
+@media (max-width: 1024px) {
+  .svrn-grid-bg { background-size: var(--grid-size-sm) var(--grid-size-sm); }
+}
+@media (max-width: 640px) {
+  .svrn-grid-bg { background-image: none; }
+}
+.svrn-grid-bg--fine { background-size: 20px 20px; }
+
+/* ============================================================
+   STATE / FOCUS — applied via classes or :where() helpers
+   ============================================================ */
+.svrn-focus:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+[data-theme="dark"] .svrn-focus:focus-visible,
+.svrn-focus--on-dark:focus-visible {
+  box-shadow: var(--focus-ring-on-dark);
+}
+
+/* ============================================================
+   MOTION REDUCE
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
