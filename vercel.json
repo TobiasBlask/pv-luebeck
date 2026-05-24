@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/TH_Luebeck_Gesamtpraesentation_Sans_v2.html" }
+  ]
+}
