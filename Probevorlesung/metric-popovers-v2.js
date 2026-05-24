@@ -24,8 +24,8 @@
       cat: "Messung", name: "Likert-Skala", mini: "validity",
       tldr: "Mehrstufige Zustimmungsskalen übersetzen subjektive Urteile in vergleichbare Zahlen.",
       long: "Eine Likert-Skala bietet typischerweise 5 oder 7 verbal verankerte Stufen von Ablehnung zu Zustimmung. Sie liefert ordinale Daten, die in der Marktforschungspraxis häufig wie metrische behandelt werden.",
-      example: "„Die Reise war pünktlich.“ 1 = stimme gar nicht zu … 7 = stimme voll zu; Bottom-2 = Stufen 1+2.",
-      formal: "x ∈ {1,…,k}; Bottom-2 = #{x≤2} / n.",
+      example: "„Die Reise war pünktlich.“ 1 = stimme gar nicht zu … 7 = stimme voll zu; verbal verankerte Endpunkte, optional Mittelkategorie.",
+      formal: "x ∈ {1,…,k}, k typischerweise 5 oder 7; ordinal mit Verbalankern an den Endpunkten.",
       pitfall: "Falle: Die Abstände zwischen Stufen sind nicht automatisch echte metrische Abstände."
     },
     bottom2: {
@@ -234,7 +234,7 @@
       cat: "Mixed Methods", name: "Erklärend-sequentiell", mini: "explanatory-seq",
       tldr: "Quantitativ findet das Muster, qualitativ erklärt es. Dieses Design braucht man, wenn man weiß, was passiert, aber noch nicht warum.",
       long: "Im erklärend-sequentiellen Design (QUANT → QUAL) liefert die quant Phase Befunde, die qual Phase liefert die Erklärung. Reihenfolge ist wichtig: Bottom-2 = 42 % zeigt das Muster, aber Mechanismus bleibt offen, also gezielte Interviews mit jenen, die in der Quant-Phase besonders auffällig waren („extreme Fälle“). Stärke: man weiß genau, was man qualitativ untersuchen muss, weil die quant Daten die Richtung vorgeben. Schwäche: die qual Phase wird oft zur bloßen Illustration degradiert („das passt zu unserem Ergebnis“), das ist methodisch zu wenig.",
-      example: "QUANT: n = 2.500, Bottom-2 = 42 % Anschlussinfo → QUAL: 12 Interviews mit Reisenden, die explizit Bottom-2 angaben → Mechanismus „Anschlussangst“ → daraus A/B-Test der Designhypothese.",
+      example: "QUANT: n = 2.500, Bottom-2 = 42 % Anschlussinfo → QUAL: 12 Interviews mit Reisenden, die im Quant-Teil explizit unzufrieden geantwortet hatten (Bottom-2) → Mechanismus „Anschlussangst“ → daraus A/B-Test der Designhypothese.",
       pitfall: "Falle: Die qual Phase darf nicht nur nachträgliche Illustration sein, sie muss eigenständig neue Erkenntnisse produzieren."
     },
     jointDisplay: {
@@ -390,8 +390,8 @@
     },
     transparency: {
       cat: "Qualitativ", name: "Transparenz", mini: "transparency",
-      tldr: "Qualitative Forschung kann nicht repliziert werden, aber sie kann NACHVOLLZIEHBAR sein. Transparenz ersetzt Replikation funktional.",
-      long: "Im quantitativen Design gilt: andere können meine Studie mit demselben Verfahren wiederholen und das Ergebnis prüfen. Im qualitativen Design geht das nicht, jede Interaktion ist einmalig. Stattdessen wird Glaubwürdigkeit über Transparenz hergestellt: andere müssen nachvollziehen können, wie die Deutung entstand. Konkret heißt das: vollständige Dokumentation von Sampling-Entscheidungen, Leitfaden, Codebuch, Codier-Iterationen, Reflexivitäts-Memos, Audit-Trail. Eine Studie ohne diesen Apparat ist nicht falsch, aber sie ist nicht prüfbar, also wissenschaftlich schwach.",
+      tldr: "Qualitative Forschung kann im strengen Sinn nicht repliziert werden, aber sie kann NACHVOLLZIEHBAR sein. Transparenz ersetzt Replikation funktional.",
+      long: "Im quantitativen Design gilt: andere können meine Studie mit demselben Verfahren wiederholen und das Ergebnis prüfen. Im qualitativen Design geht das in dieser strengen Form nicht, jede Interaktion ist einmalig. Stattdessen wird Glaubwürdigkeit über Transparenz hergestellt: andere müssen nachvollziehen können, wie die Deutung entstand. Konkret heißt das: vollständige Dokumentation von Sampling-Entscheidungen, Leitfaden, Codebuch, Codier-Iterationen, Reflexivitäts-Memos, Audit-Trail. Eine Studie ohne diesen Apparat ist nicht falsch, aber sie ist nicht prüfbar, also wissenschaftlich schwach.",
       example: "Anhang einer qualitativen Studie: Leitfaden v3, Coding-Frame mit 17 Codes und Ankerbeispielen, Sampling-Tabelle, drei Reflexivitäts-Memos, vollständiger Codier-Audit über 12 Wochen.",
       pitfall: "Falle: Nur die schönen Ergebnisfolien zeigen heißt: niemand kann die Deutung kritisieren, das ist kein Qualitätsmerkmal."
     },
@@ -463,7 +463,7 @@
       cat: "Modell", name: "R²", mini: "scatter",
       tldr: "Wieviel der Variation der Zielgröße erklärt mein Modell? Die Antwort von 0 % (gar nichts) bis 100 % (perfekt).",
       long: "R² (Determinationskoeffizient) sagt: wenn ich die Streuung der Zielgröße in „durch Modell erklärt“ und „Residuum/Rest“ zerlege, welcher Anteil ist erklärt? R² = .68 heißt: 68 % der Varianz von Zufriedenheit lässt sich aus Wartezeit + Tageszeit vorhersagen, 32 % bleiben unerklärt. Achtung: Mehr Prädiktoren ins Modell pumpen erhöht R² automatisch, deshalb adj. R² berichten, das Komplexität bestraft.",
-      example: "Lineare Regression Zufriedenheit ~ Wartezeit + Tageszeit: R² = .68, adj. R² = .66 → 2/3 der Varianz mit zwei Prädiktoren erklärt.",
+      example: "Lineare Regression Zufriedenheit ~ Wartezeit + Tageszeit, n = 240: R² = .68, adj. R² = .66, F(2, 237) = 252, p < .001 → 2/3 der Varianz mit zwei Prädiktoren erklärt.",
       formal: "R² = 1 − SS_res / SS_tot.",
       pitfall: "Falle: Hohes R² heißt nicht „kausal richtig“, nur „passt zu den vorliegenden Daten“. Overfitting ist möglich."
     },
@@ -471,7 +471,7 @@
       cat: "Logistische Regression", name: "Odds Ratio", mini: "odds",
       tldr: "Wenn das Outcome ja/nein ist (gebucht / nicht gebucht), ist OR die natürliche Sprache für „wie viel besser ist die Chance in Gruppe B?“.",
       long: "Bei binären Outcomes nutzt logistische Regression Odds = p/(1−p) als Effekt-Skala (nicht direkt Wahrscheinlichkeit). OR ist das Verhältnis der Odds in zwei Gruppen. OR = 1 → identisch; OR = 2 → doppelt so hohe Chance; OR < 1 → verringerte Chance. Bei seltenen Outcomes liegt OR nahe am relativen Risiko, bei häufigen Outcomes übertreibt OR den relativen Unterschied.",
-      example: "Buchungs-OR für Treatment vs. Kontrolle = 1,47 (95%-KI [1,31; 1,65]) → 47 % höhere Buchungs-Odds, robust über Null.",
+      example: "Buchungs-OR für Treatment vs. Kontrolle = 1,47 (95%-KI [1,31; 1,65]) → 47 % höhere Buchungs-Odds, KI schließt 1 deutlich aus.",
       formal: "OR = (p_T/(1−p_T)) / (p_K/(1−p_K)).",
       pitfall: "Falle: Im Lehrbuchsprech wird OR oft als „47 % mehr Käufer“ kommuniziert, das ist falsch. Odds ≠ Wahrscheinlichkeiten ≠ Prozentpunkte."
     },
@@ -680,7 +680,7 @@
       cat: "Bayes", name: "Posterior", mini: "posterior",
       tldr: "Kombiniert Prior und Daten zu einer aktualisierten Unsicherheitsverteilung.",
       long: "Der Posterior ist die ganze Antwort der Bayesianischen Analyse, nicht nur ein Punktschätzer, sondern eine Verteilung. Median, Mittelwert und Glaubwürdigkeitsintervall lassen sich daraus ableiten.",
-      example: "Prior Beta(9, 75) + y = 4, n = 120 → Posterior Beta(13, 191); Median ≈ 6,3%, 95%-CrI [3,7%; 9,7%].",
+      example: "Prior Beta(9, 75) + y = 4, n = 120 → Posterior Beta(13, 191); Mittelwert ≈ 6,4%, Median ≈ 6,2%, 95%-CrI [3,7%; 9,7%].",
       formal: "θ | y,n ~ Beta(α+y, β+n−y).",
       pitfall: "Falle: Nicht nur der Mittelwert zählt, sondern die Unsicherheit."
     },
@@ -696,7 +696,7 @@
       cat: "Bayes", name: "Pseudozählungen", mini: "sample",
       tldr: "α und β wirken wie vorgängige Conversions und Abbrüche aus vergleichbaren Fällen.",
       long: "Pseudozählungen machen den Prior interpretierbar: α steht für „so viele Erfolge habe ich vor den Daten schon gesehen“. Sie dürfen nicht stärker gewichtet werden, als das Vorwissen es trägt.",
-      example: "Aus 5 vergleichbaren Bahnhöfen Median-CVR 10,7% bei mittlerer Stichprobengröße n=84 → α = 9, β = 75.",
+      example: "Aus 5 vergleichbaren Bahnhöfen Median-CVR 10,7% bei mittlerer Stichprobengröße n=82 → α = 9, β = 75.",
       formal: "Prior Beta(α, β) entspricht (α + β − 2) virtuellen Beobachtungen.",
       pitfall: "Falle: Pseudozählungen dürfen nicht stärker gewichtet werden als sie begründbar sind."
     },
@@ -727,7 +727,7 @@
     expectationGap: {
       cat: "Dienstleistung", name: "Erwartung vs. Erlebnis", mini: "validity",
       tldr: "Service-Qualität ist kein absoluter Wert, sondern eine Differenz, und genau deshalb muss Forschung beide Seiten getrennt messen.",
-      long: "Reisende beurteilen nicht „wie gut war die Bahnfahrt“, sondern „wie weit ist sie hinter meiner Erwartung zurückgeblieben, oder übertroffen?“. Die Zufriedenheit entsteht aus dem Vergleich, nicht aus der absoluten Leistung. Wer nur das Erlebnis misst, übersieht die Erwartungsbasis: derselbe pünktliche Anschluss kann der eine als „selbstverständlich“ und der andere als „erleichternd“ erleben. Methodisch: Erwartung vor Kontakt erfassen, Erlebnis nach Kontakt, Differenz auswerten (klassischer SERVQUAL-Ansatz).",
+      long: "Reisende beurteilen nicht „wie gut war die Bahnfahrt“, sondern „wie weit ist sie hinter meiner Erwartung zurückgeblieben, oder übertroffen?“. Die Zufriedenheit entsteht aus dem Vergleich, nicht aus der absoluten Leistung. Folge: Wer mit hoher Erwartung kommt, ist von purer Erfüllung weniger beeindruckt als wer mit geringer Erwartung positiv überrascht wird (Disconfirmation-Paradigma: P < E → Unzufriedenheit, P > E → Begeisterung). Wer nur das Erlebnis misst, übersieht diese Erwartungsbasis. Methodisch: Erwartung vor Kontakt erfassen, Erlebnis nach Kontakt, Differenz auswerten (klassischer SERVQUAL-Ansatz).",
       example: "Pünktliche Ankunft bei mittelmäßiger Erwartung → Bottom-2 = 18 %. Pünktliche Ankunft bei hoher Erwartung → Bottom-2 = 42 %. Gleiches Erlebnis, anderer Vergleichsmaßstab.",
       pitfall: "Falle: Wer nur das Erlebnis misst, optimiert Service ins Leere, die Erwartung wandert sonst unkontrolliert mit."
     },
@@ -743,7 +743,7 @@
       tldr: "Servicequalität ist nicht konstant, sie hängt von Tag, Uhrzeit, Personal, Auslastung ab. Mittelwerte verbergen das Wichtigste.",
       long: "Anders als ein industriell gefertigtes Produkt schwankt eine Service-Erfahrung von Kontakt zu Kontakt: Wochentag, Tageszeit, Wetter, Personal, Mitreisende, eigene Verfassung, all das macht aus „der ICE 678“ jedes Mal ein anderes Produkt. Forschungsdesign muss diese Heterogenität als Befund behandeln, nicht als Störung. Touchpoints, Situationen und Segmente werden getrennt ausgewertet; ein Gesamt-Mittelwert ist meistens irreführend, weil er die kritischen Spitzen (Freitag 18 Uhr Hauptbahnhof) wegglättet.",
       example: "Anschlussinfo Bottom-2: Mo 7 h = 44 %, Sa 22 h = 18 %, Fr 7 h = 50 %. Mittelwert 36 % verschleiert die akute Pendler:innen-Krise.",
-      pitfall: "Falle: Ein Gesamt-Mittelwert ist die ehrlichste Form der Ehrlichkeit, und gleichzeitig die irreführendste. Immer nach Situation aufschlüsseln."
+      pitfall: "Falle: Ein Gesamt-Mittelwert wirkt sachlich, ist aber gerade deshalb irreführend, weil er die kritischen Spitzen wegglättet. Immer nach Situation aufschlüsseln."
     },
 
     /* ---- Quantitative Güte erweitert (Folie 12) ---- */
@@ -784,7 +784,7 @@
       cat: "Modell", name: "Modellfit", mini: "scatter",
       tldr: "Beschreibt mein Modell die Daten gut genug, um damit Aussagen zu treffen? Wenn nein, hilft auch das schönste Konstrukt nichts.",
       long: "Modellfit-Maße bewerten, wie nah die Vorhersagen des Modells an den beobachteten Daten liegen. R² als Anteil erklärter Varianz, F-Test als Gesamttest, AIC/BIC als Modellvergleich (kleinere Werte = besser). Adjustierte Maße bestrafen unnötige Komplexität, wer 30 Prädiktoren ins Modell kippt, treibt R² hoch, ohne wirklich mehr zu erklären. Modellfit beantwortet die Frage „passt das Modell zu meinen Daten?“, nicht „ist das Modell kausal korrekt?“.",
-      example: "Lineare Regression Zufriedenheit ~ Wartezeit + Tageszeit: R² = .68, R²_adj = .66, F(3, 236) = 168, p < .001 → solider Fit mit zwei Prädiktoren.",
+      example: "Lineare Regression Zufriedenheit ~ Wartezeit + Tageszeit, n = 240: R² = .68, R²_adj = .66, F(2, 237) = 252, p < .001 → solider Fit mit zwei Prädiktoren.",
       formal: "AIC = 2k − 2 · ln(L); BIC = k · ln(n) − 2 · ln(L).",
       pitfall: "Falle: Hoher Fit ist nicht Kausalität. Ein Modell kann perfekt passen und trotzdem ein Confounder fehlen."
     },
@@ -818,7 +818,7 @@
     codingApproach: {
       cat: "Inhaltsanalyse", name: "Codebildung: deduktiv / induktiv", mini: "deductive-inductive",
       tldr: "Deduktiv: Codes aus Theorie. Induktiv: Codes aus Material. In Praxis fast immer Mischung.",
-      long: "Deduktive Codes prüfen Hypothesen; induktive Codes entdecken Frames im Material. Mayring nennt diese Kombination „strukturierende Inhaltsanalyse mit induktiver Kategorienerweiterung“.",
+      long: "Deduktive Codes prüfen Hypothesen; induktive Codes entdecken Frames im Material. In der Praxis kombiniert man beides: Mayrings „Strukturierende Inhaltsanalyse“ als deduktives Rahmenwerk plus „Induktive Kategorienbildung“ für Codes, die erst im Material entstehen.",
       example: "Start mit deduktivem Codebuch aus Service-Recovery-Theorie (8 Kategorien); 3 induktive Codes ergänzt aus offenen O-Tönen.",
       pitfall: "Falle: Induktiv heißt nicht regellos; deduktiv heißt nicht blind."
     },
