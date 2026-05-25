@@ -236,6 +236,13 @@
       example: "Codes „Anschlussangst“, „Informationslücke“, „Eskalationsangst“ → Kategorie „Kontrollverlust“.",
       pitfall: "Falle: Kategorien sind schwach, wenn sie nur sammeln und nichts erklären."
     },
+    category_en: {
+      cat: "Analysis", name: "Category", mini: "cluster",
+      tldr: "Categories bundle codes into an interpretable pattern or mechanism.",
+      long: "A category is more than a sorting box. It makes an analytical claim about the material and connects to theory or design decisions.",
+      example: "Codes „connection anxiety“, „information gap“, „escalation fear“ → category „loss of control“.",
+      pitfall: "Pitfall: Categories are weak if they only collect and do not explain."
+    },
     designConcept: {
       cat: "Transfer", name: "Designbegriff", mini: "build",
       tldr: "Aus der Analyse entsteht ein Begriff, der Produkt- oder Servicegestaltung steuern kann.",
@@ -280,10 +287,10 @@
     },
     decisionArtifact: {
       cat: "Transfer", name: "Decision Artifact", mini: "fit",
-      tldr: "Forschung endet nicht beim „interessanten Befund“. Erst wenn der Befund eine Entscheidung trägt, ist sie für den Auftraggeber wirklich abgeschlossen.",
-      long: "Ein Decision Artifact ist die letzte Meile von Forschung zur Handlung: eine konkrete Empfehlung MIT klarer Bedingung („gilt unter diesen Umständen“), Reichweite („für dieses Segment“) und Prüfgröße („Erfolg = X“). Es ist Praxis-Übersetzung des Befunds, keine zusätzliche Forschung, sondern die explizite Brücke. Ohne dieses Artefakt bleibt jede Studie interpretationsbedürftig und versickert oft im Reporting.",
-      example: "Empfehlung: Umstiegsanzeige neu (Variante B), Roll-out bei Umstiegszeit ≤ 8 min, Erfolg = −15 pp Abbruch nach 30 Tagen Monitoring. Verantwortlich: Produkt-Team Navigator. Reviewer: Service Operations.",
-      pitfall: "Falle: Forschung endet nicht beim Befund. Wer die Entscheidungsfrage offen lässt, hat die Arbeit halb gemacht."
+      tldr: "Research does not end at the „interesting finding“. Only once the finding actually carries a decision is it closed for the audience that asked for it.",
+      long: "A decision artifact is the last mile from research to action: a concrete recommendation WITH a clear condition („applies under these circumstances“), reach („for this segment“) and success criterion („success = X“). It is the practice translation of a finding — not extra research, but the explicit bridge. Without this artifact, every study remains open to interpretation and often dies in reporting.",
+      example: "Recommendation: roll out connection display variant B for connection windows ≤ 8 min; success criterion = −15 pp drop-off after 30 days of monitoring. Owner: Navigator product team. Reviewer: Service Operations.",
+      pitfall: "Pitfall: Research does not end at the finding. Leaving the decision question open is half-finished work."
     },
     sparseData: {
       cat: "Paid Search", name: "Sparse Data", mini: "sampling-error",
@@ -293,6 +300,13 @@
       formal: "n_klein, p̂ = y/n, SE = √(p̂(1−p̂)/n) explodiert.",
       pitfall: "Falle: Big Data kann auf Entscheidungsebene trotzdem dünn sein."
     },
+    sparseData_en: {
+      cat: "Paid Search", name: "Sparse Data", mini: "sampling-error",
+      tldr: "Lots of data in aggregate, often very few conversions per decision unit.",
+      long: "Sparse data is the paid-search-typical big-data paradox: millions of clicks overall, but 0–10 conversions per keyword × ad × context. Aggregation masks the problem; decisions live at the granular level.",
+      example: "Long-tail keyword „Bahnreise Lübeck Ostsee Wochenende“: 14 clicks, 1 conversion → direct CVR estimate ≈ 7 %, confidence interval [0.2 %; 33 %].",
+      pitfall: "Pitfall: Big data at scale can still be thin at the decision level."
+    },
     cvr: {
       cat: "Paid Search", name: "Conversion Rate", mini: "posterior",
       tldr: "CVR ist die Wahrscheinlichkeit, dass aus einem Klick eine gewünschte Handlung wird.",
@@ -301,12 +315,20 @@
       formal: "p̂ = y/n; Bayes: θ | y,n ~ Beta(α+y, β+n−y).",
       pitfall: "Falle: Bei wenigen Klicks ist die beobachtete CVR extrem instabil."
     },
+    cvr_en: {
+      cat: "Paid Search", name: "Conversion Rate", mini: "posterior",
+      tldr: "Conversion rate (CVR) is the probability that a click becomes the desired action.",
+      long: "CVR = conversions / clicks. At low click volumes, the observed CVR is a noisy estimator of the true rate that Bayesian thinking calls θ.",
+      example: "120 clicks, 4 conversions → CVR = 3.3 %; with a Beta(1, 1) prior the posterior becomes Beta(5, 117).",
+      formal: "p̂ = y/n; Bayes: θ | y, n ~ Beta(α+y, β+n−y).",
+      pitfall: "Pitfall: With sparse cells, the observed CVR is extremely unstable."
+    },
     longtail: {
       cat: "Paid Search", name: "Long Tail", mini: "text-corpus",
-      tldr: "Viele seltene Keywords erzeugen wenig direkte Evidenz, sind zusammen aber wirtschaftlich relevant.",
-      long: "Im Long Tail dominieren niedrige Volumina pro Keyword, Standardmodelle und A/B-Tests versagen pro Zelle. Hierarchische und Bayesianische Verfahren teilen Information zwischen Zellen, ohne sie gleichzusetzen.",
-      example: "80% der Buchungs-Keywords haben < 50 Klicks/Monat; zusammen aber 35% des Umsatzes.",
-      pitfall: "Falle: Head-Keyword-Logik skaliert schlecht in den Long Tail."
+      tldr: "Many rare keywords carry little direct evidence individually, but together they are economically dominant.",
+      long: "In the long tail, low volumes dominate every keyword cell, so standard models and A/B tests fail at that level. Hierarchical and Bayesian methods share information across cells without treating them as identical, which lets evidence accumulate where direct counts would never suffice.",
+      example: "80 % of booking keywords get fewer than 50 clicks per month; together they account for roughly 35 % of revenue.",
+      pitfall: "Pitfall: Head-keyword logic does not scale into the long tail."
     },
     bidcell: {
       cat: "Paid Search", name: "Bid Cell", mini: "journey-reg",
@@ -315,12 +337,19 @@
       example: "Cell = (Keyword „Studium Lübeck“, Anzeigentext A, Device Mobile, Tageszeit 18–22 Uhr).",
       pitfall: "Falle: Die Entscheidungseinheit ist kleiner als der Datensatz."
     },
+    bidcell_en: {
+      cat: "Paid Search", name: "Bid Cell", mini: "journey-reg",
+      tldr: "The operational unit is keyword × ad × context — that is where a bid has to be decided.",
+      long: "The bid cell is the decision unit, not the dataset. Data aggregates across cells, but decisions happen inside cells. This mismatch produces the sparse-data problem in paid search.",
+      example: "Cell = (keyword „Studium Lübeck“, ad copy A, mobile device, time slot 18-22 h).",
+      pitfall: "Pitfall: Optimising at the aggregate level leaves the bid cell uninformed."
+    },
     transferLoop: {
       cat: "Transfer", name: "Public research → implementation", mini: "merge",
-      tldr: "Forschungsbeitrag als Schleife: Signal erkennen, These formulieren, veröffentlichen, im Anwendungskontext testen.",
-      long: "Klassische Veröffentlichungslogik ist linear; in schnellen AI-Märkten ist sie eine Schleife. Public research → implementation case → Rückkopplung → nächste Iteration.",
-      example: "SVRN/MPCM: thesis paper → IR-readiness audits in 6 Unternehmen → empirischer Datensatz → revidierter framework.",
-      pitfall: "Falle: Transfer ist nicht Kommunikation nach der Forschung, sondern Teil der Prüfung."
+      tldr: "Research contribution as a loop: detect a signal, formulate a thesis, publish it, test it in the application context, fold the learning back.",
+      long: "The classic publication cycle is linear; in fast-moving AI markets it has to become a loop. Public research → implementation case → feedback → next iteration. Each pass sharpens the thesis with operational evidence that a single paper could not generate.",
+      example: "SVRN / MPCM: thesis paper → AI-readability audits in six firms → empirical dataset → revised framework → next public note.",
+      pitfall: "Pitfall: Transfer is not communication after the research, it is part of the validation."
     },
     aiReadiness: {
       cat: "AI-readable IR", name: "AI-readiness Score", mini: "fit",
@@ -360,10 +389,10 @@
     },
     auditTrail: {
       cat: "Open Paper Machine", name: "Audit Trail", mini: "audit",
-      tldr: "Wenn Ergebnisse später hinterfragt werden, muss man zeigen können wie sie zustande kamen, sonst stehen sie auf Vertrauen statt Belegen.",
-      long: "Der Audit Trail dokumentiert die Forschungsproduktion lückenlos: welche Codier-Entscheidung wann von wem getroffen wurde, welche Iteration des Codebuchs ein Ergebnis erzeugte, welche Prompts und Modell-Versionen (im KI-gestützten Setting) zum Ausgang führten. Das ist das Pendant zu Lab-Notebooks in den Naturwissenschaften, ohne diese Spur ist die Forschung „glauben Sie mir“, nicht „prüfen Sie nach“.",
-      example: "orchestration_log.md mit Zeitstempeln, Modell-IDs, Prompt-Versionen, Human-Gate-Entscheidungen pro Phase; oder bei Codierung: Codebuch v1 → v2 → v3 mit Diff-Begründungen.",
-      pitfall: "Falle: Nur das Endprodukt zeigen heißt: die Methodendiskussion wird unmöglich gemacht."
+      tldr: "If the results are challenged later, you must be able to show how they came about — otherwise they rest on trust rather than evidence.",
+      long: "The audit trail documents research production end-to-end: which coding decision was made when and by whom, which iteration of the codebook produced a result, which prompts and model versions (in AI-assisted settings) led to the output. It is the equivalent of lab notebooks in the natural sciences. Without this trace, the research is „take my word for it“ rather than „check it yourself“.",
+      example: "orchestration_log.md with timestamps, model IDs, prompt versions and human-gate decisions per phase; or for coding: codebook v1 → v2 → v3 with diff justifications.",
+      pitfall: "Pitfall: Showing only the final product makes a methodological discussion impossible."
     },
     humanGate: {
       cat: "Open Paper Machine", name: "Human gate", mini: "capacity",
@@ -372,12 +401,26 @@
       example: "Gate nach Verify-Phase: Verification-Report wird gegen Quellen gelesen, jedes MISMATCH manuell entschieden.",
       pitfall: "Falle: Automatisierung ohne Gate verlagert Fehler in den Endtext."
     },
+    humanGate_en: {
+      cat: "Open Paper Machine", name: "Human gate", mini: "capacity",
+      tldr: "Critical phases require a deliberate human decision: direction, structure, source check, revision.",
+      long: "Human gates are enforced stop points between pipeline phases at which the researcher decides on substance, not just clicks „continue“. They prevent AI output from quietly ending up in the final text.",
+      example: "Gate after the verify phase: the verification report is read against the sources; each MISMATCH and UNVERIFIABLE is reviewed and either corrected, removed or justified.",
+      pitfall: "Pitfall: Skipping the gate makes the whole pipeline indistinguishable from a black-box generator."
+    },
     verification: {
       cat: "Open Paper Machine", name: "Verification", mini: "validity",
       tldr: "Claims, Zitate und Quellen werden explizit gegen die Belege geprüft.",
       long: "Verification ist die Quellenprüfungs-Phase: jedes Zitat wird gegen den tatsächlichen Quellentext abgeglichen und als VERIFIED, PLAUSIBLE, MISMATCH oder UNVERIFIABLE klassifiziert.",
       example: "Sample 30 Zitate, 4 als MISMATCH klassifiziert, 2 als UNVERIFIABLE → Quoten als Qualitätsindikator.",
       pitfall: "Falle: Sprachliche Plausibilität ist kein Quellenbeweis."
+    },
+    verification_en: {
+      cat: "Open Paper Machine", name: "Verification", mini: "validity",
+      tldr: "Claims, citations and sources are explicitly checked against the underlying evidence.",
+      long: "Verification is the source-checking phase: every citation is matched against the actual source text and classified as VERIFIED, PLAUSIBLE, MISMATCH or UNVERIFIABLE.",
+      example: "Sample of 30 citations: 4 classified as MISMATCH, 2 as UNVERIFIABLE → the rates serve as a quality indicator.",
+      pitfall: "Pitfall: Verification only works if a human reads the source — language similarity does not guarantee semantic match."
     },
     orchestration: {
       cat: "AI Research", name: "Orchestration", mini: "curator",
@@ -674,12 +717,19 @@
       example: "Vorher: Forscherin schreibt 80% des Literatur-Reviews. Nachher: Forscherin entwirft die Search-Strategie, prüft 100% der Codings, akzeptiert/verwirft Synthesen.",
       pitfall: "Falle: Produktivität erster Ordnung unterschätzt den Rollenwandel."
     },
+    curator_en: {
+      cat: "AI Research", name: "Creator-to-curator", mini: "curator",
+      tldr: "When production becomes delegable, value moves to evaluating, checking and curating.",
+      long: "The research role shifts from writing individual sentences toward selecting the right questions, sources, models and verification steps. First-order productivity metrics under-estimate this shift.",
+      example: "Before: the researcher writes 80 % of the literature review. After: the researcher designs the search strategy, chooses prompts and sources, then verifies and edits the AI-generated draft.",
+      pitfall: "Pitfall: If the curator role is left implicit, AI-generated text quietly enters the final manuscript."
+    },
     institutional: {
       cat: "AI Research", name: "Institutional knowledge", mini: "institutional",
-      tldr: "Differenzierung entsteht durch eigene Standards, Daten, Workflows und Urteilskraft.",
-      long: "Wenn alle Zugang zu denselben Modellen haben, bleibt das Institutionelle das unique: kuratierte Datenbanken, etablierte Verfahren, geteilte Beurteilungsstandards.",
-      example: "TH Lübeck × MPCM gemeinsame Audit-Datenbank für IR-readiness pro DAX-Unternehmen.",
-      pitfall: "Falle: Modellzugang allein ist kein nachhaltiger Vorteil."
+      tldr: "When everyone has access to the same models, differentiation comes from your own standards, data, workflows and judgment.",
+      long: "If model capability becomes a commodity, the institutional layer is what stays unique: curated databases, established procedures, shared assessment standards. That is where applied research transfer creates value beyond raw model output.",
+      example: "TH Lübeck × MPCM joint audit database of AI-readability for every HDAX-listed firm.",
+      pitfall: "Pitfall: Model access alone is not a durable advantage."
     },
     estimate: {
       cat: "Method Signature", name: "Estimate", mini: "posterior",
@@ -709,6 +759,13 @@
       example: "Pro IR-Item identischer Prompt mit Definition, Skala (0–10) und Begründungsaufforderung; 7 Modelle, 2 Runden.",
       pitfall: "Falle: Ohne gleiche Aufgabenstellung entsteht keine belastbare Vergleichslogik."
     },
+    promptInstrument_en: {
+      cat: "Multi-LLM Delphi", name: "Structured prompt instrument", mini: "prompt-instrument",
+      tldr: "A fixed prompt instrument makes model answers comparable and analysable.",
+      long: "The prompt instrument is the equivalent of a questionnaire: fixed items, fixed scale, fixed context. Variation comes from the model, not from the question.",
+      example: "Per IR item: identical prompt with definition, scale (0–10) and justification request; 7 models, 2 rounds.",
+      pitfall: "Pitfall: Without a fixed instrument, model answers are barely comparable."
+    },
     prior: {
       cat: "Bayes", name: "Prior", mini: "hbayes",
       tldr: "Vorwissen vor den neuen Daten, hier als Beta-Verteilung aus Pseudozählungen.",
@@ -732,6 +789,13 @@
       example: "Prior Beta(9, 75) + y = 4, n = 120 → Posterior Beta(13, 191); Mittelwert ≈ 6,4%, Median ≈ 6,2%, 95%-CrI [3,7%; 9,7%].",
       formal: "θ | y,n ~ Beta(α+y, β+n−y).",
       pitfall: "Falle: Nicht nur der Mittelwert zählt, sondern die Unsicherheit."
+    },
+    posteriorBayes_en: {
+      cat: "Bayes", name: "Posterior", mini: "posterior",
+      tldr: "Combines prior and data into an updated uncertainty distribution.",
+      long: "The posterior is the full answer of Bayesian analysis — not a point estimate, but a distribution. Mean, median and credible interval can all be derived from it.",
+      example: "Prior Beta(9, 75) + y = 4, n = 120 → Posterior Beta(13, 191); mean ≈ 6.4 %, median ≈ 6.2 %, 95 % CrI [3.7 %; 9.7 %].",
+      pitfall: "Pitfall: Reporting only the posterior mean throws away the uncertainty information that justifies the whole approach."
     },
     theta: {
       cat: "Bayes", name: "θ", mini: "posterior",
@@ -936,6 +1000,13 @@
       formal: "min Σ(yᵢ − β·xᵢ)² + λ · Σ|βⱼ|.",
       pitfall: "Falle: λ muss durch Cross-Validation gewählt werden."
     },
+    lasso_en: {
+      cat: "Model", name: "LASSO", mini: "scatter",
+      tldr: "Regression with L1 regularisation — selects variables, shrinks weak coefficients to zero.",
+      long: "LASSO (Least Absolute Shrinkage and Selection Operator, Tibshirani 1996) addresses multicollinearity and overfitting in high-dimensional regressions. Suited when a few relevant features must be extracted from many candidates.",
+      example: "Long-tail keyword modelling: 800 candidate features per keyword → LASSO selects 12 meaningful ones.",
+      pitfall: "Pitfall: LASSO selection is unstable when features are highly correlated."
+    },
     hierarchicalBayes: {
       cat: "Modell", name: "Hierarchical Bayes", mini: "hbayes",
       tldr: "Mehrebenen-Bayes-Modell: einzelne Cells teilen Information über übergeordnete Verteilung.",
@@ -943,6 +1014,13 @@
       example: "θᵢ pro Bid Cell i, gemeinsamer Hyperprior θᵢ ~ Beta(α, β); α, β werden aus allen Cells geschätzt.",
       formal: "θᵢ | yᵢ,nᵢ,α,β ~ Beta(α+yᵢ, β+nᵢ−yᵢ); (α,β) ~ Hyperprior.",
       pitfall: "Falle: Stark abweichende Cells leiden unter unangemessenem Pooling."
+    },
+    hierarchicalBayes_en: {
+      cat: "Model", name: "Hierarchical Bayes", mini: "hbayes",
+      tldr: "Multi-level Bayesian model — individual cells share information through a higher-level distribution.",
+      long: "Hierarchical Bayes addresses sparse data by linking cell estimates through a hyperprior distribution. Cells with little data are pulled toward the global mean („shrinkage“), cells with rich data keep their independence.",
+      example: "θᵢ per bid cell i, joint hyperprior θᵢ ~ Beta(α, β); cells with 1 / 10 get pulled toward the cluster mean, cells with 50 / 200 stay near their direct estimate.",
+      pitfall: "Pitfall: A misspecified hyperprior pulls everyone toward the wrong mean."
     },
     dynamicLinearModels: {
       cat: "Modell", name: "Dynamic Linear Models", mini: "scatter",
@@ -952,12 +1030,26 @@
       formal: "y_t = F_t · θ_t + ε_t; θ_t = G · θ_{t−1} + w_t.",
       pitfall: "Falle: Mehr Flexibilität heißt auch mehr Unsicherheit pro Schätzung."
     },
+    dynamicLinearModels_en: {
+      cat: "Model", name: "Dynamic Linear Models", mini: "scatter",
+      tldr: "Time-varying regression — coefficients are allowed to change over time (state space).",
+      long: "DLMs are state-space models whose parameters evolve according to a state process. Ideal for non-stationary markets like paid search, where CVR drifts across weeks and seasons.",
+      example: "Weekly CVR estimate per bid cell with a drift-enabled intercept; Kalman-filter-based update.",
+      pitfall: "Pitfall: Drift modelling without theory turns into curve fitting."
+    },
     collaborativeFiltering: {
       cat: "Modell", name: "Collaborative filtering", mini: "merge",
       tldr: "Schätzung schwacher Signale durch Ähnlichkeit zu anderen Einheiten, Cells lernen voneinander.",
       long: "Collaborative filtering nutzt Ähnlichkeitsstrukturen zwischen Einheiten (Keywords, Nutzer:innen, Cells), um Lücken aufzufüllen. In paid search: Wenn Keyword A ähnlich zu B,C,D ist, lernen wir A aus B, C, D.",
       example: "Keyword „Bachelor Wirtschaft Lübeck“ hat 0 Conversions; ähnliche Keywords haben 8%-CVR → geschätzte Posterior ≈ 8%.",
       pitfall: "Falle: Ähnlichkeit muss konstrukt-getreu definiert sein, nicht textueller Zufall."
+    },
+    collaborativeFiltering_en: {
+      cat: "Model", name: "Collaborative filtering", mini: "merge",
+      tldr: "Estimate weak signals via similarity to other units — cells learn from each other.",
+      long: "Collaborative filtering uses similarity structures between units (keywords, users, cells) to fill gaps. In paid search: if keyword A is similar to B, C, D, we learn about A from B, C, D.",
+      example: "Keyword „Bachelor Wirtschaft Lübeck“ has 0 conversions; similar keywords show 8–12 % CVR, so the estimate borrows strength from them.",
+      pitfall: "Pitfall: Borrowed strength is only as good as the similarity metric."
     },
     userJourneyRegression: {
       cat: "Modell", name: "User-journey regression", mini: "journey-reg",
@@ -966,12 +1058,26 @@
       example: "Conversion-Wahrscheinlichkeit = f(Display-Impressions, Search-Klicks t−7, Re-targeting t−1) statt nur Last-Click.",
       pitfall: "Falle: Identifikation kausaler Touchpoint-Beiträge ist nicht trivial, Beobachtungsdaten haben Confounding."
     },
+    userJourneyRegression_en: {
+      cat: "Model", name: "User-journey regression", mini: "journey-reg",
+      tldr: "Models conversion as a function of multiple touchpoints in the customer journey.",
+      long: "User-journey regression does not assign conversion probability to the last click alone but distributes it across earlier touchpoints. Methodologically close to multi-touch attribution.",
+      example: "Conversion probability = f(display impressions, search clicks t−7, re-targeting t−1) instead of last-click only.",
+      pitfall: "Pitfall: Without an identification design, journey regressions are pattern fits, not causal attribution."
+    },
     multiLLMPanel: {
       cat: "Multi-LLM Delphi", name: "Multi-LLM panel", mini: "llm-panel",
       tldr: "Heterogene Foundation-Modelle als Expert:innen-Panel, Diversität als Validitätsmechanismus.",
       long: "Statt einem LLM mehrere Rollen zu geben, werden mehrere verschiedene Modelle (GPT-4o, Claude, Gemini, Llama, Mistral, …) als unabhängige Stimmen behandelt. Modell-Heterogenität operationalisiert epistemische Vielfalt.",
       example: "n = 7 Foundation-Modelle, 2 Befragungsrunden, je 36 IR-Items pro 8 Branchen → 288 Antwortzellen pro Modell.",
       pitfall: "Falle: Modelle teilen Trainingsdaten, die „Unabhängigkeit“ der Stimmen ist eingeschränkt."
+    },
+    multiLLMPanel_en: {
+      cat: "Multi-LLM Delphi", name: "Multi-LLM panel", mini: "llm-panel",
+      tldr: "Heterogeneous foundation models as an expert panel — diversity as a validity mechanism.",
+      long: "Instead of giving one LLM multiple roles, several different models (GPT-4o, Claude, Gemini, Llama, Mistral …) are treated as independent voices. Model heterogeneity operationalises epistemic diversity.",
+      example: "n = 7 foundation models, 2 elicitation rounds, 36 IR items across 8 GICS service industries.",
+      pitfall: "Pitfall: A shared training corpus across providers can manufacture artificial convergence."
     },
     convergenceZones: {
       cat: "Multi-LLM Delphi", name: "Convergence zones", mini: "convergence",
@@ -980,12 +1086,26 @@
       example: "Item „IR-Sites brauchen JSON-LD bis 2027“, 7/7 Modelle stimmen zu (Median 8/10, IQR < 1).",
       pitfall: "Falle: Konvergenz heißt nicht Wahrheit, sie kann auch geteilte Trainingsverzerrung anzeigen."
     },
+    convergenceZones_en: {
+      cat: "Multi-LLM Delphi", name: "Convergence zones", mini: "convergence",
+      tldr: "Areas where the panel agrees on direction after two rounds.",
+      long: "Convergence zones are the robust statements of the panel — where models meet despite different training data. They are strong candidates for „state of expectation“ in an industry.",
+      example: "Item „IR sites need JSON-LD by 2027“: 7/7 models agree (median 8/10, IQR < 1).",
+      pitfall: "Pitfall: Convergence is not truth — it can also be shared bias from similar training data."
+    },
     blindSpots: {
       cat: "Multi-LLM Delphi", name: "Blind spots", mini: "divergence",
       tldr: "Items, bei denen alle Modelle unsicher antworten, kein gemeinsames Wissen.",
       long: "Blind Spots zeigen Themen, in denen kein Modell ausreichend Trainingssignal hat. Für Forschung ist das ein Hinweis auf unterbelichtete Felder, in denen menschliche Primärrecherche besonders wertvoll bleibt.",
       example: "Item „Stimmungseffekt KI-generierter Earnings Calls auf Privatanleger“, alle 7 Modelle antworten mit Median 5/10, IQR > 3.",
       pitfall: "Falle: Blind Spots heißt nicht zwingend „kein echtes Phänomen“, nur „keine Modellrepräsentation“."
+    },
+    blindSpots_en: {
+      cat: "Multi-LLM Delphi", name: "Blind spots", mini: "divergence",
+      tldr: "Items where all models answer with uncertainty — no shared knowledge.",
+      long: "Blind spots reveal topics for which no model has sufficient training signal. For research, this flags under-explored fields where human primary work still adds the most value.",
+      example: "Item „sentiment effect of AI-generated earnings calls on retail investors“ — all seven models answer with high uncertainty.",
+      pitfall: "Pitfall: Blind spots are not failures, they are research opportunities."
     },
     contestedFutures: {
       cat: "Multi-LLM Delphi", name: "Contested futures", mini: "divergence",
@@ -994,12 +1114,26 @@
       example: "Item „Regulatorischer Eingriff in AI-IR bis 2028“, 4 Modelle „wahrscheinlich“ (≥7/10), 3 Modelle „unwahrscheinlich“ (≤4/10).",
       pitfall: "Falle: Dissens darf nicht weggemittelt werden, beide Pole sind die Information."
     },
+    contestedFutures_en: {
+      cat: "Multi-LLM Delphi", name: "Contested futures", mini: "divergence",
+      tldr: "Items where models systematically predict different directions.",
+      long: "Contested futures are the most informative results: models do not converge, yet each argues internally consistently. These disagreements are methodologically more valuable than convergence, because they make optionality visible.",
+      example: "Item „regulatory intervention in AI-IR by 2028“: 4 models say „likely“, 3 say „unlikely“, no clear winner.",
+      pitfall: "Pitfall: Resolving the disagreement by majority vote destroys the signal that this future is genuinely undetermined."
+    },
     capacityFlip: {
       cat: "AI Research", name: "Capacity flip", mini: "capacity",
       tldr: "Mit jeder Modellgeneration verschiebt sich, was menschliche Forscher:innen tun müssen versus dürfen.",
       long: "Der „Capacity Flip“ ist die These, dass mit jeder LLM-Generation Aufgaben aus dem menschlichen Pflichtbereich in den optionalen Bereich rutschen. Wert verschiebt sich vom Tun zum Steuern, Prüfen, Verantworten.",
       example: "Vor 3 Jahren: Forscherin schreibt Literatur-Review selbst. Heute: Forscherin entwirft Suchstrategie, prüft KI-Synthese, verwirft Halluzinationen.",
       pitfall: "Falle: Wer „mehr Output mit weniger Arbeit“ misst, übersieht den Rollenwandel."
+    },
+    capacityFlip_en: {
+      cat: "AI Research", name: "Capacity flip", mini: "capacity",
+      tldr: "With every model generation, what human researchers must do shifts toward what they may choose to do.",
+      long: "The capacity flip is the hypothesis that with each LLM generation, tasks move from the human „must do“ zone into the optional zone. Value shifts from doing to steering, checking and taking responsibility.",
+      example: "Three years ago: the researcher writes the literature review by hand. Today: the researcher curates sources, the model writes the draft, the researcher reviews and decides.",
+      pitfall: "Pitfall: Capacity flip is not job loss, it is role redesign."
     },
     gioia: {
       cat: "Codierung", name: "Gioia-Methodik", mini: "codes-items",
@@ -1008,12 +1142,26 @@
       example: "1st-order: O-Ton „Ich wusste nicht, ob ich es schaffe“ → 2nd-order: „Informationslücke“ → Aggregate: „Service-Vertrauensbruch“.",
       pitfall: "Falle: Gioia braucht eiserne Transparenz im Anhang, der Reiz ist Auditbarkeit, nicht Form."
     },
+    gioia_en: {
+      cat: "Coding", name: "Gioia methodology", mini: "codes-items",
+      tldr: "Structured qualitative analysis: 1st-order concepts → 2nd-order themes → aggregate dimensions.",
+      long: "The Gioia methodology (Gioia, Corley, Hamilton 2013) makes qualitative theory-building traceable. Three coding stages plus an explicit data structure in the appendix establish methodological rigour for inductive research.",
+      example: "1st-order: verbatim „I didn't know if I would make it“ → 2nd-order theme „loss of control“ → aggregate dimension „experience risk“.",
+      pitfall: "Pitfall: A Gioia structure without analytical density is a graphic, not an analysis."
+    },
     prisma: {
       cat: "SLR", name: "PRISMA 2020", mini: "audit",
       tldr: "Berichtsstandard für Systematische Literaturreviews, definiert Such-, Screen-, Einschluss-Logik.",
       long: "PRISMA 2020 (Page et al.) ist der Reporting-Standard für SLRs. Das Flussdiagramm zeigt, wie viele Treffer aus welcher Quelle nach Screening übrigbleiben, Audit-Trail für Literaturarbeit.",
       example: "Identifiziert: 1.842 Treffer · nach Deduplikation: 1.214 · nach Title-/Abstract-Screening: 87 · nach Volltext: 31 eingeschlossen.",
       pitfall: "Falle: PRISMA prüft Berichtsqualität, nicht Inhaltsqualität der Studien selbst."
+    },
+    prisma_en: {
+      cat: "SLR", name: "PRISMA 2020", mini: "audit",
+      tldr: "Reporting standard for systematic literature reviews — defines search, screening and inclusion logic.",
+      long: "PRISMA 2020 (Page et al.) is the reporting standard for SLRs. The flow diagram shows how many hits per source remain after screening — an audit trail for the literature work.",
+      example: "Identified: 1,842 hits · after deduplication: 1,214 · after title/abstract screening: 87 · after full text: 31 eligible studies.",
+      pitfall: "Pitfall: PRISMA is documentation, not justification; an unsystematic screen with a PRISMA flow is still unsystematic."
     },
 
     /* ---- Folie 10, Pattern-Kategorien (quantitative Erkenntnisformen) ---- */
@@ -2196,6 +2344,10 @@
     prior: F.prior, likelihood: F.likelihood, posteriorBayes: F.posteriorBayes, theta: F.theta,
     pseudoCounts: F.pseudoCounts, credibleInterval: F.credibleInterval
   };
+  /* Kolloquium EN-Hovers: reuse figures from the corresponding DE keys */
+  ["bidcell","blindSpots","capacityFlip","category","collaborativeFiltering","contestedFutures","convergenceZones","curator","cvr","dynamicLinearModels","gioia","hierarchicalBayes","humanGate","lasso","multiLLMPanel","posteriorBayes","prisma","promptInstrument","sparseData","userJourneyRegression","verification"].forEach(function (k) {
+    if (figureLibrary[k]) figureLibrary[k + "_en"] = figureLibrary[k];
+  });
   function INK_HEX() { return "#0f172a"; } function RED_HEX() { return "#D9272E"; }
 
   Object.keys(figureLibrary).forEach(function (k) {
@@ -2567,28 +2719,28 @@
       ["Meta-Inferenz", "metaInference"],
       ["Inhaltsvalidität", "contentValidity"],
 
-      /* Kolloquium, Folie 37 Paid Search Procedure */
-      ["LASSO", "lasso"],
-      ["Hierarchical Bayes", "hierarchicalBayes"],
-      ["dynamic linear models", "dynamicLinearModels"],
-      ["collaborative filtering", "collaborativeFiltering"],
-      ["user-journey regression", "userJourneyRegression"],
-      ["Posterior CVR", "posteriorBayes"],
-      ["Cluster", "category"],
+      /* Kolloquium (EN-only): Paid Search Procedure */
+      ["LASSO", "lasso_en"],
+      ["Hierarchical Bayes", "hierarchicalBayes_en"],
+      ["dynamic linear models", "dynamicLinearModels_en"],
+      ["collaborative filtering", "collaborativeFiltering_en"],
+      ["user-journey regression", "userJourneyRegression_en"],
+      ["Posterior CVR", "posteriorBayes_en"],
+      ["Cluster", "category_en"],
 
-      /* Kolloquium, Folie 40 Multi-LLM Procedure */
-      ["Multi-LLM panel, n=7", "multiLLMPanel"],
-      ["Structured prompt instrument", "promptInstrument"],
-      ["Convergence zones", "convergenceZones"],
-      ["Blind spots", "blindSpots"],
-      ["Contested futures", "contestedFutures"],
+      /* Kolloquium (EN-only): Multi-LLM Procedure */
+      ["Multi-LLM panel, n=7", "multiLLMPanel_en"],
+      ["Structured prompt instrument", "promptInstrument_en"],
+      ["Convergence zones", "convergenceZones_en"],
+      ["Blind spots", "blindSpots_en"],
+      ["Contested futures", "contestedFutures_en"],
 
-      /* Kolloquium, Folie 42 Copilot Fallacy */
-      ["Capacity flip", "capacityFlip"],
-      ["Creator-to-curator", "curator"],
+      /* Kolloquium (EN-only): Copilot Fallacy */
+      ["Capacity flip", "capacityFlip_en"],
+      ["Creator-to-curator", "curator_en"],
       ["Institutional knowledge", "institutional"],
-      ["Gioia", "gioia"],
-      ["PRISMA 2020", "prisma"]
+      ["Gioia", "gioia_en"],
+      ["PRISMA 2020", "prisma_en"]
     ], ".metric-label");
   }
 
