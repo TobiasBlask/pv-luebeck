@@ -708,16 +708,16 @@
     },
     theta: {
       cat: "Bayes", name: "θ", mini: "posterior",
-      tldr: "Die unbekannte wahre Wahrscheinlichkeit, etwa Buchung fortgesetzt nach Umstiegsanzeige.",
+      tldr: "Die unbekannte wahre Wahrscheinlichkeit, etwa Folge-Aktion am Umstieg nach Anschlussanzeige.",
       long: "θ ist das Ziel der Inferenz: die latente, nicht direkt beobachtbare Rate. Die beobachtete Quote ist nur ein verrauschter Hinweis auf θ.",
-      example: "θ = P(Buchung abgeschlossen | Umstiegsanzeige gesehen). Beobachtet y/n; gesucht: Verteilung von θ.",
+      example: "θ = P(Folge-Aktion am Umstieg | Anschlussanzeige gesehen). Beobachtet y/n; gesucht: Verteilung von θ.",
       formal: "θ ∈ [0, 1]; P(θ | y,n) ∝ P(y,n | θ) · P(θ).",
       pitfall: "Falle: Die beobachtete Rate ist nur ein unsicherer Hinweis auf θ."
     },
     pseudoCounts: {
       cat: "Bayes", name: "Pseudozählungen", mini: "sample",
-      tldr: "α und β wirken wie vorgängige Conversions und Abbrüche aus vergleichbaren Fällen.",
-      long: "Pseudozählungen machen den Prior interpretierbar: α steht für „so viele Erfolge habe ich vor den Daten schon gesehen“. Sie dürfen nicht stärker gewichtet werden, als das Vorwissen es trägt.",
+      tldr: "α und β wirken wie vorgängige Folge-Aktionen und Verlassen-Ereignisse aus vergleichbaren Bahnhöfen.",
+      long: "Pseudozählungen machen den Prior interpretierbar: α steht für „so viele Folge-Aktionen habe ich vor den Daten schon gesehen“. Sie dürfen nicht stärker gewichtet werden, als das Vorwissen es trägt.",
       example: "Aus 5 vergleichbaren Bahnhöfen Median-CVR 10,7% bei mittlerer Stichprobengröße n=82 → α = 9, β = 75.",
       formal: "Prior Beta(α, β) entspricht (α + β − 2) virtuellen Beobachtungen.",
       pitfall: "Falle: Pseudozählungen dürfen nicht stärker gewichtet werden als sie begründbar sind."
