@@ -5723,6 +5723,7 @@
       <div class="quality-detail-title">Wie belastbar ist die Inferenz?</div>
       <div class="quality-detail-text">Konfidenzintervall zeigt Präzision, p-Wert Evidenz gegen H0 und Power die Chance, relevante Effekte zu entdecken.</div>
       <div class="quality-detail-metrics">
+        <span class="metric-chip" data-explain="variance" tabindex="0"><span class="metric-label">Varianz · SD</span></span>
         <span class="metric-chip" tabindex="0"><span class="metric-label">Standardfehler</span><span class="metric-popover"><span class="metric-pop-kicker">Inferenz</span><strong>Wie stark schwankt die Schätzung?</strong><span class="metric-explain">Der Standardfehler beschreibt die Unsicherheit eines Schätzers über hypothetische Wiederholungen.</span><span class="metric-mini metric-mini--se"><i></i><i></i><i></i></span><em>Falle: nicht mit Standardabweichung der Rohwerte verwechseln.</em></span></span>
         <span class="metric-chip" tabindex="0"><span class="metric-label">95%-KI</span><span class="metric-popover"><span class="metric-pop-kicker">Inferenz</span><strong>Ein Präzisionsfenster für den Effekt.</strong><span class="metric-explain">Bei vielen Wiederholungen würden 95 Prozent solcher Intervalle den wahren Wert überdecken.</span><span class="metric-mini metric-mini--ci"><i></i><i></i><i></i></span><em>Falle: nicht als „95 Prozent Wahrscheinlichkeit“ für diesen konkreten Wert lesen.</em></span></span>
         <span class="metric-chip" tabindex="0"><span class="metric-label">p-Wert</span><span class="metric-popover"><span class="metric-pop-kicker">Inferenz</span><strong>Evidenz gegen die Nullhypothese.</strong><span class="metric-explain">Er sagt, wie überraschend die Daten wären, wenn H0 gilt. Er sagt nicht, wie wichtig der Effekt ist.</span><span class="metric-mini metric-mini--pvalue"><i></i><i></i><i></i></span><em>Falle: p kleiner .05 ist keine praktische Relevanz.</em></span></span>
@@ -7600,7 +7601,7 @@
 </section>
 
 </deck-stage>
-<script src="Probevorlesung/metric-popovers-v2.js?v=explainer-rich31-bottom2figs"></script>
+<script src="Probevorlesung/metric-popovers-v2.js?v=explainer-rich32-variance"></script>
 
 <script>
 /* ============================================================
