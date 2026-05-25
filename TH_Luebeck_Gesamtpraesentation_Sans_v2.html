@@ -5219,6 +5219,49 @@
 }
 
 /* ============================================================
+   FOLIE 19 — Hover-Spickzettel für Quadranten und Achsen
+   Quadranten- und Achsen-Labels werden zu Hover-Chips mit
+   eigenem Popover (Spickzettel für Vortrag und Rückfragen).
+   pointer-events: auto überschreibt die default-Sperre auf
+   .method-quadrant, dezenter Hover-Akzent als Affordanz.
+   ============================================================ */
+.method-quadrant.metric-chip {
+  pointer-events: auto !important;
+  cursor: help;
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin: -2px -6px;
+  transition: background 120ms ease, color 120ms ease;
+}
+.method-quadrant.metric-chip:hover,
+.method-quadrant.metric-chip:focus-visible {
+  background: rgba(15, 23, 42, 0.06);
+  color: var(--slate-900) !important;
+  outline: none;
+}
+.method-axis-x .metric-chip,
+.method-axis-y .metric-chip {
+  pointer-events: auto !important;
+  cursor: help;
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin: -2px -6px;
+  transition: background 120ms ease;
+}
+.method-axis-x .metric-chip:hover,
+.method-axis-x .metric-chip:focus-visible,
+.method-axis-y .metric-chip:hover,
+.method-axis-y .metric-chip:focus-visible {
+  background: rgba(15, 23, 42, 0.06);
+  outline: none;
+}
+/* Popover über Quadrant-Label nach oben aufklappen, wenn der
+   Quadrant nahe dem unteren Slide-Rand sitzt. */
+.method-quadrant.metric-chip .metric-popover {
+  z-index: 30;
+}
+
+/* ============================================================
    FOLIE 19 — Lesehilfe unter der Methodenlandkarte
    Zusätzliche Grid-Zeile, kompakt, schmaler Trennstrich oben.
    ============================================================ */
@@ -5667,10 +5710,12 @@
       <div class="quality-detail-title">Ist der Befund praktisch relevant?</div>
       <div class="quality-detail-text">Signifikanz ist nicht Relevanz. Für Entscheidungen zählen Effektgröße, Zusammenhangsstärke und Modellfit.</div>
       <div class="quality-detail-metrics">
-        <span class="metric-chip" tabindex="0"><span class="metric-label">Cohen’s d</span><span class="metric-popover"><span class="metric-pop-kicker">Effekt</span><strong>Standardisierte Mittelwertsdifferenz.</strong><span class="metric-explain">Macht Gruppenunterschiede über Skalen hinweg vergleichbar, etwa A gegen B in Standardabweichungen.</span><span class="metric-mini metric-mini--cohen"><i></i><i></i><i></i></span><em>Falle: Daumenregeln wie .2/.5/.8 sind kontextabhängig.</em></span></span>
-        <span class="metric-chip" tabindex="0"><span class="metric-label">r / R²</span><span class="metric-popover"><span class="metric-pop-kicker">Effekt</span><strong>Zusammenhang und erklärte Varianz.</strong><span class="metric-explain">r beschreibt Richtung und Stärke eines Zusammenhangs; R² den erklärten Varianzanteil im Modell.</span><span class="metric-mini metric-mini--scatter"><i></i><i></i><i></i></span><em>Falle: Korrelation bleibt ohne Design keine Kausalität.</em></span></span>
-        <span class="metric-chip" tabindex="0"><span class="metric-label">Odds Ratio</span><span class="metric-popover"><span class="metric-pop-kicker">Effekt</span><strong>Verhältnis von Chancen.</strong><span class="metric-explain">Nützlich bei binären Ergebnissen, etwa Kauf ja/nein. 1 bedeutet kein Unterschied.</span><span class="metric-mini metric-mini--odds"><i></i><i></i><i></i></span><em>Falle: Odds Ratio ist bei häufigen Ereignissen kein Risikoquotient.</em></span></span>
-        <span class="metric-chip" tabindex="0"><span class="metric-label">Modellfit</span><span class="metric-popover"><span class="metric-pop-kicker">Effekt</span><strong>Passt das Modell zu Daten und Zweck?</strong><span class="metric-explain">Je nach Modell über Residuen, RMSE, AIC, Pseudo-R² oder Validierungsdaten beurteilen.</span><span class="metric-mini metric-mini--fit"><i></i><i></i><i></i></span><em>Falle: hoher Fit ersetzt keine saubere Theorie oder Kausalidentifikation.</em></span></span>
+        <span class="metric-chip" data-explain="bottom2" tabindex="0"><span class="metric-label">Bottom-2</span></span>
+        <span class="metric-chip" data-explain="cohenD" tabindex="0"><span class="metric-label">Cohen’s d</span></span>
+        <span class="metric-chip" data-explain="correlation" tabindex="0"><span class="metric-label">r (Korrelation)</span></span>
+        <span class="metric-chip" data-explain="rSquared" tabindex="0"><span class="metric-label">R² (erklärte Varianz)</span></span>
+        <span class="metric-chip" data-explain="oddsRatio" tabindex="0"><span class="metric-label">Odds Ratio</span></span>
+        <span class="metric-chip" data-explain="modelFit" tabindex="0"><span class="metric-label">Modellfit</span></span>
       </div>
     </div>
   </div>
@@ -5937,15 +5982,15 @@
 <section class="slide white pillars qual-methods-slide" data-screen-label="Methodenlandkarte qualitativ" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="18">
   <div class="pillars-head">
     <div class="deck-eyebrow">METHODENLANDKARTE · QUALITATIV</div>
-    <h2 class="deck-h2">Nicht das Tool entscheidet, sondern der Zugang zum Erleben.</h2>
+    <h2 class="deck-h2">Jede qualitative Methode hat einen Schwerpunkt zwischen Datenzugang und Erkenntnisziel.</h2>
   </div>
   <div class="qual-method-map">
-    <div class="method-axis-x"><span><b>aktiv erhoben</b>Gespräch · Aufgabe · Gruppe</span><span><b>vorliegend / beobachtet</b>Feld · Text · Dokument</span></div>
-    <div class="method-axis-y"><span><b>hohe Falltiefe</b>Kontext nah verstehen</span><span><b>hohe Vergleichbarkeit</b>Muster über Fälle prüfen</span></div>
-    <div class="method-quadrant method-quadrant--tl">Erzählen lassen</div>
-    <div class="method-quadrant method-quadrant--tr">Feldnah beobachten</div>
-    <div class="method-quadrant method-quadrant--bl">Interaktion vergleichen</div>
-    <div class="method-quadrant method-quadrant--br">Material codieren</div>
+    <div class="method-axis-x"><span class="metric-chip" data-explain="axisActive" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>aktiv erhoben</b>Gespräch · Aufgabe · Gruppe</span><span class="metric-chip popover-align-right" data-explain="axisObserved" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>vorliegend / beobachtet</b>Feld · Text · Dokument</span></div>
+    <div class="method-axis-y"><span class="metric-chip" data-explain="axisDepth" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>hohe Falltiefe</b>Kontext nah verstehen</span><span class="metric-chip popover-above" data-explain="axisBreadth" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>hohe Vergleichbarkeit</b>Muster über Fälle prüfen</span></div>
+    <div class="method-quadrant method-quadrant--tl metric-chip" data-explain="quadrantTL" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Erzählen lassen</div>
+    <div class="method-quadrant method-quadrant--tr metric-chip popover-align-right" data-explain="quadrantTR" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Feldnah beobachten</div>
+    <div class="method-quadrant method-quadrant--bl metric-chip" data-explain="quadrantBL" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Interaktion vergleichen</div>
+    <div class="method-quadrant method-quadrant--br metric-chip popover-align-right popover-above" data-explain="quadrantBR" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Material codieren</div>
     <div class="method-dot method-dot--interview popover-align-left metric-chip" style="left:21%; top:28%;" data-explain="interview" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Interview</b><span>erzählen lassen</span><small>Erleben → Code</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Interview</strong><span class="metric-explain">Interviews machen Begriffe, Motive und Deutungen sichtbar, die im Fragebogen noch fehlen.</span><span class="metric-pop-position"><b>Warum hier?</b><span>links oben, weil aktiv erhobene Interaktion und hohe Falltiefe zusammenkommen.</span></span><span class="metric-mini metric-mini--quote"><i></i><i></i><i></i></span><em>Falle: Interviews liefern Mechanismen und Hypothesen, keine Marktanteile.</em></span></div>
     <div class="method-dot method-dot--critical popover-align-left metric-chip" style="left:21%; top:45%;" data-explain="criticalIncident" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Critical Incident</b><span>Schlüsselmoment</span><small>Ereignis → Auslöser</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Critical Incident</strong><span class="metric-explain">Die Methode sammelt besonders positive oder negative Schlüsselerlebnisse und rekonstruiert Auslöser, Ablauf und Konsequenz.</span><span class="metric-pop-position"><b>Warum hier?</b><span>links mittig, weil konkrete Episoden tief rekonstruiert und anschließend über Fälle verglichen werden.</span></span><span class="metric-mini metric-mini--countercase"><i></i><i></i><i></i></span><em>Falle: Extreme Ereignisse sind analytisch stark, aber nicht automatisch typisch.</em></span></div>
     <div class="method-dot method-dot--diary metric-chip" style="left:41%; top:28%;" data-explain="diaryStudy" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Tagebuchstudie</b><span>über Zeit erfassen</span><small>Moment → Muster</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Tagebuchstudie</strong><span class="metric-explain">Teilnehmende dokumentieren Erlebnisse nah am Moment. Dadurch werden Routinen, Auslöser und Veränderungen über Zeit sichtbar.</span><span class="metric-pop-position"><b>Warum hier?</b><span>oben links-mittig, weil Erleben aktiv erhoben wird, aber stärker über Zeit als in einem Einzelinterview.</span></span><span class="metric-mini metric-mini--audit"><i></i><i></i><i></i></span><em>Falle: Tagebücher brauchen klare Prompts; sonst entstehen sehr ungleich tiefe Einträge.</em></span></div>
@@ -7551,7 +7596,7 @@
     <div class="head">Prinzip</div><div class="head">Bedeutung</div><div class="head">Gute Praxis</div><div class="head">Typische Falle</div>
     <div><b class="metric-chip" data-explain="theoretical" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Theoretical Sampling<span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Theoretical Sampling</strong><span class="metric-explain">Fälle werden nach Erkenntniswert, Kontrast und theoretischer Schärfung ausgewählt.</span><span class="metric-mini metric-mini--theoretical"><i></i><i></i><i></i></span><em>Falle: Convenience Sampling nicht nachträglich theoretisch adeln.</em></span></b></div><div>Fälle werden nach Erkenntniswert ausgewählt.</div><div>Kontrastfälle: Pendler, Gelegenheitsreisende, Anschlusskritische.</div><div>So tun, als sei n=12 repräsentativ.</div>
     <div><b class="metric-chip" data-explain="saturation" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Sättigung<span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Sättigung</strong><span class="metric-explain">Sättigung liegt vor, wenn zusätzliche Fälle kaum neue Kategorien oder Mechanismen liefern.</span><span class="metric-mini metric-mini--saturation"><i></i><i></i><i></i></span><em>Falle: Sättigung ist zu begründen, nicht als fixe Zahl zu behaupten.</em></span></b></div><div>Neue Fälle bringen kaum neue Kategorien.</div><div>Sättigung pro zentraler Kategorie prüfen.</div><div>Sättigung als reine Zahl behaupten.</div>
-    <div><b class="metric-chip" data-explain="negativeCases" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Fallkontrast<span class="metric-popover"><span class="metric-pop-kicker">Qualitative Validität</span><strong>Negative Fälle</strong><span class="metric-explain">Abweichende Fälle prüfen, ob eine Deutung zu glatt, zu breit oder falsch ist.</span><span class="metric-mini metric-mini--countercase"><i></i><i></i><i></i></span><em>Falle: Nur passende Belege zu zeigen schwächt die Aussage.</em></span></b></div><div>Unterschiede schärfen den Mechanismus.</div><div>Positive und negative Service Incidents vergleichen.</div><div>Nur bequeme oder besonders laute Fälle hören.</div>
+    <div><b class="metric-chip" data-explain="fallkontrast" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Fallkontrast<span class="metric-popover"><span class="metric-pop-kicker">Fallauswahl</span><strong>Fallkontrast</strong><span class="metric-explain">Bewusste Auswahl maximal verschiedener Fälle entlang einer relevanten Dimension, damit Variation und Mechanismus sichtbar werden.</span><span class="metric-mini metric-mini--countercase"><i></i><i></i><i></i></span><em>Falle: Convenience-Sampling nicht nachträglich als Fallkontrast deklarieren.</em></span></b></div><div>Variation theoretisch begründet vorbereiten.</div><div>Junge vs. alte Pendler, kurze vs. lange Strecken.</div><div>Nur bequeme oder besonders laute Fälle hören.</div>
   </div>
   <div class="method-answer"><strong>Antwortsatz:</strong> Für qualitative Forschung begründe ich Fälle über theoretische Relevanz und Kontrast, nicht über statistische Repräsentativität.</div>
   <div class="m-footer"><div>Backup answer: qualitative sampling seeks mechanism variation, not population estimates</div><div>B5</div></div>
@@ -7659,7 +7704,7 @@
   <p class="m-subtitle">Diese Werte beantworten nicht dieselbe Frage. Prozentuale Übereinstimmung und Kappa betreffen Codierende; Cronbach’s Alpha betrifft Items einer Skala.</p>
   <div class="method-table">
     <div class="head">Wert</div><div class="head">Wofür?</div><div class="head">Berechnung</div><div class="head">Bedeutung und Falle</div>
-    <div><b class="metric-chip" data-explain="kappa" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Prozentuale Übereinstimmung<span class="metric-popover"><span class="metric-pop-kicker">Codierung</span><strong>Cohen’s κ</strong><span class="metric-explain">Kappa misst Übereinstimmung zweier Codierender über Zufall hinaus.</span><span class="metric-mini metric-mini--kappa"><i></i><i></i><i></i></span><em>Falle: Kappa prüft Anwendung des Codebuchs, nicht die inhaltliche Wahrheit.</em></span></b></div><div>Einfacher Codiervergleich.</div><div>Gleiche Codierungen / alle Codierungen.</div><div>Intuitiv, aber Zufallstreffer werden nicht herausgerechnet.</div>
+    <div><b class="metric-chip" data-explain="percentAgreement" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Prozentuale Übereinstimmung<span class="metric-popover"><span class="metric-pop-kicker">Codierung</span><strong>Prozentuale Übereinstimmung</strong><span class="metric-explain">Anteil der Fälle, in denen zwei Codierende denselben Code vergeben. Intuitiv, aber zufallsblind.</span><span class="metric-mini metric-mini--kappa"><i></i><i></i><i></i></span><em>Falle: Hohe Prozent-Übereinstimmung ignoriert Zufallstreffer und Kategorien-Balance.</em></span></b></div><div>Einfacher Codiervergleich.</div><div>Gleiche Codierungen / alle Codierungen.</div><div>Intuitiv, aber Zufallstreffer werden nicht herausgerechnet.</div>
     <div><b class="metric-chip" data-explain="kappa" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Cohen’s κ<span class="metric-popover"><span class="metric-pop-kicker">Codierung</span><strong>Cohen’s κ</strong><span class="metric-explain">Kappa misst Übereinstimmung zweier Codierender über Zufall hinaus.</span><span class="metric-mini metric-mini--kappa"><i></i><i></i><i></i></span><em>Falle: Kappa prüft Anwendung des Codebuchs, nicht die inhaltliche Wahrheit.</em></span></b></div><div>Zwei Codierende, nominale Kategorien.</div><div>κ = (P<sub>o</sub> - P<sub>e</sub>) / (1 - P<sub>e</sub>).</div><div>Übereinstimmung über Zufall hinaus. Keine Validitätsgarantie.</div>
     <div><b class="metric-chip" data-explain="krippendorff" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Krippendorff’s α<span class="metric-popover"><span class="metric-pop-kicker">Codierung</span><strong>Krippendorff’s α</strong><span class="metric-explain">Alpha ist ein flexibles Reliabilitätsmaß für mehrere Codierende, fehlende Werte und verschiedene Skalenniveaus.</span><span class="metric-mini metric-mini--krippendorff"><i></i><i></i><i></i></span><em>Falle: Auch Alpha ist Reliabilität, keine Validität.</em></span></b></div><div>Mehrere Codierende, fehlende Werte, verschiedene Skalenniveaus.</div><div>α = 1 - beobachtete Uneinigkeit / erwartete Uneinigkeit.</div><div>Flexibler als Kappa, besonders in Inhaltsanalysen.</div>
     <div><b class="metric-chip" data-explain="cronbach" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Cronbach’s α<span class="metric-popover"><span class="metric-pop-kicker">Skalen</span><strong>Cronbach’s α</strong><span class="metric-explain">Alpha prüft, ob mehrere Items intern konsistent auf ein Konstrukt reagieren.</span><span class="metric-mini metric-mini--alpha"><i></i><i></i><i></i></span><em>Falle: Sehr hohes Alpha kann Redundanz anzeigen und beweist keine Validität.</em></span></b></div><div>Interne Konsistenz einer Skala.</div><div>α = k/(k-1) × (1 - Summe Itemvarianzen / Gesamtvarianz).</div><div>Ab .70 oft akzeptabel; sehr hohe Werte können redundante Items anzeigen.</div>
@@ -7680,11 +7725,12 @@
     <div><b class="metric-chip" data-explain="correlation" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Korrelation r<span class="metric-popover"><span class="metric-pop-kicker">Zusammenhang</span><strong>Korrelation r</strong><span class="metric-explain">r beschreibt Richtung und Stärke eines linearen Zusammenhangs.</span><span class="metric-mini metric-mini--scatter"><i></i><i></i><i></i></span><em>Falle: Korrelation beweist ohne Design keine Kausalität.</em></span></b></div><div>Linearer Zusammenhang.</div><div>r = Kovarianz(X,Y) / (SD<sub>X</sub> × SD<sub>Y</sub>).</div><div>r zeigt Zusammenhang, nicht Ursache.</div>
     <div><b class="metric-chip" data-explain="rSquared" tabindex="0" aria-haspopup="dialog" aria-expanded="false">R²<span class="metric-popover"><span class="metric-pop-kicker">Modell</span><strong>R²</strong><span class="metric-explain">R² zeigt, welcher Varianzanteil im Modell erklärt wird.</span><span class="metric-mini metric-mini--scatter"><i></i><i></i><i></i></span><em>Falle: Hoher Fit macht ein Modell nicht automatisch kausal richtig.</em></span></b></div><div>Erklärte Varianz im Modell.</div><div>R² = 1 - SSE/SST.</div><div>Hoher Fit heißt nicht kausal richtiges Modell.</div>
     <div><b class="metric-chip" data-explain="oddsRatio" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Odds Ratio<span class="metric-popover"><span class="metric-pop-kicker">Logistische Regression</span><strong>Odds Ratio</strong><span class="metric-explain">Das Odds Ratio vergleicht Chancen zweier Gruppen bei binären Outcomes.</span><span class="metric-mini metric-mini--odds"><i></i><i></i><i></i></span><em>Falle: Odds sind nicht dasselbe wie Wahrscheinlichkeiten oder Prozentpunkte.</em></span></b></div><div>Logistische Regression, binäre Outcomes.</div><div>OR = Odds Gruppe A / Odds Gruppe B.</div><div>Odds sind nicht Prozentpunkte; OR muss übersetzt werden.</div>
+    <div><b class="metric-chip" data-explain="modelFit" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Modellfit<span class="metric-popover"><span class="metric-pop-kicker">Modell · Oberbegriff</span><strong>Modellfit</strong><span class="metric-explain">Sammelbegriff für mehrere Gütemaße eines Modells: R², RMSE, AIC, Residuendiagnostik. R² ist ein Bestandteil, kein paralleles Maß.</span><span class="metric-mini metric-mini--fit"><i></i><i></i><i></i></span><em>Falle: Hoher Fit ersetzt keine saubere Theorie und keine Kausalidentifikation.</em></span></b></div><div>Passt das Modell zu Daten und Zweck.</div><div>R², RMSE, AIC/BIC, Residuendiagnostik.</div><div>Hoher Fit ist nicht Kausalität, Confounder können fehlen.</div>
   </div>
   <div class="method-answer"><strong>Antwortsatz:</strong> Ich würde immer trennen: Ist der Befund präzise, signifikant, praktisch groß, erklärend oder kausal belastbar?</div>
   <div class="m-footer"><div>Backup answer: inference and effect values must be interpreted against the claim being made</div><div>B14</div></div>
 </section></deck-stage>
-<script src="Probevorlesung/metric-popovers-v2.js?v=explainer-rich23"></script>
+<script src="Probevorlesung/metric-popovers-v2.js?v=explainer-rich26-figures"></script>
 
 <script>
 /* ============================================================

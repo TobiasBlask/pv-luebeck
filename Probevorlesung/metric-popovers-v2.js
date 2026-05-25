@@ -403,6 +403,15 @@
       formal: "κ = (p_o − p_e) / (1 − p_e).",
       pitfall: "Falle: Kappa prüft nur die Anwendung des Codebuchs, nicht ob das Codebuch inhaltlich richtig ist."
     },
+    percentAgreement: {
+      cat: "Codierung", name: "Prozentuale Übereinstimmung", mini: "kappa",
+      tldr: "Das einfachste Reliabilitätsmaß: Anteil der Fälle, in denen zwei Codierende denselben Code vergeben. Intuitiv, aber zufallsblind.",
+      long: "Die prozentuale Übereinstimmung (p_o) zählt schlicht: wie oft haben beide Codierende denselben Code für denselben Fall vergeben? Ergebnis ist eine Quote zwischen 0 und 1. Stärke: extrem leicht zu kommunizieren, „92 % Übereinstimmung“ klingt überzeugend. Schwäche: rechnet Zufallstreffer nicht heraus. Bei zwei nominalen Kategorien (ja/nein) erreichen zufällige Codierende schon ~50 % Übereinstimmung; bei stark unbalancierten Verteilungen (z.B. 90 % Klasse A) liegt die zufällig erwartete Übereinstimmung sogar bei ~82 %. Genau hier setzt Cohen's κ an: es korrigiert die Beobachtung um diesen Zufallsanteil. p_o ist deshalb selten allein berichtbar, sondern immer Zwischenschritt auf dem Weg zu κ oder α.",
+      example: "200 Beschwerde-Tickets, 2 Codierende, gleicher Code in 184 Fällen → p_o = .92. Aussage: nice to know, aber ohne Zufallsbereinigung nicht publikationsreif.",
+      formal: "p_o = #{gleiche Codes} / #{alle Codierungen}.",
+      figure: "<svg width='408' height='88' viewBox='0 0 408 88' xmlns='http://www.w3.org/2000/svg'><text x='75' y='14' font-family='DM Mono, monospace' font-size='10' fill='#0f172a' text-anchor='middle'>Coder A</text><text x='195' y='14' font-family='DM Mono, monospace' font-size='10' fill='#0f172a' text-anchor='middle'>Coder B</text><rect x='45' y='22' width='60' height='12' fill='#0f172a'/><rect x='165' y='22' width='60' height='12' fill='#0f172a'/><text x='240' y='32' font-family='DM Mono, monospace' font-size='10' fill='#0f172a'>match</text><rect x='45' y='38' width='60' height='12' fill='#cbd5e1'/><rect x='165' y='38' width='60' height='12' fill='#cbd5e1'/><text x='240' y='48' font-family='DM Mono, monospace' font-size='10' fill='#0f172a'>match</text><rect x='45' y='54' width='60' height='12' fill='#0f172a'/><rect x='165' y='54' width='60' height='12' fill='#D9272E'/><text x='240' y='64' font-family='DM Mono, monospace' font-size='10' font-weight='700' fill='#D9272E'>mismatch</text><rect x='45' y='70' width='60' height='12' fill='#0f172a'/><rect x='165' y='70' width='60' height='12' fill='#0f172a'/><text x='240' y='80' font-family='DM Mono, monospace' font-size='10' fill='#0f172a'>match</text><text x='370' y='48' font-family='DM Mono, monospace' font-size='12' font-weight='700' fill='#0f172a' text-anchor='middle'>p_o = 3/4</text></svg>",
+      pitfall: "Falle: Hohe Prozent-Übereinstimmung wirkt überzeugend, ignoriert aber Zufallstreffer und die Balance der Kategorien."
+    },
     krippendorff: {
       cat: "Codierung", name: "Krippendorff's α", mini: "krippendorff",
       tldr: "Wenn man mehr als zwei Codierende, mehrere Skalenniveaus oder Lücken im Material hat, scheitert κ, α ist die robuste Alternative.",
@@ -441,6 +450,7 @@
       long: "Eine Mittelwertdifferenz allein („+1,2 Punkte“) ist ohne Kontext bedeutungslos. d standardisiert den Abstand in SD-Einheiten, damit kann man Effekte aus einer 7er-Skala mit Effekten aus einer 11er-Skala oder aus ganz anderen Studien direkt vergleichen. Daumenregel Cohen: 0,2 klein · 0,5 mittel · 0,8 groß. Die Regel ist nur Orientierung, in Bildungsforschung sind 0,2 schon groß, in der UX-Forschung erwartet man oft > 0,5.",
       example: "Wartezeit-Wahrnehmung Treatment vs. Kontrolle: M_T = 4,1; M_K = 5,3; SD_pooled = 1,4 → d = −0,86 → großer Effekt.",
       formal: "d = (M_1 − M_2) / SD_pooled.",
+      figure: "<svg width='408' height='88' viewBox='0 0 408 88' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='72' x2='388' y2='72' stroke='#cbd5e1' stroke-width='1'/><path d='M 50 72 Q 135 12 220 72' stroke='#0f172a' stroke-width='1.5' fill='rgba(15,23,42,0.06)'/><line x1='135' y1='22' x2='135' y2='72' stroke='#0f172a' stroke-width='1' stroke-dasharray='2 2'/><text x='135' y='84' font-family='DM Mono, monospace' font-size='10' fill='#0f172a' text-anchor='middle'>M₁</text><path d='M 180 72 Q 265 12 350 72' stroke='#D9272E' stroke-width='1.5' fill='rgba(217,39,46,0.08)'/><line x1='265' y1='22' x2='265' y2='72' stroke='#D9272E' stroke-width='1' stroke-dasharray='2 2'/><text x='265' y='84' font-family='DM Mono, monospace' font-size='10' fill='#D9272E' text-anchor='middle'>M₂</text><line x1='140' y1='30' x2='258' y2='30' stroke='#0f172a' stroke-width='1.5'/><polygon points='258,26 268,30 258,34' fill='#0f172a'/><text x='200' y='24' font-family='DM Mono, monospace' font-size='11' font-weight='700' fill='#0f172a' text-anchor='middle'>d · in SD-Einheiten</text></svg>",
       pitfall: "Falle: Daumenregeln nicht über Domänen blind anwenden. Kontext bestimmt, was „groß“ ist."
     },
     riskDifference: {
@@ -457,6 +467,7 @@
       long: "Pearsons r liegt in [−1; +1]: +1 = perfekt positiv, 0 = kein linearer Zusammenhang, −1 = perfekt negativ. r macht aus einer Punktewolke eine Zahl, Grundlage für Hypothesen über Wirkung („wenn Wartezeit länger, ist Zufriedenheit niedriger“). Wichtig: r erfasst nur LINEAR und ist anfällig für Ausreißer und U-förmige Zusammenhänge.",
       example: "Wartezeit (min) vs. Zufriedenheit (1–7): r = −0,81, p < .001, n = 240 → starker negativer Zusammenhang, jeder zusätzliche Min Wartezeit drückt die Zufriedenheit.",
       formal: "r = Σ(x_i−x̄)(y_i−ȳ) / √(Σ(x_i−x̄)² · Σ(y_i−ȳ)²).",
+      figure: "<svg width='408' height='88' viewBox='0 0 408 88' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='72' x2='388' y2='72' stroke='#cbd5e1' stroke-width='1'/><line x1='30' y1='10' x2='30' y2='72' stroke='#cbd5e1' stroke-width='1'/><circle cx='55' cy='20' r='3' fill='#0f172a'/><circle cx='80' cy='26' r='3' fill='#0f172a'/><circle cx='105' cy='22' r='3' fill='#0f172a'/><circle cx='130' cy='32' r='3' fill='#0f172a'/><circle cx='155' cy='28' r='3' fill='#0f172a'/><circle cx='180' cy='38' r='3' fill='#0f172a'/><circle cx='205' cy='42' r='3' fill='#0f172a'/><circle cx='230' cy='38' r='3' fill='#0f172a'/><circle cx='255' cy='50' r='3' fill='#0f172a'/><circle cx='280' cy='54' r='3' fill='#0f172a'/><circle cx='305' cy='52' r='3' fill='#0f172a'/><circle cx='330' cy='62' r='3' fill='#0f172a'/><line x1='50' y1='20' x2='340' y2='66' stroke='#D9272E' stroke-width='1.5' stroke-dasharray='4 3'/><text x='378' y='84' font-family='DM Mono, monospace' font-size='10' font-weight='700' fill='#D9272E' text-anchor='end'>r ≈ −0,81 · linear</text></svg>",
       pitfall: "Falle: Korrelation ist kein Kausalitätsbeweis. Drittvariablen, Selbstselektion und Umkehrung der Wirkrichtung erklären viele Korrelationen."
     },
     rSquared: {
@@ -465,6 +476,7 @@
       long: "R² (Determinationskoeffizient) sagt: wenn ich die Streuung der Zielgröße in „durch Modell erklärt“ und „Residuum/Rest“ zerlege, welcher Anteil ist erklärt? R² = .68 heißt: 68 % der Varianz von Zufriedenheit lässt sich aus Wartezeit + Tageszeit vorhersagen, 32 % bleiben unerklärt. Achtung: Mehr Prädiktoren ins Modell pumpen erhöht R² automatisch, deshalb adj. R² berichten, das Komplexität bestraft.",
       example: "Lineare Regression Zufriedenheit ~ Wartezeit + Tageszeit, n = 240: R² = .68, adj. R² = .66, F(2, 237) = 252, p < .001 → 2/3 der Varianz mit zwei Prädiktoren erklärt.",
       formal: "R² = 1 − SS_res / SS_tot.",
+      figure: "<svg width='408' height='88' viewBox='0 0 408 88' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='72' x2='388' y2='72' stroke='#cbd5e1' stroke-width='1'/><line x1='30' y1='10' x2='30' y2='72' stroke='#cbd5e1' stroke-width='1'/><line x1='40' y1='62' x2='340' y2='18' stroke='#D9272E' stroke-width='1.5'/><line x1='60' y1='56' x2='60' y2='66' stroke='#cbd5e1' stroke-width='1'/><circle cx='60' cy='56' r='3' fill='#0f172a'/><line x1='120' y1='50' x2='120' y2='42' stroke='#cbd5e1' stroke-width='1'/><circle cx='120' cy='42' r='3' fill='#0f172a'/><line x1='180' y1='44' x2='180' y2='48' stroke='#cbd5e1' stroke-width='1'/><circle cx='180' cy='48' r='3' fill='#0f172a'/><line x1='240' y1='38' x2='240' y2='30' stroke='#cbd5e1' stroke-width='1'/><circle cx='240' cy='30' r='3' fill='#0f172a'/><line x1='300' y1='32' x2='300' y2='36' stroke='#cbd5e1' stroke-width='1'/><circle cx='300' cy='36' r='3' fill='#0f172a'/><text x='378' y='84' font-family='DM Mono, monospace' font-size='10' font-weight='700' fill='#D9272E' text-anchor='end'>R² ≈ 0,68 · Anteil erklärt</text></svg>",
       pitfall: "Falle: Hohes R² heißt nicht „kausal richtig“, nur „passt zu den vorliegenden Daten“. Overfitting ist möglich."
     },
     oddsRatio: {
@@ -473,6 +485,7 @@
       long: "Bei binären Outcomes nutzt logistische Regression Odds = p/(1−p) als Effekt-Skala (nicht direkt Wahrscheinlichkeit). OR ist das Verhältnis der Odds in zwei Gruppen. OR = 1 → identisch; OR = 2 → doppelt so hohe Chance; OR < 1 → verringerte Chance. Bei seltenen Outcomes liegt OR nahe am relativen Risiko, bei häufigen Outcomes übertreibt OR den relativen Unterschied.",
       example: "Buchungs-OR für Treatment vs. Kontrolle = 1,47 (95%-KI [1,31; 1,65]) → 47 % höhere Buchungs-Odds, KI schließt 1 deutlich aus.",
       formal: "OR = (p_T/(1−p_T)) / (p_K/(1−p_K)).",
+      figure: "<svg width='408' height='88' viewBox='0 0 408 88' xmlns='http://www.w3.org/2000/svg'><text x='90' y='12' font-family='DM Mono, monospace' font-size='10' fill='#0f172a' text-anchor='middle'>Kontrolle</text><rect x='30' y='20' width='120' height='16' fill='#e2e8f0'/><rect x='30' y='20' width='48' height='16' fill='#0f172a'/><text x='90' y='52' font-family='DM Mono, monospace' font-size='9' fill='#0f172a' text-anchor='middle'>40 / 60 → Odds 0,67</text><text x='318' y='12' font-family='DM Mono, monospace' font-size='10' font-weight='700' fill='#D9272E' text-anchor='middle'>Treatment</text><rect x='258' y='20' width='120' height='16' fill='#f5d8d9'/><rect x='258' y='20' width='84' height='16' fill='#D9272E'/><text x='318' y='52' font-family='DM Mono, monospace' font-size='9' fill='#D9272E' text-anchor='middle'>70 / 30 → Odds 2,33</text><text x='204' y='80' font-family='DM Mono, monospace' font-size='12' font-weight='700' fill='#0f172a' text-anchor='middle'>OR = 2,33 / 0,67 ≈ 3,5</text></svg>",
       pitfall: "Falle: Im Lehrbuchsprech wird OR oft als „47 % mehr Käufer“ kommuniziert, das ist falsch. Odds ≠ Wahrscheinlichkeiten ≠ Prozentpunkte."
     },
     contentValidity: {
@@ -501,7 +514,16 @@
       tldr: "Wer nur bestätigende Belege sammelt, betreibt Bestätigung, nicht Forschung. Der Test einer Deutung sind Fälle, die ihr widersprechen.",
       long: "Negative Cases sind Fälle, die der bisherigen Interpretation widersprechen, und sie werden GEZIELT gesucht, nicht passiv erhofft. Wenn die Deutung auch nach Kontakt mit dem Gegenbeispiel hält, ist sie geschärft; wenn nicht, muss sie zurückgenommen oder differenziert werden. Das ist der qualitative Gegenpart zum quantitativen Falsifikationismus und unterscheidet rigorose Qual-Forschung von Bestätigungsschreiben.",
       example: "Nach 9 Interviews zu „Anschlussangst“ als Pendler-Mechanismus gezielt 3 Reisende rekrutieren, die Umstiege als entspannt erleben → 2 bestätigen die Deutung, 1 zeigt eine neue Subkategorie „Routine-Pendler:innen ohne Angst“.",
+      figure: "<svg width='408' height='88' viewBox='0 0 408 88' xmlns='http://www.w3.org/2000/svg'><text x='204' y='14' font-family='DM Mono, monospace' font-size='10' font-weight='700' fill='#0f172a' text-anchor='middle'>Arbeitshypothese H</text><line x1='30' y1='42' x2='378' y2='42' stroke='#cbd5e1' stroke-width='1' stroke-dasharray='3 3'/><circle cx='55' cy='28' r='4' fill='#0f172a'/><circle cx='85' cy='32' r='4' fill='#0f172a'/><circle cx='115' cy='26' r='4' fill='#0f172a'/><circle cx='145' cy='30' r='4' fill='#0f172a'/><circle cx='175' cy='28' r='4' fill='#0f172a'/><circle cx='205' cy='32' r='4' fill='#0f172a'/><text x='130' y='66' font-family='DM Mono, monospace' font-size='9' fill='#0f172a' text-anchor='middle'>9 bestätigende Fälle</text><circle cx='265' cy='56' r='5' fill='#D9272E' stroke='#0f172a' stroke-width='1'/><circle cx='305' cy='60' r='5' fill='#D9272E' stroke='#0f172a' stroke-width='1'/><circle cx='345' cy='54' r='5' fill='#D9272E' stroke='#0f172a' stroke-width='1'/><text x='305' y='82' font-family='DM Mono, monospace' font-size='9' font-weight='700' fill='#D9272E' text-anchor='middle'>3 Negative Fälle → H schärfen</text></svg>",
       pitfall: "Falle: Cherry-picking nur bestätigender Zitate ist die häufigste Form qualitativer Schwäche, auch unbewusst."
+    },
+    fallkontrast: {
+      cat: "Fallauswahl", name: "Fallkontrast", mini: "countercase",
+      tldr: "Bewusste Auswahl maximal verschiedener Fälle, damit Variation und Mechanismus sichtbar werden, nicht erst Mittelwerte.",
+      long: "Fallkontrast ist eine SAMPLING-Strategie: vor der Datenerhebung werden Fälle entlang einer relevanten Dimension gezielt verschieden gewählt (z.B. junge vs. alte Pendler, tägliche vs. seltene Bahnreisende, urban vs. ländlich). Ziel: Variation in den Daten sichtbar machen, statt sie über Zufall zu hoffen. Abgrenzung zu Negativen Fällen: Fallkontrast plant Variation VOR der Studie ein, Negative Fälle prüfen eine ENTSTANDENE Hypothese durch gezielt widersprechende Fälle. Beide gehören zum qualitativen Gütekanon, aber an verschiedenen Stellen im Forschungsprozess.",
+      example: "12 Pendler-Interviews mit bewusstem Kontrast: 4 Hamburg-Berlin (1 h Fernverkehr), 4 Lübeck-Hamburg (45 min Regional), 4 Lübeck-Travemünde (15 min S-Bahn) → Anschlusslogik unterscheidet sich systematisch.",
+      figure: "<svg width='408' height='88' viewBox='0 0 408 88' xmlns='http://www.w3.org/2000/svg'><text x='204' y='14' font-family='DM Mono, monospace' font-size='10' font-weight='700' fill='#0f172a' text-anchor='middle'>Sampling entlang einer Kontrast-Dimension</text><line x1='30' y1='50' x2='378' y2='50' stroke='#cbd5e1' stroke-width='1'/><text x='30' y='66' font-family='DM Mono, monospace' font-size='9' fill='#0f172a' text-anchor='start'>kurz</text><text x='378' y='66' font-family='DM Mono, monospace' font-size='9' fill='#0f172a' text-anchor='end'>lang</text><circle cx='70' cy='50' r='6' fill='#0f172a'/><circle cx='82' cy='50' r='6' fill='#0f172a'/><circle cx='94' cy='50' r='6' fill='#0f172a'/><circle cx='106' cy='50' r='6' fill='#0f172a'/><circle cx='198' cy='50' r='6' fill='#D9272E'/><circle cx='210' cy='50' r='6' fill='#D9272E'/><circle cx='222' cy='50' r='6' fill='#D9272E'/><circle cx='234' cy='50' r='6' fill='#D9272E'/><circle cx='326' cy='50' r='6' fill='#0f172a'/><circle cx='338' cy='50' r='6' fill='#0f172a'/><circle cx='350' cy='50' r='6' fill='#0f172a'/><circle cx='362' cy='50' r='6' fill='#0f172a'/><text x='88' y='82' font-family='DM Mono, monospace' font-size='9' fill='#0f172a' text-anchor='middle'>S-Bahn · 15 min</text><text x='216' y='82' font-family='DM Mono, monospace' font-size='9' fill='#D9272E' text-anchor='middle'>Regional · 45 min</text><text x='344' y='82' font-family='DM Mono, monospace' font-size='9' fill='#0f172a' text-anchor='middle'>Fernverkehr · 1 h+</text></svg>",
+      pitfall: "Falle: Fallkontrast ist nicht Convenience-Sampling mit nachträglicher Begründung. Die Kontrast-Dimension muss VORHER theoretisch begründet sein."
     },
     memberCheck: {
       cat: "Qualitative Validität", name: "Member Check", mini: "reflexivity",
@@ -781,11 +803,12 @@
       pitfall: "Falle: Hohe Power bei unsauberer Messung garantiert nur, dass man ein verzerrtes Ergebnis sicher findet."
     },
     modelFit: {
-      cat: "Modell", name: "Modellfit", mini: "scatter",
-      tldr: "Beschreibt mein Modell die Daten gut genug, um damit Aussagen zu treffen? Wenn nein, hilft auch das schönste Konstrukt nichts.",
-      long: "Modellfit-Maße bewerten, wie nah die Vorhersagen des Modells an den beobachteten Daten liegen. R² als Anteil erklärter Varianz, F-Test als Gesamttest, AIC/BIC als Modellvergleich (kleinere Werte = besser). Adjustierte Maße bestrafen unnötige Komplexität, wer 30 Prädiktoren ins Modell kippt, treibt R² hoch, ohne wirklich mehr zu erklären. Modellfit beantwortet die Frage „passt das Modell zu meinen Daten?“, nicht „ist das Modell kausal korrekt?“.",
-      example: "Lineare Regression Zufriedenheit ~ Wartezeit + Tageszeit, n = 240: R² = .68, R²_adj = .66, F(2, 237) = 252, p < .001 → solider Fit mit zwei Prädiktoren.",
-      formal: "AIC = 2k − 2 · ln(L); BIC = k · ln(n) − 2 · ln(L).",
+      cat: "Modell · Oberbegriff", name: "Modellfit", mini: "fit",
+      tldr: "Sammelbegriff für mehrere Gütemaße eines Modells: R², RMSE, AIC, Residuen. Frage: passt das Modell zu Daten und Zweck?",
+      long: "Modellfit-Maße bewerten, wie nah die Vorhersagen des Modells an den beobachteten Daten liegen. R² als Anteil erklärter Varianz, F-Test als Gesamttest, RMSE/MAE als Vorhersagefehler, AIC/BIC als Modellvergleich (kleinere Werte = besser), Residuendiagnostik als visuelle Prüfung, Cross-Validation für Generalisierbarkeit. Adjustierte Maße bestrafen unnötige Komplexität, wer 30 Prädiktoren ins Modell kippt, treibt R² hoch, ohne wirklich mehr zu erklären. R² ist also EIN Modellfit-Maß, nicht ein paralleles Konzept. Modellfit beantwortet die Frage „passt das Modell zu meinen Daten?“, nicht „ist das Modell kausal korrekt?“.",
+      example: "Lineare Regression Zufriedenheit ~ Wartezeit + Tageszeit, n = 240: R² = .68, R²_adj = .66, RMSE = 0,82, F(2, 237) = 252, p < .001 → solider Fit mit zwei Prädiktoren, RMSE in Skalenpunkten interpretierbar.",
+      formal: "AIC = 2k − 2 · ln(L); BIC = k · ln(n) − 2 · ln(L); RMSE = √(Σ(y_i − ŷ_i)²/n).",
+      figure: "<svg width='408' height='88' viewBox='0 0 408 88' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='72' x2='388' y2='72' stroke='#cbd5e1' stroke-width='1'/><line x1='30' y1='10' x2='30' y2='72' stroke='#cbd5e1' stroke-width='1'/><line x1='40' y1='62' x2='320' y2='22' stroke='#D9272E' stroke-width='1.5'/><circle cx='55' cy='60' r='3' fill='#0f172a'/><circle cx='90' cy='52' r='3' fill='#0f172a'/><circle cx='130' cy='48' r='3' fill='#0f172a'/><circle cx='170' cy='42' r='3' fill='#0f172a'/><circle cx='210' cy='36' r='3' fill='#0f172a'/><circle cx='250' cy='30' r='3' fill='#0f172a'/><circle cx='290' cy='26' r='3' fill='#0f172a'/><rect x='332' y='14' width='68' height='58' fill='#fff' stroke='#cbd5e1' stroke-width='1'/><text x='338' y='26' font-family='DM Mono, monospace' font-size='8' fill='#D9272E'>R²</text><text x='338' y='38' font-family='DM Mono, monospace' font-size='8' fill='#D9272E'>RMSE</text><text x='338' y='50' font-family='DM Mono, monospace' font-size='8' fill='#D9272E'>AIC/BIC</text><text x='338' y='62' font-family='DM Mono, monospace' font-size='8' fill='#D9272E'>Residuen</text></svg>",
       pitfall: "Falle: Hoher Fit ist nicht Kausalität. Ein Modell kann perfekt passen und trotzdem ein Confounder fehlen."
     },
 
@@ -988,6 +1011,62 @@
       example: "Treatment senkt Abbruchquote von 63 % auf 41 % → Δ = −22 pp, Cohen's d ≈ 0,46 (mittel). Beide Zahlen brauchen ein Konfidenzintervall, um belastbar zu sein.",
       formal: "Δ = M_T − M_K; d = Δ / SD_pooled.",
       pitfall: "Falle: „Statistisch signifikant“ ohne Effektgröße ist keine Entscheidung wert."
+    },
+    quadrantTL: {
+      cat: "Quadrant", name: "Erzählen lassen", mini: "quote",
+      tldr: "Methoden, in denen Reisende selbst zu Wort kommen und ihr Erleben in eigenen Worten formen.",
+      long: "Der obere-linke Quadrant kombiniert aktiv erhobene Sprache mit hoher Falltiefe. Hier interessiert weniger, wie oft etwas passiert, sondern wie Reisende es deuten, in welche Worte sie es kleiden, welche Vorgeschichte sie erzählen. Typisch sind leitfadengestützte Interviews, Critical-Incident-Erzählungen oder Tagebucheinträge. Output sind Mechanismen, Begründungen und Konstrukte, die später in Items übersetzt werden können.",
+      example: "Frage: Was bedeutet ein verpasster Anschluss für Reisende? Zwölf leitfadengestützte Interviews, Mayring-Codierung, vier Bedeutungsmuster als Codebuch.",
+      pitfall: "Falle: Was Reisende erzählen, ist nicht zwingend identisch mit dem, was sie tun."
+    },
+    quadrantTR: {
+      cat: "Quadrant", name: "Feldnah beobachten", mini: "field",
+      tldr: "Methoden, die Verhalten im echten Servicekontext aufnehmen, statt es zu erfragen.",
+      long: "Der obere-rechte Quadrant kombiniert vorliegende oder beobachtbare Daten mit hoher Falltiefe. Forschende gehen ins Feld (Bahnhof, App, Lounge) und dokumentieren, was tatsächlich passiert, im Detail und in Reihenfolge. Typisch sind Ethnographie, Go-along, Think-aloud. Output sind Routinen, Improvisationen und Touchpoint-Beschreibungen, die im Interview niemand benannt hätte.",
+      example: "Sechs Wochen teilnehmende Beobachtung am Hauptbahnhof, 18 Sessions, Feldnotizen getrennt nach Beobachtung, Kontext und Interpretation.",
+      pitfall: "Falle: Anwesenheit der Forschenden verändert manchmal die Situation, Feldnotiz braucht reflexive Distanz."
+    },
+    quadrantBL: {
+      cat: "Quadrant", name: "Interaktion vergleichen", mini: "consensus",
+      tldr: "Methoden, die Aussprache und Aushandlung über mehrere Fälle hinweg vergleichbar machen.",
+      long: "Der untere-linke Quadrant kombiniert aktiv erhobene Interaktion mit höherer Vergleichbarkeit. Es geht weniger um Einzelfall-Tiefe als um Sprachmuster, Konfliktlinien oder Aufgabenbarrieren, die sich über mehrere Gespräche oder Sessions wiederholen. Typisch sind Fokusgruppen, Think-aloud-Tests an Standardaufgaben oder halbstandardisierte Gruppendiskussionen mit fixem Themenraster.",
+      example: "Drei Fokusgruppen à sechs Pendlerinnen zu drei Wording-Varianten der App-Anschlussanzeige, Konvergenz auf eine Sprache, Streit über die anderen zwei.",
+      pitfall: "Falle: Dominante Stimmen können einen Konsens vortäuschen, den es so nicht gibt."
+    },
+    quadrantBR: {
+      cat: "Quadrant", name: "Material codieren", mini: "deductive-inductive",
+      tldr: "Methoden, die existierende Texte, Dokumente oder Online-Spuren systematisch in Kategorien überführen.",
+      long: "Der untere-rechte Quadrant kombiniert vorliegendes Material mit hoher Vergleichbarkeit. Forschende erheben hier nichts Neues, sondern strukturieren existierende Inhalte regelgeleitet: Beschwerden, Forenposts, Servicedokumente, Open-Ends. Typisch sind qualitative Inhaltsanalyse, Netnographie und Dokumentenanalyse. Output sind Kategorien, Frames und Häufigkeiten mit Anker-Zitaten.",
+      example: "1.200 Beschwerde-Tickets der DB, induktiv codiert mit zwei Codierenden, Cohen's κ = .78, fünf Hauptkategorien.",
+      pitfall: "Falle: Kategorien sind eine Lese-Entscheidung der Forschenden, keine Wahrheit aus dem Material."
+    },
+    axisActive: {
+      cat: "Datenzugang", name: "Aktiv erhoben", mini: "sample",
+      tldr: "Die Daten entstehen erst durch die Forschungssituation: jemand fragt, stellt eine Aufgabe, moderiert eine Gruppe.",
+      long: "Aktiv erhobene Daten setzen voraus, dass eine Forschungssituation geschaffen wird, sei es ein Interview, eine Fokusgruppe oder eine Usability-Aufgabe. Vorteil: man kommt an Sprache, Deutung und Begründung, also an Inhalte, die nicht von allein sichtbar werden. Preis: jede Forschungssituation ist eine konstruierte Situation, die Antworten formt, soziale Erwünschtheit, Aufgabenframing, Moderationseffekte sind unvermeidbar und müssen reflektiert werden.",
+      example: "Leitfadeninterview mit Pendlerinnen, Fokusgruppen-Moderation zu Anschluss-Wording, Think-aloud-Test am Self-Service-Kiosk.",
+      pitfall: "Falle: Die Forschungssituation beeinflusst, was Reisende sagen oder tun (Reaktivität)."
+    },
+    axisObserved: {
+      cat: "Datenzugang", name: "Vorliegend oder beobachtet", mini: "text-corpus",
+      tldr: "Die Daten sind bereits vorhanden oder entstehen ohne Befragungseingriff: Forschende lesen, beobachten, sammeln.",
+      long: "Vorliegende oder beobachtete Daten sind Material, das nicht für die Forschungsfrage erzeugt wurde: Feldhandlungen, Logfiles, Beschwerden, Forenposts, Dokumente. Vorteil: keine Reaktivität, oft große Fallzahl, Verhalten statt Selbstauskunft. Preis: das Material muss inhaltlich passen, und der Kontext seiner Entstehung muss mitgelesen werden, sonst beantwortet man die Frage des Datenproduzenten, nicht die eigene.",
+      example: "Ethnographische Feldnotizen am Bahnsteig, Forendiskussionen in einem Pendlerforum, Beschwerdeprotokolle der DB-Kundenbetreuung.",
+      pitfall: "Falle: Was vorhanden ist, antwortet nicht automatisch auf die eigene Forschungsfrage."
+    },
+    axisDepth: {
+      cat: "Erkenntnisziel", name: "Hohe Falltiefe", mini: "quote",
+      tldr: "Wenige Fälle werden so detailreich erhoben, dass Kontext, Reihenfolge und Bedeutung verstanden werden.",
+      long: "Falltiefe heißt: lieber sechs Fälle in je 90 Minuten als hundert Fälle in je zehn Minuten. Forschende rekonstruieren die Geschichte hinter dem Phänomen, hören Vorgeschichte und Wendepunkt, kommen an Mechanismen und Begründungen. Typisch für Phasen, in denen das Phänomen noch nicht gut verstanden ist und es zunächst Hypothesen, Begriffe und Konstrukte zu finden gilt.",
+      example: "Zwölf Critical-Incident-Interviews zu verpassten Anschlüssen liefern vier typische Eskalationspfade.",
+      pitfall: "Falle: Ein tiefer Fall ist analytisch reich, aber nicht automatisch typisch für die Grundgesamtheit."
+    },
+    axisBreadth: {
+      cat: "Erkenntnisziel", name: "Hohe Vergleichbarkeit", mini: "pattern-mechanism",
+      tldr: "Viele Fälle werden so ähnlich behandelt, dass sich Muster über die Fälle hinweg lesen lassen.",
+      long: "Vergleichbarkeit heißt: bewusst Kontext reduzieren, damit Fälle aufeinander beziehbar werden. Typisch für die Phase, in der man bereits eine Vorstellung vom Phänomen hat und Kategorien, Frames oder Häufigkeiten prüfen will. Die Methodenwahl steuert das Maß: Inhaltsanalyse mit festem Codebuch, Fokusgruppen mit gleichem Themenraster, Tagebuchstudien mit identischen Prompts.",
+      example: "1.200 Beschwerde-Tickets nach gleichem Codebuch codiert, fünf Hauptkategorien mit Anker-Zitaten und Häufigkeitsverteilung.",
+      pitfall: "Falle: Mehr Vergleichbarkeit kostet immer Bedeutung; was nicht ins Codebuch passt, wird unsichtbar."
     }
   };
 
