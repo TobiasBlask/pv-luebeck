@@ -36,6 +36,33 @@
       formal: "p̂ = #{x≤2} / n; SE = √(p̂(1−p̂)/n).",
       pitfall: "Falle: Der Anteil ersetzt nicht die Frage, warum Menschen so urteilen."
     },
+    bottom2Anschluss: {
+      cat: "Auswertung · Dimension Anschlussinfo", name: "Bottom-2 Anschlussinfo", mini: "pvalue",
+      tldr: "Anschlussinfo Bottom-2 = 42 %, 95%-KI [40; 44], n = 2.500 → akutes Problemsegment, höchster Handlungsdruck der drei Dimensionen.",
+      long: "Von 2.500 befragten Reisenden geben 42 % auf einer 7-stufigen Likert-Skala ein Urteil von 1 oder 2 ab, also klar unzufrieden mit der Anschlussinformation. Das Konfidenzintervall [40; 44] zeigt: über hypothetische Wiederholungen würde der wahre Anteil mit hoher Sicherheit in diesem Korridor liegen. Damit ist Anschlussinfo das dominante Problemsegment der drei erhobenen Dimensionen.",
+      example: "MW = 3,4 / 7 (Skalenmitte 4), Bottom-2 = 42 %, 95%-KI [40; 44]. Im Vergleich: Pünktlichkeit 36 %, Komfort 12 %.",
+      formal: "p̂ = 0,42; SE ≈ 0,99 pp; 95%-KI = p̂ ± 1,96·SE.",
+      figure: "<svg width='408' height='88' viewBox='0 0 408 88' xmlns='http://www.w3.org/2000/svg'><rect x='24' y='38' width='61.2' height='30' fill='#D9272E'/><rect x='85.2' y='38' width='90' height='30' fill='#D9272E' opacity='0.7'/><rect x='175.2' y='38' width='208.8' height='30' fill='#cbd5e1'/><text x='54.6' y='58' font-family='DM Mono, monospace' font-size='10' font-weight='700' fill='#fff' text-anchor='middle'>17%</text><text x='130.2' y='58' font-family='DM Mono, monospace' font-size='10' font-weight='700' fill='#fff' text-anchor='middle'>25%</text><text x='279.6' y='58' font-family='DM Mono, monospace' font-size='10' font-weight='700' fill='#0f172a' text-anchor='middle'>Stufen 3–7</text><line x1='24' y1='26' x2='175.2' y2='26' stroke='#D9272E' stroke-width='2'/><line x1='24' y1='22' x2='24' y2='30' stroke='#D9272E' stroke-width='2'/><line x1='175.2' y1='22' x2='175.2' y2='30' stroke='#D9272E' stroke-width='2'/><text x='99.6' y='18' font-family='DM Mono, monospace' font-size='11' font-weight='700' fill='#D9272E' text-anchor='middle'>Bottom-2 = 42 %</text><text x='30' y='82' font-family='DM Mono, monospace' font-size='9' fill='#64748b'>stimme gar nicht zu (1)</text><text x='378' y='82' font-family='DM Mono, monospace' font-size='9' fill='#64748b' text-anchor='end'>stimme voll zu (7)</text></svg>",
+      pitfall: "Falle: 42 % sagt nichts darüber, WARUM Reisende unzufrieden sind, dafür braucht es qualitative Vertiefung."
+    },
+    bottom2Punkt: {
+      cat: "Auswertung · Dimension Pünktlichkeit", name: "Bottom-2 Pünktlichkeit", mini: "pvalue",
+      tldr: "Pünktlichkeit Bottom-2 = 36 %, 95%-KI [34; 38], n = 2.500 → relevantes Problem, aber spürbar geringer als Anschlussinfo.",
+      long: "36 % der Reisenden geben auf der Pünktlichkeits-Skala 1 oder 2, also klar unzufrieden. Das Konfidenzintervall [34; 38] überlappt nicht mit dem Konfidenzintervall der Anschlussinfo [40; 44], die beiden Dimensionen unterscheiden sich also statistisch belastbar voneinander. Pünktlichkeit ist relevant, aber nicht der Hebel Nummer eins.",
+      example: "MW = 3,7 / 7, Bottom-2 = 36 %, 95%-KI [34; 38]. Im Vergleich: Anschlussinfo 42 %, Komfort 12 %.",
+      formal: "p̂ = 0,36; SE ≈ 0,96 pp; 95%-KI = p̂ ± 1,96·SE.",
+      figure: "<svg width='408' height='88' viewBox='0 0 408 88' xmlns='http://www.w3.org/2000/svg'><rect x='24' y='38' width='43.2' height='30' fill='#D9272E'/><rect x='67.2' y='38' width='86.4' height='30' fill='#D9272E' opacity='0.7'/><rect x='153.6' y='38' width='230.4' height='30' fill='#cbd5e1'/><text x='45.6' y='58' font-family='DM Mono, monospace' font-size='10' font-weight='700' fill='#fff' text-anchor='middle'>12%</text><text x='110.4' y='58' font-family='DM Mono, monospace' font-size='10' font-weight='700' fill='#fff' text-anchor='middle'>24%</text><text x='268.8' y='58' font-family='DM Mono, monospace' font-size='10' font-weight='700' fill='#0f172a' text-anchor='middle'>Stufen 3–7</text><line x1='24' y1='26' x2='153.6' y2='26' stroke='#D9272E' stroke-width='2'/><line x1='24' y1='22' x2='24' y2='30' stroke='#D9272E' stroke-width='2'/><line x1='153.6' y1='22' x2='153.6' y2='30' stroke='#D9272E' stroke-width='2'/><text x='88.8' y='18' font-family='DM Mono, monospace' font-size='11' font-weight='700' fill='#D9272E' text-anchor='middle'>Bottom-2 = 36 %</text><text x='30' y='82' font-family='DM Mono, monospace' font-size='9' fill='#64748b'>stimme gar nicht zu (1)</text><text x='378' y='82' font-family='DM Mono, monospace' font-size='9' fill='#64748b' text-anchor='end'>stimme voll zu (7)</text></svg>",
+      pitfall: "Falle: Pünktlichkeit korreliert stark mit Anschlussinfo, der Mechanismus muss qualitativ entwirrt werden."
+    },
+    bottom2Komfort: {
+      cat: "Auswertung · Dimension Komfort", name: "Bottom-2 Komfort", mini: "pvalue",
+      tldr: "Komfort Bottom-2 = 12 %, 95%-KI [10; 14], n = 2.500 → kleines Segment, kein akuter Hebel.",
+      long: "Nur 12 % der Reisenden urteilen Komfort mit 1 oder 2. Das Konfidenzintervall [10; 14] ist eng und liegt deutlich unter den anderen beiden Dimensionen. Komfort ist mit MW 5,1 / 7 sogar überwiegend positiv bewertet, der Fokus für Service-Design liegt klar woanders.",
+      example: "MW = 5,1 / 7, Bottom-2 = 12 %, 95%-KI [10; 14]. Im Vergleich: Anschlussinfo 42 %, Pünktlichkeit 36 %.",
+      formal: "p̂ = 0,12; SE ≈ 0,65 pp; 95%-KI = p̂ ± 1,96·SE.",
+      figure: "<svg width='408' height='88' viewBox='0 0 408 88' xmlns='http://www.w3.org/2000/svg'><rect x='24' y='38' width='18' height='30' fill='#D9272E'/><rect x='42' y='38' width='25.2' height='30' fill='#D9272E' opacity='0.7'/><rect x='67.2' y='38' width='316.8' height='30' fill='#cbd5e1'/><text x='33' y='58' font-family='DM Mono, monospace' font-size='9' font-weight='700' fill='#fff' text-anchor='middle'>5%</text><text x='54.6' y='58' font-family='DM Mono, monospace' font-size='9' font-weight='700' fill='#fff' text-anchor='middle'>7%</text><text x='225.6' y='58' font-family='DM Mono, monospace' font-size='10' font-weight='700' fill='#0f172a' text-anchor='middle'>Stufen 3–7 · 88 %</text><line x1='24' y1='26' x2='67.2' y2='26' stroke='#D9272E' stroke-width='2'/><line x1='24' y1='22' x2='24' y2='30' stroke='#D9272E' stroke-width='2'/><line x1='67.2' y1='22' x2='67.2' y2='30' stroke='#D9272E' stroke-width='2'/><text x='45.6' y='18' font-family='DM Mono, monospace' font-size='11' font-weight='700' fill='#D9272E' text-anchor='middle'>Bottom-2 = 12 %</text><text x='30' y='82' font-family='DM Mono, monospace' font-size='9' fill='#64748b'>stimme gar nicht zu (1)</text><text x='378' y='82' font-family='DM Mono, monospace' font-size='9' fill='#64748b' text-anchor='end'>stimme voll zu (7)</text></svg>",
+      pitfall: "Falle: Niedriger Bottom-2 heißt nicht, dass Komfort egal ist, sondern dass er hier nicht das akute Problem ist."
+    },
     stratified: {
       cat: "Stichprobe", name: "Geschichtete Stichprobe", mini: "selection",
       tldr: "Wichtige Gruppen werden gezielt abgedeckt, etwa Strecke, Tageszeit oder Reisezweck.",
@@ -248,7 +275,7 @@
       cat: "Mixed Methods", name: "Meta-Inferenz", mini: "meta-inference",
       tldr: "Die Aussage, die nur aus der Verbindung beider Evidenzen folgt, sonst wäre Mixed Methods reines Sammeln gewesen.",
       long: "Meta-Inferenz ist der explizite Schluss, der genau das integrierte Mixed-Methods-Design rechtfertigt. Konvergenz (beide zeigen dasselbe) stärkt Vertrauen, Divergenz (beide zeigen Verschiedenes) fordert Erklärung, ist aber oft die spannendere Information. Ohne Meta-Inferenz ist Mixed Methods nur teurere Forschung; mit Meta-Inferenz wird sie zur integrierten Aussage, die keine Einzelmethode tragen könnte.",
-      example: "QUANT: −22 pp Abbruch nach Redesign. QUAL: Reisende beschreiben „endlich sehe ich, was passiert, wenn ich nicht schaffe“. → Meta-Inferenz: der gemessene Effekt wird durch den qualitativ identifizierten Mechanismus (Kontrollverlust → Kontrollgewinn) erklärt. Konvergent + plausibel → Rollout-Entscheidung tragfähig.",
+      example: "QUANT: −18 pp Verweildauer Bahnsteig > 4 min nach Redesign. QUAL: Reisende beschreiben „endlich sehe ich, was passiert, wenn ich nicht schaffe“. → Meta-Inferenz: der gemessene Effekt wird durch den qualitativ identifizierten Mechanismus (Kontrollverlust → Kontrollgewinn) erklärt. Konvergent + plausibel → Rollout-Entscheidung tragfähig.",
       pitfall: "Falle: Widersprüche zwischen QUAL und QUANT wegmoderieren ist der häufigste Fehler. Sie sind die wertvollste Information."
     },
     decisionArtifact: {
@@ -432,7 +459,7 @@
       cat: "Inferenz", name: "Konfidenzintervall", mini: "ci",
       tldr: "Eine Punktschätzung ohne KI ist eine Behauptung, das KI macht aus der Schätzung eine prüfbare Aussage.",
       long: "„Bottom-2 = 42 %“ klingt präzise, kann aber bei kleinem n viele Prozentpunkte daneben liegen. Das 95 %-KI sagt: „Der wahre Wert liegt mit hoher Sicherheit in [40 %; 44 %].“ Damit kann man zwei Werte rechnerisch sauber vergleichen: wenn die KIs zweier Schätzungen sich nicht überlappen, ist der Unterschied belastbar, sonst nicht. Strikt gilt: 95 % der identisch konstruierten Intervalle enthalten den wahren Wert (nicht: „95 % Wahrscheinlichkeit, dass θ drin ist“, das wäre Bayes).",
-      example: "Δ Abbruchquote Treatment vs. Kontrolle = −22 pp, 95%-KI [−23,4; −20,6]. KI schließt 0 deutlich aus → robuster Effekt.",
+      example: "Δ Verweildauer-Anteil Treatment vs. Kontrolle = −18 pp, 95%-KI [−19,2; −16,8]. KI schließt 0 deutlich aus → robuster Effekt.",
       formal: "θ̂ ± z_{1−α/2} · SE(θ̂).",
       pitfall: "Falle: KI quantifiziert nur Zufall, keinen Bias. Ein schmales KI bei schlechter Auswahl ist präzise falsch."
     },
@@ -440,7 +467,7 @@
       cat: "Inferenz", name: "p-Wert", mini: "pvalue",
       tldr: "Schutz vor „Wir sehen ein Muster, das nur Zufall war.“ Wie unwahrscheinlich wären die Daten, wenn nichts wirklich los wäre?",
       long: "Der p-Wert misst, wie überraschend die Daten unter der Nullhypothese (kein Effekt) wären. Sehr kleiner p-Wert = das Beobachtete passt nicht zur „kein Effekt“-Welt → H₀ wird verworfen. Die Schwelle p < .05 ist Konvention, kein Naturgesetz. Wichtig: ein winziger p-Wert bedeutet nicht „großer Effekt“, bei riesigen Stichproben werden auch winzige Unterschiede signifikant. Effektgröße + Power müssen daneben gelesen werden.",
-      example: "Treatment vs. Kontrolle, n = 9.200, Δ = −22 pp, χ² = 1.040, p < .001 → unter H₀ praktisch unmöglich, also Effekt belastbar.",
+      example: "Treatment vs. Kontrolle, n = 9.200, Δ = −18 pp Verweildauer-Anteil, χ² ≈ 870, p < .001 → unter H₀ praktisch unmöglich, also Effekt belastbar.",
       formal: "p = P(T ≥ t_obs | H₀ wahr).",
       pitfall: "Falle: Statistische Signifikanz ≠ praktische Relevanz. Immer Effektgröße + KI dazu lesen."
     },
@@ -457,7 +484,7 @@
       cat: "Effekt", name: "Prozentpunktdifferenz", mini: "pvalue",
       tldr: "Differenz zweier Anteile, gemessen in Prozentpunkten, nicht in Prozentveränderung.",
       long: "Die Risk Difference (RD) gibt den absoluten Unterschied zwischen zwei Anteilen an. Sie ist direkt handlungsrelevant, weil sie absolute Häufigkeiten quantifiziert.",
-      example: "63% Abbruch in Kontrolle, 41% in Treatment → RD = −22 pp; das sind nicht 22% weniger Abbrüche, sondern 35% relativer Rückgang.",
+      example: "32 % Verweildauer Bahnsteig > 4 min in Kontrolle, 14 % im Treatment → RD = −18 pp; das sind nicht 18 % weniger Verweildauer, sondern 56 % relativer Rückgang.",
       formal: "RD = p_T − p_K; SE = √(p_T(1−p_T)/n_T + p_K(1−p_K)/n_K).",
       pitfall: "Falle: Prozentpunkte nicht mit Prozentveränderung verwechseln."
     },
@@ -1008,7 +1035,7 @@
       cat: "Auswertung", name: "Effekt", mini: "cohen",
       tldr: "Statistik beantwortet zwei Fragen getrennt: „Existiert ein Unterschied?“ (Signifikanz) und „Wie groß ist er?“ (Effektgröße). Beide sind nötig.",
       long: "Ein Effekt quantifiziert, wie groß die Wirkung tatsächlich ist, als Mittelwertdifferenz, Anteilsdifferenz (pp), oder standardisiert als Cohen's d. Bei sehr großen Stichproben werden auch winzige Unterschiede statistisch signifikant; ohne Effektgröße kann man Praxisrelevanz nicht beurteilen. Faustregeln: für Anteile gelten 2–5 pp als spürbar, 10 pp als groß; für d gilt 0,2 klein / 0,5 mittel / 0,8 groß. Aber: Domäne entscheidet, in der Bildungsforschung sind 0,2 schon groß, im UX 0,8 manchmal nicht ausreichend.",
-      example: "Treatment senkt Abbruchquote von 63 % auf 41 % → Δ = −22 pp, Cohen's d ≈ 0,46 (mittel). Beide Zahlen brauchen ein Konfidenzintervall, um belastbar zu sein.",
+      example: "Treatment senkt Anteil Verweildauer Bahnsteig > 4 min von 32 % auf 14 % → Δ = −18 pp, Cohen's h ≈ 0,44 (mittel). Beide Zahlen brauchen ein Konfidenzintervall, um belastbar zu sein.",
       formal: "Δ = M_T − M_K; d = Δ / SD_pooled.",
       pitfall: "Falle: „Statistisch signifikant“ ohne Effektgröße ist keine Entscheidung wert."
     },
@@ -1172,12 +1199,12 @@
       /* ---- Effekt: Vorher/Nachher Bars ---- */
       effect: function () {
         return wrap(
-          "<rect x='90' y='30' width='60' height='44' fill='" + GREY + "'/>" +
-          "<rect x='240' y='40' width='60' height='34' fill='" + RED + "'/>" +
-          t(120, 22, "63%", { fs: 12, fill: INK, weight: 700 }) + t(120, 84, "Kontrolle", { fs: 10, fill: AXIS }) +
-          t(270, 32, "41%", { fs: 12, fill: RED, weight: 700 }) + t(270, 84, "Treatment", { fs: 10, fill: RED }) +
+          "<rect x='90' y='24' width='60' height='50' fill='" + GREY + "'/>" +
+          "<rect x='240' y='52' width='60' height='22' fill='" + RED + "'/>" +
+          t(120, 16, "32%", { fs: 12, fill: INK, weight: 700 }) + t(120, 84, "Kontrolle", { fs: 10, fill: AXIS }) +
+          t(270, 44, "14%", { fs: 12, fill: RED, weight: 700 }) + t(270, 84, "Treatment", { fs: 10, fill: RED }) +
           "<path d='M 160 50 L 230 50' stroke='" + INK + "' stroke-width='1.5'/><polygon points='230,50 222,46 222,54' fill='" + INK + "'/>" +
-          t(195, 44, "Δ = −22 pp", { fs: 11, fill: INK, weight: 700 })
+          t(195, 44, "Δ = −18 pp", { fs: 11, fill: INK, weight: 700 })
         );
       },
 
@@ -2125,7 +2152,9 @@
   /* Mappings auf die Helper-Funktionen, Bilder werden automatisch injiziert. */
   var figureLibrary = {
     distribution: F.distribution, mean: F.mean, dispersion: F.dispersion, segmentation: F.segmentation, effect: F.effect,
-    likert: F.likert, survey: F.survey, bottom2: F.bottom2, sampleSize: F.sampleSize,
+    likert: F.likert, survey: F.survey, bottom2: F.bottom2,
+    bottom2Anschluss: F.bottom2, bottom2Punkt: F.bottom2, bottom2Komfort: F.bottom2,
+    sampleSize: F.sampleSize,
     confidenceInterval: F.confidenceInterval, pvalue: F.pvalue, cohenD: F.cohenD,
     correlation: F.correlation, rSquared: F.rSquared, oddsRatio: F.oddsRatio, power: F.power,
     modelFit: F.modelFit, riskDifference: F.riskDifference, statisticalValidity: F.statisticalValidity,
@@ -2288,7 +2317,7 @@
       ["Integrationsfrage", "jointDisplay"],
       ["Meta-Inferenz", "metaInference"],
       ["Anschlussangst", "mechanism"],
-      ["−22 pp Abbruch", "riskDifference"],
+      ["−18 pp Bahnsteig", "riskDifference"],
       ["Passt Mechanismus zum Effekt?", "jointDisplay"],
       ["Ausrollen oder iterieren", "decisionArtifact"],
       ["QUANT", "marketSize"],
