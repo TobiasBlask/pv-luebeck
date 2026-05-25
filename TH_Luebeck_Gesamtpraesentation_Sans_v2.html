@@ -5184,6 +5184,71 @@
   color: var(--slate-900) !important;
   font-weight: 600 !important;
 }
+
+/* ============================================================
+   FOLIE 13 — Datenquellen-Tag pro Funnel-Zeile
+   Macht den Multi-Source-Anspruch sichtbar: App-Stufen vs.
+   Sensor-Stufe stammen aus unterschiedlichen Datenquellen.
+   ============================================================ */
+.tracking-funnel .funnel-source {
+  font-style: normal;
+  font-family: var(--font-mono, inherit);
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--slate-700);
+  margin-left: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.tracking-funnel .funnel-source--sensor {
+  color: var(--accent, #D9272E);
+}
+
+/* ============================================================
+   FOLIE 19 — BL-Quadrant-Label freistellen
+   "Interaktion vergleichen" wurde von der Fokusgruppen-Karte
+   verdeckt (beide am Top-Center der BL-Quadrant-Zone). Label
+   wandert in die obere-linke Ecke, weg von allen Dots.
+   ============================================================ */
+.method-quadrant--bl {
+  left: 1.5% !important;
+  top: calc(50% + 8px) !important;
+  transform: none !important;
+  text-align: left !important;
+}
+
+/* ============================================================
+   FOLIE 19 — Lesehilfe unter der Methodenlandkarte
+   Zusätzliche Grid-Zeile, kompakt, schmaler Trennstrich oben.
+   ============================================================ */
+.slide.qual-methods-slide {
+  grid-template-rows: auto 1fr auto !important;
+  gap: 32px !important;
+}
+.map-reading-hint {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: baseline;
+  gap: 20px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-1);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--slate-700);
+}
+.map-reading-hint-kicker {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  color: var(--slate-900);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.map-reading-hint-body b {
+  color: var(--slate-900);
+  font-weight: 600;
+}
 </style>
 </head>
 <body>
@@ -5694,20 +5759,14 @@
   </div>
   <div class="slab-card">
     <div class="slab-card-inner">
-      <div class="deck-eyebrow">DATENBILD · FERNVERKEHR · 30 TAGE · N = 42.000 SESSIONS</div>
+      <div class="deck-eyebrow">VERHALTENSDATEN · FERNVERKEHRS-ANSCHLUSS · N = 42.000 SESSIONS</div>
       <h3 class="deck-h3">Verhalten am Umstieg verrät Unzufriedenheit, bevor Reisende sie äußern.</h3>
       <div class="tracking-funnel">
-        <div class="funnel-row"><span class="funnel-label">Verbindung suchen</span><span class="funnel-track"><i style="width:100%"></i></span><b>100%</b></div>
-        <div class="funnel-row is-alert"><span class="funnel-label">Umstiegsbildschirm verlassen</span><span class="funnel-track"><i style="width:63%"></i></span><b>63%</b></div>
-        <div class="funnel-row"><span class="funnel-label">Buchung fortsetzen</span><span class="funnel-track"><i style="width:37%"></i></span><b>37%</b></div>
-        <div class="funnel-row"><span class="funnel-label">Ticket kaufen</span><span class="funnel-track"><i style="width:31%"></i></span><b>31%</b></div>
+        <div class="funnel-row"><span class="funnel-label">Umstiegsbildschirm öffnen <em class="funnel-source">App</em></span><span class="funnel-track"><i style="width:100%"></i></span><b>100%</b></div>
+        <div class="funnel-row is-alert"><span class="funnel-label">Verlassen ohne Folge-Aktion <em class="funnel-source">App</em></span><span class="funnel-track"><i style="width:63%"></i></span><b>63%</b></div>
+        <div class="funnel-row"><span class="funnel-label">Anzeige erneut aufrufen <em class="funnel-source">App</em></span><span class="funnel-track"><i style="width:47%"></i></span><b>47%</b></div>
+        <div class="funnel-row"><span class="funnel-label">Verweildauer Bahnsteig &gt; 4 min <em class="funnel-source funnel-source--sensor">Bahnsteig-Sensor</em></span><span class="funnel-track"><i style="width:32%"></i></span><b>32%</b></div>
       </div>
-      <div class="metric-tiles compact">
-        <div class="metric-tile"><div class="metric-value">2,4×</div><div class="metric-label">Refresh bei Verspätung</div></div>
-        <div class="metric-tile"><div class="metric-value">+11</div><div class="metric-label">Minuten Aufenthaltszeit</div></div>
-        <div class="metric-tile"><div class="metric-value">30</div><div class="metric-label">Tage Beobachtung</div></div>
-      </div>
-      <div class="slab-card-rule">ENTSCHEIDUNG · UMSTIEG IST DER DIAGNOSEPUNKT FÜR UNZUFRIEDENHEIT, NICHT DER TICKETKAUF</div>
     </div>
   </div>
   <div class="deck-pagenum">13 / 33</div>
@@ -5898,6 +5957,10 @@
     <div class="method-dot method-dot--netno popover-above metric-chip" style="left:62%; top:69%;" data-explain="netnography" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Netnographie</b><span>Online-Feld lesen</span><small>Community → Frame</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Netnographie</strong><span class="metric-explain">Online-Communities, Foren und Social-Media-Spuren werden als kulturelles Feld gelesen und codiert.</span><span class="metric-pop-position"><b>Warum hier?</b><span>rechts unten-mittig, weil vorhandene Online-Spuren feldnah gelesen und zugleich als Korpus verglichen werden.</span></span><span class="metric-mini metric-mini--text-corpus"><i></i><i></i><i></i></span><em>Falle: Online-Stimmen sind oft selbstselektiert und brauchen Kontextprüfung.</em></span></div>
     <div class="method-dot method-dot--document popover-align-right popover-above metric-chip" style="left:80%; top:67%;" data-explain="documentAnalysis" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Dokumentenanalyse</b><span>Material prüfen</span><small>Regelwerk → Deutung</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Dokumentenanalyse</strong><span class="metric-explain">Vorhandenes Material wie Beschwerden, Leitfäden oder Serviceprotokolle wird systematisch auf Deutungsmuster geprüft.</span><span class="metric-pop-position"><b>Warum hier?</b><span>rechts unten, weil die Daten bereits vorliegen und über Materialtypen hinweg verglichen werden.</span></span><span class="metric-mini metric-mini--audit"><i></i><i></i><i></i></span><em>Falle: Dokumente zeigen Organisationslogik, aber nicht automatisch gelebte Praxis.</em></span></div>
     <div class="method-dot method-dot--content popover-align-right popover-above metric-chip" style="left:80%; top:86%;" data-explain="contentAnalysis" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Inhaltsanalyse</b><span>codieren</span><small>Textkorpus → Kategorie</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Inhaltsanalyse</strong><span class="metric-explain">Texte werden systematisch codiert, damit wiederkehrende Frames und Kategorien prüfbar werden.</span><span class="metric-pop-position"><b>Warum hier?</b><span>rechts unten, weil vorhandenes Material über viele Fälle hinweg codiert und vergleichbar gemacht wird.</span></span><span class="metric-mini metric-mini--deductive-inductive"><i></i><i></i><i></i></span><em>Falle: Große Textmengen sind nicht automatisch repräsentativ.</em></span></div>
+  </div>
+  <div class="map-reading-hint">
+    <span class="map-reading-hint-kicker">Lesehilfe</span>
+    <span class="map-reading-hint-body"><b>x-Achse</b> · Datenzugang, aktiv erhoben (links) versus feld- oder textbasiert vorliegend (rechts). <b>y-Achse</b> · Erkenntnisziel, hohe Falltiefe (oben) versus hohe Vergleichbarkeit über Fälle (unten). Jede Methode sitzt an ihrem typischen Schwerpunkt, die Quadranten sind Tendenzen, keine Schubladen.</span>
   </div>
   <div class="deck-pagenum">19 / 33</div>
 </section>
