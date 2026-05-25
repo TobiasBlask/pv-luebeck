@@ -155,6 +155,73 @@
     gap: 34px;
   }
 
+  /* Research Portfolio Overview (K01 colloquium overview) */
+  .portfolio-grid {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+  }
+  .portfolio-col {
+    background: #fff;
+    border: 1px solid var(--line);
+    padding: 22px 22px 18px;
+  }
+  .portfolio-col .col-head {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  .portfolio-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .portfolio-item {
+    padding: 9px 0;
+    border-bottom: 1px solid #eef0f4;
+  }
+  .portfolio-item:last-child { border-bottom: none; }
+  .portfolio-item .item-title {
+    font-size: 14px;
+    line-height: 1.32;
+    color: var(--ink);
+    font-weight: 600;
+    margin-bottom: 3px;
+  }
+  .portfolio-item .item-meta {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    line-height: 1.3;
+  }
+  .portfolio-item.spotlight .item-title {
+    color: var(--red);
+  }
+  .portfolio-item.spotlight .item-title::before {
+    content: "★ ";
+    color: var(--red);
+  }
+  .portfolio-footer {
+    margin-top: 18px;
+    padding: 12px 18px;
+    background: rgba(15,23,42,0.04);
+    border-left: 3px solid var(--red);
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .portfolio-footer em {
+    color: var(--ink);
+    font-style: italic;
+    font-weight: 600;
+  }
+
   .signature-card {
     border: 1px solid var(--ink);
     box-shadow: 12px 12px 0 0 var(--ink);
@@ -6465,49 +6532,6 @@
   </div>
 </section>
 
-<section class="slide m-slide grid-bg" data-screen-label="Method Signature" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="34">
-    <div class="kicker"><span class="red">RESEARCH COLLOQUIUM</span> · METHOD JOURNEY · TH LUEBECK</div>
-    <h1 class="m-title wide">Four studies, one method line across <em>service markets</em>.</h1>
-    <p class="m-subtitle">Each line starts from the same situation: someone in a service market has to decide, but the available signals are too sparse, too fast or too unstructured for a clean inference. My contribution sits in the procedure that bridges that gap, not in the headline number it produces.</p>
-
-    <div class="method-overview">
-      <div class="signature-card">
-        <div>
-          <div class="panel-label red">how the four lines connect</div>
-          <div class="signature-line">In every line the decision is only as defensible as the documentation of how it was reached.</div>
-        </div>
-        <div class="signature-steps">
-          <div class="sig-step"><div class="sig-key">Estimate</div><div class="sig-text">Paid Search: Bayesian estimates of conversion rate from sparse keyword data.</div></div>
-          <div class="sig-step"><div class="sig-key">Orchestrate</div><div class="sig-text">From Creator to Orchestrator: where human judgment enters AI-built research.</div></div>
-          <div class="sig-step"><div class="sig-key">Forecast</div><div class="sig-text">Multi-LLM Delphi: structured forecast of how generative AI reshapes service industries.</div></div>
-          <div class="sig-step"><div class="sig-key">Measure</div><div class="sig-text">AI-Readable IR: audit how the 101 HDAX firms communicate to agentic AI.</div></div>
-          <div class="sig-step"><div class="sig-key">Transfer</div><div class="sig-text">SVRN Alpha: operating laboratory in the same spirit as Adference back then.</div></div>
-        </div>
-      </div>
-
-      <div class="method-table">
-        <div class="method-row header">
-          <div class="method-cell">Study</div><div class="method-cell">Evidence problem</div><div class="method-cell">Method design</div><div class="method-cell">Artifact</div>
-        </div>
-        <div class="method-row">
-          <div class="method-cell study">Paid Search</div><div class="method-cell">Keyword-level conversion data is too sparse for direct estimation.</div><div class="method-cell">Hierarchical Bayesian model plus controlled field experiments.</div><div class="method-cell">Bid and ad-copy recommendations.</div>
-        </div>
-        <div class="method-row">
-          <div class="method-cell study">From Creator to Orchestrator</div><div class="method-cell">First-order productivity metrics miss the human role shift; AI-written papers need a documented chain of human decisions.</div><div class="method-cell">PRISMA SLR plus Gioia field study (Copilot Fallacy); agent pipeline with editorial gates (Open Paper Machine).</div><div class="method-cell">Position paper with disclosed methodology, co-authored with B. Funk.</div>
-        </div>
-        <div class="method-row">
-          <div class="method-cell study">Multi-LLM Delphi</div><div class="method-cell">Generative AI reshapes service industries faster than peer-reviewed evidence catches up.</div><div class="method-cell">Structured panel · 7 frontier models · 8 GICS service industries · 3 orders of effects.</div><div class="method-cell">Manuscript under review at Tech. Forecasting &amp; Social Change.</div>
-        </div>
-        <div class="method-row">
-          <div class="method-cell study">AI-Readable IR</div><div class="method-cell">German listed firms still write IR for human readers, not for agentic AI.</div><div class="method-cell">Audit of all 101 HDAX firms along a four-dimension AI-readability score.</div><div class="method-cell">Empirical readiness report for IR practice.</div>
-        </div>
-        <div class="method-row">
-          <div class="method-cell study">SVRN Alpha</div><div class="method-cell">Public research needs an operating laboratory to test against market reality.</div><div class="method-cell">Implementation cases plus public notes — same logic as Adference back then.</div><div class="method-cell">Workflow and decision artifacts in the IR audit market.</div>
-        </div>
-      </div>
-    </div>
-    <div class="m-footer"><div>Paid search · Delphi forecasting · SVRN/MPCM transfer · Open Paper Machine</div><div>01 / 15</div></div>
-  </section>
 
 <section class="slide m-slide soft" data-screen-label="Paid Search Evidence Problem" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="35">
     <div class="kicker"><span class="red">STUDY LINE 01A</span> · PAID SEARCH · EVIDENCE PROBLEM</div>
@@ -6727,6 +6751,45 @@
     <div class="deck-pagenum">ACT 2</div>
   </div>
 </section>
+<section class="slide m-slide grid-bg" data-screen-label="Method Signature" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="34">
+    <div class="kicker"><span class="red">OVERVIEW</span> · CURRENT RESEARCH PORTFOLIO · svrn-alpha.com/research</div>
+    <h1 class="m-title wide">Twelve research outputs in the current semester — <em>at a glance</em>.</h1>
+    <p class="m-subtitle">Across positions, market analyses and empirical studies, all on how generative AI reshapes service markets. The next slides spotlight three: the Copilot Fallacy as position, When the Middle Disappears as forecast, and the HDAX IR AI-Readiness Report as status check.</p>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-col">
+        <div class="col-head">Positions / Essays</div>
+        <ul class="portfolio-list">
+          <li class="portfolio-item spotlight"><div class="item-title">The Copilot Fallacy</div><div class="item-meta">Essay · second- and third-order effects of institutional AI</div></li>
+          <li class="portfolio-item"><div class="item-title">If It's Not Dangerous, It's Not Us</div><div class="item-meta">Note · why uncontrolled AI fails in regulated finance</div></li>
+          <li class="portfolio-item"><div class="item-title">The Speed of Trust</div><div class="item-meta">Note · allocator view on AI-adoption throttling</div></li>
+        </ul>
+      </div>
+      <div class="portfolio-col">
+        <div class="col-head">Market Analyses</div>
+        <ul class="portfolio-list">
+          <li class="portfolio-item"><div class="item-title">The Database Demotion</div><div class="item-meta">Salesforce Headless 360, CIO lens</div></li>
+          <li class="portfolio-item"><div class="item-title">The 2026 AI Index, from the Finance Desk</div><div class="item-meta">Stanford HAI reframed for CIOs &amp; compliance</div></li>
+          <li class="portfolio-item"><div class="item-title">The Spot Market for Expertise</div><div class="item-meta">Humwork.ai human-in-the-loop API</div></li>
+          <li class="portfolio-item"><div class="item-title">When Agents Replace Software</div><div class="item-meta">Software multiple compression as symptom</div></li>
+        </ul>
+      </div>
+      <div class="portfolio-col">
+        <div class="col-head">Studies / Papers</div>
+        <ul class="portfolio-list">
+          <li class="portfolio-item spotlight"><div class="item-title">When the Middle Disappears</div><div class="item-meta">Academic paper · 7 frontier models · TF&amp;SC submission</div></li>
+          <li class="portfolio-item spotlight"><div class="item-title">HDAX IR AI-Readiness Report</div><div class="item-meta">Joint study · 101 listed firms</div></li>
+          <li class="portfolio-item"><div class="item-title">When Agents Become the Trading Desk</div><div class="item-meta">SLR · 88 papers + 29 multi-agent systems</div></li>
+          <li class="portfolio-item"><div class="item-title">Are We Adopting AI Fast Enough to Avoid a Bubble?</div><div class="item-meta">Study · S-curve adoption vs. infrastructure</div></li>
+          <li class="portfolio-item"><div class="item-title">The Real Price of AI</div><div class="item-meta">Delphi analysis · foundation-model pricing</div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="portfolio-footer">Plus the position paper <em>From Creator to Orchestrator</em>, co-authored with B. Funk, published outside the SVRN library.</div>
+
+    <div class="m-footer"><div>Positions · Market Analyses · Studies · all on AI in service markets</div><div>01 / 15</div></div>
+  </section>
 <section class="slide m-slide soft" data-screen-label="Copilot Fallacy" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="41">
     <div class="kicker"><span class="red">STUDY LINE 02B</span> · COPILOT FALLACY · PRISMA PROCEDURE + GIOIA FIELD STUDY</div>
     <h1 class="m-title wide">The Copilot Fallacy: productivity metrics capture only the first order.</h1>
