@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="Probevorlesung/colors_and_type.css?v=2" />
 <link rel="stylesheet" href="Probevorlesung/deck.css?v=2" />
 <link rel="stylesheet" href="Probevorlesung/deck-extras.css?v=seminar11" />
-<link rel="stylesheet" href="Probevorlesung/deck-sans-override.css?v=headline2" />
+<link rel="stylesheet" href="Probevorlesung/deck-sans-override.css?v=darkpanel2" />
 <script src="Probevorlesung/deck-stage.js?v=navfix1"></script>
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
@@ -3492,8 +3492,10 @@
     padding: 18px 22px;
     min-width: 0;
     min-height: 0;
-    overflow: hidden;
+    overflow: visible;
   }
+  /* allow popovers anchored inside the panel to bleed out into the slide area */
+  .copilot-panel:has(.metric-popover) { overflow: visible; }
 
   .copilot-panel.dark {
     background: var(--ink);
@@ -5433,7 +5435,7 @@
       </div>
     </div>
   </div>
-  <div class="deck-pagenum">2 / 38</div>
+  <div class="deck-pagenum">2 / 37</div>
 </section>
 
 <section class="slide white service-context-only service-context-hero" data-screen-label="Dienstleistungssektor" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text">
@@ -5445,7 +5447,7 @@
       Ein Produkt prüft man im Labor. Eine Dienstleistung entsteht erst beim Nutzen. Marktforschung im Service muss deshalb Erwartung, Erlebnis, Prozess und Wirkung trennen.
     </p>
   </div>
-  <div class="deck-pagenum">3 / 38</div>
+  <div class="deck-pagenum">3 / 37</div>
 </section>
 
 <section class="slide white pillars" data-screen-label="Drei Besonderheiten" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="3">
@@ -5478,7 +5480,7 @@
       <div class="research-implication"><span>Risiko</span><b>Falsche Verallgemeinerung.</b><span>Design-Regel</span>Touchpoints, Situationen und Segmente getrennt auswerten.</div>
     </div>
   </div>
-  <div class="deck-pagenum">4 / 38</div>
+  <div class="deck-pagenum">4 / 37</div>
 </section>
 <section class="slide soft activation" data-screen-label="Murmelgruppe · Service-Eigenschaften" data-activation="true" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text">
   <div class="slide-pad slide-content">
@@ -5490,7 +5492,7 @@
       <span class="task-cta-text">Tausch mit Sitznachbar:in · wir hören danach 1–2 Beispiele</span>
     </div>
   </div>
-  <div class="deck-pagenum">5 / 38</div>
+  <div class="deck-pagenum">5 / 37</div>
 </section>
 
 
@@ -5511,58 +5513,7 @@
     </div>
     <div class="activation-hint">Roter Faden: Wir starten nicht mit der Anzeige, sondern mit Unzufriedenheit. Die Anzeige wird erst zum Lösungskandidaten, wenn die Evidenz darauf zeigt.</div>
   </div>
-  <div class="deck-pagenum">6 / 38</div>
-</section>
-
-<section class="slide soft activation activation-router" data-screen-label="Murmelgruppe · Einstieg" data-activation="true" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="5">
-  <div class="slide-pad slide-content">
-    <div class="deck-eyebrow accent">MURMELGRUPPE · 90 SEKUNDEN · MIT SITZNACHBAR:IN</div>
-    <h2 class="deck-h2 activation-q">Vor der Methode steht die Art der Frage.</h2>
-    <div class="evidence-router-grid">
-      <article class="router-card">
-        <div class="router-head"><b>A</b><span>Wie groß?</span></div>
-        <h3>Ist das ein Einzelfall oder ein Muster?</h3>
-        <div class="router-mini router-mini--bars" aria-label="Mini-Balken für Segment und Verteilung">
-          <i style="height:32%"></i><i style="height:64%"></i><i class="is-alert" style="height:82%"></i><i style="height:48%"></i>
-        </div>
-        <div class="router-proof"><span>Beweisbedarf</span><strong class="metric-chip popover-align-left" tabindex="0"><span class="metric-label">Häufigkeit · Verteilung · Segment</span><span class="metric-popover" role="tooltip"><span class="metric-pop-kicker">Quantitativer Klärungsbedarf</span><strong>Wie groß ist das Problem?</strong><span class="metric-explain">Wir prüfen, ob Beschwerden ein Muster bilden: wie häufig, in welchen Gruppen und in welchen Situationen.</span><span class="metric-mini metric-mini--router-bars"><i></i><i></i><i></i><i></i></span><span class="metric-pop-position"><b>Warum hier?</b><span>Erst wenn Größe und Verteilung belastbar sind, lässt sich Priorität begründen.</span></span><em>Typische Route: Befragung, Tracking, Segmentvergleich.</em></span></strong></div>
-        <p><b>Entscheidung:</b> Lohnt es sich, das Thema in der Breite zu priorisieren?</p>
-        <small>Führt später zu: standardisierte Befragung, Tracking, Segmentvergleich.</small>
-      </article>
-      <article class="router-card">
-        <div class="router-head"><b>B</b><span>Was passiert?</span></div>
-        <h3>Wo entsteht genau die Unzufriedenheit im Prozess?</h3>
-        <div class="router-mini router-mini--sequence" aria-label="Mini-Ablaufspur für Beobachtung">
-          <span>Start</span><i></i><span class="is-alert">Störung</span><i></i><span>Anschluss</span>
-        </div>
-        <div class="router-proof"><span>Beweisbedarf</span><strong class="metric-chip" tabindex="0"><span class="metric-label">Situation · Ablauf · Reibung</span><span class="metric-popover" role="tooltip"><span class="metric-pop-kicker">Prozesslogik</span><strong>Wo entsteht die Reibung?</strong><span class="metric-explain">Hier suchen wir keine Kennzahl, sondern die Stelle im Ablauf, an der Orientierung, Erwartung oder Handlung blockiert.</span><span class="metric-mini metric-mini--router-journey"><i></i><i></i></span><span class="metric-pop-position"><b>Warum hier?</b><span>Beobachtung macht sichtbar, was Befragte oft erst nachträglich rationalisieren.</span></span><em>Typische Route: Beobachtung, Go-along, Critical Incident.</em></span></strong></div>
-        <p><b>Entscheidung:</b> Welcher Kontaktpunkt blockiert die Entscheidung der Reisenden?</p>
-        <small>Führt später zu: Beobachtung, Go-along, Critical Incident.</small>
-      </article>
-      <article class="router-card">
-        <div class="router-head"><b>C</b><span>Wie deuten Reisende es?</span></div>
-        <h3>Welche Sprache macht das Problem sichtbar?</h3>
-        <div class="router-mini router-mini--quotes" aria-label="Mini-Codes für Textanalyse">
-          <span>Angst</span><span class="is-alert">Info</span><span>Vertrauen</span>
-        </div>
-        <div class="router-proof"><span>Beweisbedarf</span><strong class="metric-chip" tabindex="0"><span class="metric-label">Sprache · Bedeutung · Erwartung</span><span class="metric-popover" role="tooltip"><span class="metric-pop-kicker">Qualitative Sinnrekonstruktion</span><strong>Wie wird das Problem benannt?</strong><span class="metric-explain">Wir rekonstruieren Begriffe, Erwartungen und Deutungen, bevor daraus Items oder Kategorien werden.</span><span class="metric-mini metric-mini--router-codes"><i></i><i></i><i></i></span><span class="metric-pop-position"><b>Warum hier?</b><span>Gute Messung braucht die Sprache der Zielgruppe, nicht nur Managementbegriffe.</span></span><em>Typische Route: Interview, Inhaltsanalyse, Codebildung.</em></span></strong></div>
-        <p><b>Entscheidung:</b> Welche Begriffe und Kategorien dürfen wir später messen?</p>
-        <small>Führt später zu: Interview, Inhaltsanalyse, Codebildung.</small>
-      </article>
-      <article class="router-card">
-        <div class="router-head"><b>D</b><span>Was wirkt?</span></div>
-        <h3>Welche Änderung müsste sich beweisen?</h3>
-        <div class="router-mini router-mini--network" aria-label="Mini-Knotenkarte für Anschlussdaten">
-          <span></span><span class="is-alert"></span><span></span><span></span><span class="is-alert"></span>
-        </div>
-        <div class="router-proof"><span>Beweisbedarf</span><strong class="metric-chip popover-align-right" tabindex="0"><span class="metric-label">Vergleich · Effekt · Entscheidung</span><span class="metric-popover" role="tooltip"><span class="metric-pop-kicker">Wirkungslogik</span><strong>Was wirkt besser als der Status quo?</strong><span class="metric-explain">Wir vergleichen eine Veränderung gegen eine Referenz und fragen, ob der Effekt groß genug für eine Entscheidung ist.</span><span class="metric-mini metric-mini--router-effect"><i></i><i></i><i></i></span><span class="metric-pop-position"><b>Warum hier?</b><span>Eine gute Idee ist noch keine Evidenz. Für Rollout zählt der nachweisbare Effekt.</span></span><em>Typische Route: Experiment, A/B-Test, Wirkungsprüfung.</em></span></strong></div>
-        <p><b>Entscheidung:</b> Wann wäre eine spätere Lösung stark genug für den Rollout?</p>
-        <small>Führt später zu: Experiment, A/B-Test, Wirkungslogik.</small>
-      </article>
-    </div>
-    <div class="activation-hint">Aufgabe: Erst Beweisbedarf wählen, dann Methode zuordnen.</div>
-  </div>
-  <div class="deck-pagenum">7 / 38</div>
+  <div class="deck-pagenum">6 / 37</div>
 </section>
 
 <section class="slide soft two-col-slab" data-screen-label="Anwendungsfall · Bahn" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="6">
@@ -5600,7 +5551,7 @@
       <div class="slab-card-rule">FALL · DEUTSCHE BAHN FERNVERKEHR</div>
     </div>
   </div>
-  <div class="deck-pagenum">8 / 38</div>
+  <div class="deck-pagenum">7 / 37</div>
 </section>
 
 <section class="slide dark gridbg-dark section-divider section-divider--proof" data-screen-label="Akt 01 · Muster messen" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="7">
@@ -5615,7 +5566,7 @@
     <div class="proof-chip"><span>Zusammenhang</span><b>r=-0,81</b></div>
     <div class="proof-chip"><span>Effekt</span><b>−18 pp</b></div>
   </div>
-  <div class="deck-pagenum">9 / 38</div>
+  <div class="deck-pagenum">8 / 37</div>
 </section>
 
 <section class="slide white pattern-slide" data-screen-label="Was quantitativ leistet" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="8">
@@ -5717,7 +5668,7 @@
     </div>
 
   </div>
-  <div class="deck-pagenum">10 / 38</div>
+  <div class="deck-pagenum">9 / 37</div>
 </section>
 
 <section class="slide white pillars" data-screen-label="Methodenlandkarte quantitativ" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="9">
@@ -5755,7 +5706,7 @@
       <div class="m-output">Output · kausaler Effekt / KI</div>
     </div>
   </div>
-  <div class="deck-pagenum">11 / 38</div>
+  <div class="deck-pagenum">10 / 37</div>
 </section>
 
 <section class="slide white quality-detail-slide" data-screen-label="Gütemaße quantitativ" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="10">
@@ -5813,7 +5764,7 @@
     </div>
   </div>
   <div class="quality-detail-answer"><strong>Antwortsatz:</strong> Quantitative Güte prüft Messung, Stichprobe, Inferenz und Effekt. Erst zusammen wird aus einer Zahl belastbare Evidenz.</div>
-  <div class="deck-pagenum">12 / 38</div>
+  <div class="deck-pagenum">11 / 37</div>
 </section>
 <section class="slide soft activation" data-screen-label="Murmelgruppe · Gütekriterium" data-activation="true" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text">
   <div class="slide-pad slide-content">
@@ -5825,7 +5776,7 @@
       <span class="task-cta-text">Tausch mit Sitznachbar:in · wir hören danach 1–2 Beispiele</span>
     </div>
   </div>
-  <div class="deck-pagenum">13 / 38</div>
+  <div class="deck-pagenum">12 / 37</div>
 </section>
 
 
@@ -5850,13 +5801,13 @@
       <h3 class="deck-h3">Verhalten am Umstieg verrät Unzufriedenheit, bevor Reisende sie äußern.</h3>
       <div class="tracking-funnel">
         <div class="funnel-row"><span class="funnel-label">Umstiegsbildschirm öffnen <em class="funnel-source">App</em></span><span class="funnel-track"><i style="width:100%"></i></span><b>100%</b></div>
-        <div class="funnel-row is-alert"><span class="funnel-label">Verlassen ohne Folge-Aktion <em class="funnel-source">App</em></span><span class="funnel-track"><i style="width:63%"></i></span><b>63%</b></div>
+        <div class="funnel-row is-alert"><span class="funnel-label">Verlassen ohne Folge-Aktion <em class="funnel-source">App</em></span><span class="funnel-track"><i style="width:53%"></i></span><b>53%</b></div>
         <div class="funnel-row"><span class="funnel-label">Anzeige erneut aufrufen <em class="funnel-source">App</em></span><span class="funnel-track"><i style="width:47%"></i></span><b>47%</b></div>
         <div class="funnel-row"><span class="funnel-label">Verweildauer Bahnsteig &gt; 4 min <em class="funnel-source funnel-source--sensor">Bahnsteig-Sensor</em></span><span class="funnel-track"><i style="width:32%"></i></span><b>32%</b></div>
       </div>
     </div>
   </div>
-  <div class="deck-pagenum">14 / 38</div>
+  <div class="deck-pagenum">13 / 37</div>
 </section>
 
 <section class="slide soft two-col-slab exhibit-slab" data-screen-label="Anwendung · Befragung" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="11">
@@ -5920,9 +5871,386 @@
       <div class="slab-card-rule">ENTSCHEIDUNG · ANSCHLUSSINFORMATION IST DER AKUTE HEBEL</div>
     </div>
   </div>
-  <div class="deck-pagenum">15 / 38</div>
+  <div class="deck-pagenum">14 / 37</div>
 </section>
 
+<section class="slide white compare" data-screen-label="Stärken &amp; Grenzen quantitativ" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="14">
+  <div>
+    <div class="deck-eyebrow">BILANZ · QUANTITATIV</div>
+    <h2 class="deck-h2" style="font-size: 72px;">Was Zahlen <em>leisten</em>, und was sie <em>nicht</em> leisten.</h2>
+  </div>
+  <div class="quant-balance-grid">
+    <div class="quant-proof-panel">
+      <div class="head">WAS QUANT STARK MACHT</div>
+      <div class="quant-proof-value metric-chip" data-explain="sampleSize" tabindex="0" aria-haspopup="dialog" aria-expanded="false">n = 2.500<span class="metric-popover"><span class="metric-pop-kicker">Stichprobe</span><strong>Fallzahl n</strong><span class="metric-explain">Die Fallzahl bestimmt Präzision und Power, aber nicht automatisch Repräsentativität.</span><span class="metric-mini metric-mini--sample"><i></i><i></i><i></i></span><em>Falle: Großes n korrigiert keinen systematischen Bias.</em></span></div>
+      <div class="quant-proof-bars">
+        <div><span>Anschlussinfo</span><i style="width:42%"></i><b class="metric-chip" data-explain="bottom2Anschluss" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Bottom-2 42%</b></div>
+        <div><span>Pünktlichkeit</span><i style="width:36%"></i><b class="metric-chip" data-explain="bottom2Punkt" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Bottom-2 36%</b></div>
+        <div><span>Komfort</span><i style="width:12%"></i><b class="metric-chip" data-explain="bottom2Komfort" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Bottom-2 12%</b></div>
+      </div>
+      <p>Wenn Begriffe bekannt sind, macht quantitative Forschung Größe, Stabilität, Segmentunterschiede und Effekte entscheidbar.</p>
+    </div>
+    <div class="quant-blindspot-panel">
+      <div class="head accent">WAS OFFEN BLEIBT</div>
+      <div class="blackbox-question metric-chip" data-explain="mechanism" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Warum sind 42 % unzufrieden mit Anschlussinfo?<span class="metric-popover"><span class="metric-pop-kicker">Qual-Grenze</span><strong>Mechanismus</strong><span class="metric-explain">Der Mechanismus erklärt, warum ein beobachtetes Muster entsteht.</span><span class="metric-mini metric-mini--pattern-mechanism"><i></i><i></i><i></i></span><em>Falle: Mechanismen lassen sich selten direkt aus Mittelwerten ablesen.</em></span></div>
+      <div class="blackbox-core metric-chip" data-explain="mechanism" tabindex="0" aria-haspopup="dialog" aria-expanded="false">?<span class="metric-popover"><span class="metric-pop-kicker">Qual-Grenze</span><strong>Mechanismus</strong><span class="metric-explain">Der Mechanismus erklärt, warum ein beobachtetes Muster entsteht.</span><span class="metric-mini metric-mini--pattern-mechanism"><i></i><i></i><i></i></span><em>Falle: Mechanismen lassen sich selten direkt aus Mittelwerten ablesen.</em></span></div>
+      <p>Der Score zeigt die Lage. Er benennt noch nicht den Mechanismus, der das Erlebnis erzeugt.</p>
+    </div>
+  </div>
+  <div class="compare-takeaway"><strong>Regel:</strong> Begriff bekannt → quantitativ entscheiden. Begriff offen → qualitativ rekonstruieren.</div>
+  <div class="deck-pagenum">15 / 37</div>
+</section>
+
+<section class="slide soft activation" data-screen-label="Murmelgruppe · Was Zahlen nicht zeigen" data-activation="true" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="15">
+  <div class="slide-pad slide-content">
+    <h2 class="deck-h2 activation-q">Eine Kennzahl zeigt das Ausmaß, aber nicht die Ursache.</h2>
+    <div class="activation-gap-board">
+      <div class="score-card">
+        <div class="score-label">Quantitatives Signal</div>
+        <div class="score-value">3,4 <span>/ 7</span></div>
+        <div class="score-scale"><i></i><i></i><i></i><i class="active"></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="gap-arrow">?</div>
+      <div class="missing-context-card">
+        <div class="score-label">Drei mögliche Mechanismen</div>
+        <div class="mechanism-options">
+          <div><b>Erwartung</b><span>Versprochen war ein sicherer Anschluss.</span></div>
+          <div class="is-alert"><b>Informationsbruch</b><span>Unklar, ob der zweite Zug wartet.</span></div>
+          <div><b>Kontrollverlust</b><span>Rennen, warten oder neu planen?</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="deck-pagenum">16 / 37</div>
+</section>
+
+<section class="slide navy section-divider section-divider--qual" data-screen-label="Akt 02 · Erlebnis verstehen" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="16">
+  <div class="section-numeral">02</div>
+  <div class="section-title-block">
+    <div class="deck-eyebrow accent">AKT 02 · QUALITATIV</div>
+    <h2 class="deck-h2">Erlebnis <em>verstehen</em>.</h2>
+  </div>
+  <div class="section-proof-object">
+    <div><span>Signal</span><b>3,4 / 7</b></div>
+    <i>→</i>
+    <q>Ich weiß nicht, ob ich es schaffe.</q>
+    <i>→</i>
+    <div><span>Code</span><b>Kontrollverlust</b></div>
+  </div>
+  <div class="deck-pagenum">17 / 37</div>
+</section>
+
+<section class="slide white" data-screen-label="Was qualitativ leistet" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="17">
+  <div class="slide-pad slide-content leisten">
+    <div class="deck-eyebrow">QUALITATIVE MARKTFORSCHUNG</div>
+    <h2 class="deck-h2">Qualitativ rekonstruiert, wie Reisende Unsicherheit deuten.</h2>
+    <div class="qual-evidence-chain qual-audit-trail">
+      <div class="qual-evidence-step">
+        <div class="evidence-head metric-chip" data-explain="quote" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Original<span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Ankerzitat</strong><span class="metric-explain">Ein Originalausschnitt zeigt, woran eine Kategorie im Material festgemacht wird.</span><span class="metric-mini metric-mini--quote"><i></i><i></i><i></i></span><em>Falle: Ein gutes Zitat ersetzt keine systematische Codierung.</em></span></div>
+        <div class="quote-fragment">„Ich weiß nicht, ob ich es schaffe.“</div>
+      </div>
+      <div class="qual-evidence-step">
+        <div class="evidence-head metric-chip" data-explain="invivo" tabindex="0" aria-haspopup="dialog" aria-expanded="false">In-vivo-Code<span class="metric-popover"><span class="metric-pop-kicker">Codierung</span><strong>In-vivo-Code</strong><span class="metric-explain">Begriffe aus dem Material werden übernommen, damit die Sprache der Befragten sichtbar bleibt.</span><span class="metric-mini metric-mini--quote"><i></i><i></i><i></i></span><em>Falle: Ein O-Ton ist noch keine fertige analytische Kategorie.</em></span></div>
+        <div class="code-pill metric-chip" data-explain="invivo" tabindex="0" aria-haspopup="dialog" aria-expanded="false">„schaffe ich es?“<span class="metric-popover"><span class="metric-pop-kicker">Codierung</span><strong>In-vivo-Code</strong><span class="metric-explain">Begriffe aus dem Material werden übernommen, damit die Sprache der Befragten sichtbar bleibt.</span><span class="metric-mini metric-mini--quote"><i></i><i></i><i></i></span><em>Falle: Ein O-Ton ist noch keine fertige analytische Kategorie.</em></span></div>
+      </div>
+      <div class="qual-evidence-step">
+        <div class="evidence-head metric-chip" data-explain="analyticCode" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Analytischer Code<span class="metric-popover"><span class="metric-pop-kicker">Codierung</span><strong>Analytischer Code</strong><span class="metric-explain">Ein analytischer Code verdichtet mehrere Textstellen zu einem erklärenden Konzept.</span><span class="metric-mini metric-mini--codes-items"><i></i><i></i><i></i></span><em>Falle: Codes dürfen nicht nur Etiketten sein; sie brauchen eine Regel.</em></span></div>
+        <div class="code-pill metric-chip" data-explain="analyticCode" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Anschlussangst<span class="metric-popover"><span class="metric-pop-kicker">Codierung</span><strong>Analytischer Code</strong><span class="metric-explain">Ein analytischer Code verdichtet mehrere Textstellen zu einem erklärenden Konzept.</span><span class="metric-mini metric-mini--codes-items"><i></i><i></i><i></i></span><em>Falle: Codes dürfen nicht nur Etiketten sein; sie brauchen eine Regel.</em></span></div>
+        <small>Unsicherheit über eigene Handlungsoption.</small>
+      </div>
+      <div class="qual-evidence-step">
+        <div class="evidence-head metric-chip" data-explain="category" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Kategorie<span class="metric-popover"><span class="metric-pop-kicker">Auswertung</span><strong>Kategorie</strong><span class="metric-explain">Kategorien bündeln Codes zu einem interpretierbaren Muster oder Mechanismus.</span><span class="metric-mini metric-mini--cluster"><i></i><i></i><i></i></span><em>Falle: Kategorien sind schwach, wenn sie nur sammeln und nichts erklären.</em></span></div>
+        <div class="category-chip metric-chip" data-explain="category" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Kontrollverlust<span class="metric-popover"><span class="metric-pop-kicker">Auswertung</span><strong>Kategorie</strong><span class="metric-explain">Kategorien bündeln Codes zu einem interpretierbaren Muster oder Mechanismus.</span><span class="metric-mini metric-mini--cluster"><i></i><i></i><i></i></span><em>Falle: Kategorien sind schwach, wenn sie nur sammeln und nichts erklären.</em></span></div>
+      </div>
+      <div class="qual-evidence-step insight-card">
+        <div class="evidence-head">Designbegriff</div>
+        <div class="metric-chip" data-explain="designConcept" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Entscheidungssicherheit statt nur Zeitinformation.<span class="metric-popover"><span class="metric-pop-kicker">Transfer</span><strong>Designbegriff</strong><span class="metric-explain">Aus der Analyse entsteht ein Begriff, der Produkt- oder Servicegestaltung steuern kann.</span><span class="metric-mini metric-mini--build"><i></i><i></i><i></i></span><em>Falle: Transfer braucht Evidenzkette von Material über Code zur Entscheidung.</em></span></div>
+      </div>
+    </div>
+    <div class="exhibit-takeaway"><strong>Qualitätssignal:</strong> 12 Interviews · 47 codierte Segmente · 2 Gegenfälle geprüft.</div>
+  </div>
+  <div class="deck-pagenum">18 / 37</div>
+</section>
+
+<section class="slide white pillars qual-methods-slide" data-screen-label="Methodenlandkarte qualitativ" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="18">
+  <div class="pillars-head">
+    <div class="deck-eyebrow">METHODENLANDKARTE · QUALITATIV</div>
+    <h2 class="deck-h2">Jede qualitative Methode hat einen Schwerpunkt zwischen Datenzugang und Erkenntnisziel.</h2>
+  </div>
+  <div class="qual-method-map">
+    <div class="method-axis-x"><span class="metric-chip" data-explain="axisActive" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>aktiv erhoben</b>Gespräch · Aufgabe · Gruppe</span><span class="metric-chip popover-align-right" data-explain="axisObserved" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>vorliegend / beobachtet</b>Feld · Text · Dokument</span></div>
+    <div class="method-axis-y"><span class="metric-chip" data-explain="axisDepth" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>hohe Falltiefe</b>Kontext nah verstehen</span><span class="metric-chip popover-above" data-explain="axisBreadth" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>hohe Vergleichbarkeit</b>Muster über Fälle prüfen</span></div>
+    <div class="method-quadrant method-quadrant--tl metric-chip" data-explain="quadrantTL" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Erzählen lassen</div>
+    <div class="method-quadrant method-quadrant--tr metric-chip popover-align-right" data-explain="quadrantTR" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Feldnah beobachten</div>
+    <div class="method-quadrant method-quadrant--bl metric-chip" data-explain="quadrantBL" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Interaktion vergleichen</div>
+    <div class="method-quadrant method-quadrant--br metric-chip popover-align-right popover-above" data-explain="quadrantBR" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Material codieren</div>
+    <div class="method-dot method-dot--interview popover-align-left metric-chip" style="left:21%; top:28%;" data-explain="interview" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Interview</b><span>erzählen lassen</span><small>Erleben → Code</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Interview</strong><span class="metric-explain">Interviews machen Begriffe, Motive und Deutungen sichtbar, die im Fragebogen noch fehlen.</span><span class="metric-pop-position"><b>Warum hier?</b><span>links oben, weil aktiv erhobene Interaktion und hohe Falltiefe zusammenkommen.</span></span><span class="metric-mini metric-mini--quote"><i></i><i></i><i></i></span><em>Falle: Interviews liefern Mechanismen und Hypothesen, keine Marktanteile.</em></span></div>
+    <div class="method-dot method-dot--critical popover-align-left metric-chip" style="left:21%; top:45%;" data-explain="criticalIncident" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Critical Incident</b><span>Schlüsselmoment</span><small>Ereignis → Auslöser</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Critical Incident</strong><span class="metric-explain">Die Methode sammelt besonders positive oder negative Schlüsselerlebnisse und rekonstruiert Auslöser, Ablauf und Konsequenz.</span><span class="metric-pop-position"><b>Warum hier?</b><span>links mittig, weil konkrete Episoden tief rekonstruiert und anschließend über Fälle verglichen werden.</span></span><span class="metric-mini metric-mini--countercase"><i></i><i></i><i></i></span><em>Falle: Extreme Ereignisse sind analytisch stark, aber nicht automatisch typisch.</em></span></div>
+    <div class="method-dot method-dot--diary metric-chip" style="left:41%; top:28%;" data-explain="diaryStudy" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Tagebuchstudie</b><span>über Zeit erfassen</span><small>Moment → Muster</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Tagebuchstudie</strong><span class="metric-explain">Teilnehmende dokumentieren Erlebnisse nah am Moment. Dadurch werden Routinen, Auslöser und Veränderungen über Zeit sichtbar.</span><span class="metric-pop-position"><b>Warum hier?</b><span>oben links-mittig, weil Erleben aktiv erhoben wird, aber stärker über Zeit als in einem Einzelinterview.</span></span><span class="metric-mini metric-mini--audit"><i></i><i></i><i></i></span><em>Falle: Tagebücher brauchen klare Prompts; sonst entstehen sehr ungleich tiefe Einträge.</em></span></div>
+    <div class="method-dot method-dot--goalong metric-chip" style="left:60%; top:31%;" data-explain="goalong" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Go-along</b><span>begleiten</span><small>Situation → Nachfrage</small><span class="metric-popover"><span class="metric-pop-kicker">Ethnographie</span><strong>Go-along</strong><span class="metric-explain">Forschende begleiten Menschen im Nutzungskontext und fragen direkt an konkreten Situationen nach.</span><span class="metric-pop-position"><b>Warum hier?</b><span>rechts oben-mittig, weil der Zugang im Feld stattfindet, aber durch Nachfragen stärker interaktiv ist als reine Beobachtung.</span></span><span class="metric-mini metric-mini--field"><i></i><i></i><i></i></span><em>Falle: Nähe zum Feld muss reflexiv dokumentiert werden.</em></span></div>
+    <div class="method-dot method-dot--ethno popover-align-right metric-chip" style="left:80%; top:29%;" data-explain="ethnography" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Ethnographie</b><span>beobachten</span><small>Feldnotiz → Touchpoint</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Ethnographie</strong><span class="metric-explain">Feldbeobachtung zeigt, wie Menschen im realen Kontext handeln, improvisieren und Bedeutung herstellen.</span><span class="metric-pop-position"><b>Warum hier?</b><span>rechts oben, weil der Zugang im Feld liegt und die Falltiefe aus beobachtetem Kontext entsteht.</span></span><span class="metric-mini metric-mini--field"><i></i><i></i><i></i></span><em>Falle: Beobachtung braucht Trennung von Feldnotiz und Interpretation.</em></span></div>
+    <div class="method-dot method-dot--fokus popover-align-left popover-above metric-chip" style="left:23%; top:64%;" data-explain="focusgroup" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Fokusgruppe</b><span>aushandeln</span><small>Sprache / Konfliktlinie</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Fokusgruppe</strong><span class="metric-explain">In der Gruppendiskussion wird sichtbar, welche Sprache, Konflikte und geteilten Deutungen entstehen.</span><span class="metric-pop-position"><b>Warum hier?</b><span>links unten, weil Interaktion erhoben wird, aber der Vergleich von Deutungen wichtiger ist als Einzelfalltiefe.</span></span><span class="metric-mini metric-mini--consensus"><i></i><i></i><i></i></span><em>Falle: Dominante Stimmen können scheinbaren Konsens erzeugen.</em></span></div>
+    <div class="method-dot method-dot--thinkaloud popover-above metric-chip" style="left:43%; top:63%;" data-explain="thinkAloud" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Think-aloud</b><span>Nutzung erklären</span><small>Task → Barriere</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Think-aloud</strong><span class="metric-explain">Menschen bearbeiten eine Aufgabe und sprechen laut mit, was sie wahrnehmen, erwarten und nicht verstehen.</span><span class="metric-pop-position"><b>Warum hier?</b><span>links unten-mittig, weil die Interaktion erhoben wird, aber meist mehrere Aufgaben oder Barrieren verglichen werden.</span></span><span class="metric-mini metric-mini--field"><i></i><i></i><i></i></span><em>Falle: Lautes Denken verändert die Situation; es zeigt Nutzungsbarrieren, keine natürlichen Häufigkeiten.</em></span></div>
+    <div class="method-dot method-dot--servqual popover-above metric-chip" style="left:42%; top:84%;" data-explain="servqual" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>SERVQUAL</b><span>Grenzfall Skala</span><small>Dimension → Messung</small><span class="metric-popover"><span class="metric-pop-kicker">Grenzfall</span><strong>SERVQUAL</strong><span class="metric-explain">SERVQUAL ist primär eine standardisierte Skala zu Servicequalität, nicht qualitative Forschung im engeren Sinn.</span><span class="metric-pop-position"><b>Warum hier?</b><span>unten links als Brücke zur Quantifizierung: erhobene Antworten, große Vergleichsbreite, aber qualitative Vorarbeit für die Dimensionen.</span></span><span class="metric-mini metric-mini--validity"><i></i><i></i><i></i></span><em>Falle: Die Dimensionen wirken objektiv, müssen aber für den Kontext inhaltlich validiert werden.</em></span></div>
+    <div class="method-dot method-dot--netno popover-above metric-chip" style="left:62%; top:69%;" data-explain="netnography" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Netnographie</b><span>Online-Feld lesen</span><small>Community → Frame</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Netnographie</strong><span class="metric-explain">Online-Communities, Foren und Social-Media-Spuren werden als kulturelles Feld gelesen und codiert.</span><span class="metric-pop-position"><b>Warum hier?</b><span>rechts unten-mittig, weil vorhandene Online-Spuren feldnah gelesen und zugleich als Korpus verglichen werden.</span></span><span class="metric-mini metric-mini--text-corpus"><i></i><i></i><i></i></span><em>Falle: Online-Stimmen sind oft selbstselektiert und brauchen Kontextprüfung.</em></span></div>
+    <div class="method-dot method-dot--document popover-align-right popover-above metric-chip" style="left:80%; top:67%;" data-explain="documentAnalysis" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Dokumentenanalyse</b><span>Material prüfen</span><small>Regelwerk → Deutung</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Dokumentenanalyse</strong><span class="metric-explain">Vorhandenes Material wie Beschwerden, Leitfäden oder Serviceprotokolle wird systematisch auf Deutungsmuster geprüft.</span><span class="metric-pop-position"><b>Warum hier?</b><span>rechts unten, weil die Daten bereits vorliegen und über Materialtypen hinweg verglichen werden.</span></span><span class="metric-mini metric-mini--audit"><i></i><i></i><i></i></span><em>Falle: Dokumente zeigen Organisationslogik, aber nicht automatisch gelebte Praxis.</em></span></div>
+    <div class="method-dot method-dot--content popover-align-right popover-above metric-chip" style="left:80%; top:86%;" data-explain="contentAnalysis" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Inhaltsanalyse</b><span>codieren</span><small>Textkorpus → Kategorie</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Inhaltsanalyse</strong><span class="metric-explain">Texte werden systematisch codiert, damit wiederkehrende Frames und Kategorien prüfbar werden.</span><span class="metric-pop-position"><b>Warum hier?</b><span>rechts unten, weil vorhandenes Material über viele Fälle hinweg codiert und vergleichbar gemacht wird.</span></span><span class="metric-mini metric-mini--deductive-inductive"><i></i><i></i><i></i></span><em>Falle: Große Textmengen sind nicht automatisch repräsentativ.</em></span></div>
+  </div>
+  <div class="map-reading-hint">
+    <span class="map-reading-hint-kicker">Lesehilfe</span>
+    <span class="map-reading-hint-body"><b>x-Achse</b> · Datenzugang, aktiv erhoben (links) versus feld- oder textbasiert vorliegend (rechts). <b>y-Achse</b> · Erkenntnisziel, hohe Falltiefe (oben) versus hohe Vergleichbarkeit über Fälle (unten). Jede Methode sitzt an ihrem typischen Schwerpunkt, die Quadranten sind Tendenzen, keine Schubladen.</span>
+  </div>
+  <div class="deck-pagenum">19 / 37</div>
+</section>
+
+<section class="slide white quality-detail-slide" data-screen-label="Gütemaße qualitativ" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="19">
+  <div class="quality-detail-head">
+    <div class="deck-eyebrow">GÜTEMASSE · QUALITATIVE METHODEN</div>
+    <h2 class="deck-h2">Qualitative Güte verlangt eine nachvollziehbar entstandene Deutung.</h2>
+  </div>
+  <div class="quality-detail-grid four">
+    <div class="quality-detail-card dark">
+      <div class="quality-detail-key">01 · Fallauswahl</div>
+      <div class="quality-detail-title">Warum diese Fälle?</div>
+      <div class="quality-detail-text">Fälle werden nach Erkenntniswert, Kontrast und Mechanismusvariation ausgewählt.</div>
+      <div class="quality-detail-metrics">
+        <span class="metric-chip" tabindex="0"><span class="metric-label">Theoretical Sampling</span><span class="metric-popover"><span class="metric-pop-kicker">Fallauswahl</span><strong>Fälle werden nach Erkenntniswert gewählt.</strong><span class="metric-explain">Nicht statistische Repräsentativität steht im Vordergrund, sondern Kontrast, Variation und theoretische Schärfung.</span><span class="metric-mini metric-mini--theoretical"><i></i><i></i><i></i></span><em>Falle: Convenience Sampling nicht nachträglich als Theorie verkaufen.</em></span></span>
+        <span class="metric-chip" data-explain="fallkontrast" tabindex="0"><span class="metric-label">Fallkontrast</span></span>
+        <span class="metric-chip" tabindex="0"><span class="metric-label">Sättigung</span><span class="metric-popover"><span class="metric-pop-kicker">Fallauswahl</span><strong>Neue Fälle bringen kaum neue Einsicht.</strong><span class="metric-explain">Sättigung heißt: Zusätzliche Interviews oder Texte verändern Kategorien und Mechanismusverständnis kaum noch.</span><span class="metric-mini metric-mini--saturation"><i></i><i></i><i></i></span><em>Falle: kein fixer n-Wert; Sättigung muss am Material begründet werden.</em></span></span>
+      </div>
+    </div>
+    <div class="quality-detail-card">
+      <div class="quality-detail-key">02 · Auswertung</div>
+      <div class="quality-detail-title">Wie wird aus Material eine Kategorie?</div>
+      <div class="quality-detail-text">Codierregeln, Ankerzitate und Auswertungsschritte machen die Interpretation prüfbar.</div>
+      <div class="quality-detail-metrics">
+        <span class="metric-chip" tabindex="0"><span class="metric-label">Transparenz</span><span class="metric-popover"><span class="metric-pop-kicker">Auswertung</span><strong>Der Weg zur Aussage ist sichtbar.</strong><span class="metric-explain">Leitfaden, Codierregeln, Auswertungsschritte und Entscheidungen werden so dokumentiert, dass andere sie prüfen können.</span><span class="metric-mini metric-mini--transparency"><i></i><i></i><i></i></span><em>Falle: Nur Ergebnisse zeigen ist keine transparente Analyse.</em></span></span>
+        <span class="metric-chip" tabindex="0"><span class="metric-label">Ankerzitate</span><span class="metric-popover"><span class="metric-pop-kicker">Auswertung</span><strong>Zitat belegt Kategorie.</strong><span class="metric-explain">Konkrete Textstellen zeigen, warum eine Deutung plausibel ist und wie Material in Kategorien überführt wurde.</span><span class="metric-mini metric-mini--quote"><i></i><i></i><i></i></span><em>Falle: Ein starkes Zitat ersetzt keine systematische Auswertung.</em></span></span>
+        <span class="metric-chip" tabindex="0"><span class="metric-label">Audit Trail</span><span class="metric-popover"><span class="metric-pop-kicker">Auswertung</span><strong>Analyseentscheidungen bleiben nachvollziehbar.</strong><span class="metric-explain">Memos, Codebuch-Versionen und dokumentierte Änderungen zeigen, wie die Interpretation entstanden ist.</span><span class="metric-mini metric-mini--audit"><i></i><i></i><i></i></span><em>Falle: Dokumentiertes Chaos ist noch kein guter Audit Trail.</em></span></span>
+      </div>
+    </div>
+    <div class="quality-detail-card">
+      <div class="quality-detail-key">03 · Codierung</div>
+      <div class="quality-detail-title">Wird der Leitfaden gleich angewendet?</div>
+      <div class="quality-detail-text">Bei codiertem Text kann Intercoder-Reliabilität zeigen, ob Kategorien verlässlich nutzbar sind.</div>
+      <div class="quality-detail-metrics">
+        <span class="metric-chip" data-explain="percentAgreement" tabindex="0"><span class="metric-label">Prozentuale Übereinstimmung</span></span>
+        <span class="metric-chip" tabindex="0"><span class="metric-label">Cohen’s κ</span><span class="metric-popover"><span class="metric-pop-kicker">Codierung</span><strong>Zufallskorrigierte Übereinstimmung zweier Coder.</strong><span class="metric-explain">κ zeigt, ob ein Codebuch von zwei Personen konsistent angewendet wird.</span><span class="metric-mini metric-mini--kappa"><i></i><i></i><i></i></span><em>Falle: Hohes κ macht Kategorien nicht automatisch inhaltlich gut.</em></span></span>
+        <span class="metric-chip" tabindex="0"><span class="metric-label">Krippendorffs α</span><span class="metric-popover"><span class="metric-pop-kicker">Codierung</span><strong>Reliabilität für mehrere Coder und Datentypen.</strong><span class="metric-explain">α ist flexibler als κ, etwa bei mehreren Codern, fehlenden Werten und unterschiedlichen Skalenniveaus.</span><span class="metric-mini metric-mini--krippendorff"><i></i><i></i><i></i></span><em>Falle: Reliabilität ersetzt keine Validierung der Deutung.</em></span></span>
+      </div>
+    </div>
+    <div class="quality-detail-card">
+      <div class="quality-detail-key">04 · Validität</div>
+      <div class="quality-detail-title">Ist die Deutung plausibel?</div>
+      <div class="quality-detail-text">Gegenfälle, Reflexivität und Triangulation schützen vor zu glatter Interpretation.</div>
+      <div class="quality-detail-metrics">
+        <span class="metric-chip" tabindex="0"><span class="metric-label">Reflexivität</span><span class="metric-popover"><span class="metric-pop-kicker">Validität</span><strong>Die eigene Rolle wird mitgedacht.</strong><span class="metric-explain">Vorannahmen, Intervieweffekte und Interpretationsposition werden sichtbar gemacht, statt als neutral unsichtbar zu bleiben.</span><span class="metric-mini metric-mini--reflexivity"><i></i><i></i><i></i></span><em>Falle: Reflexivität ist Analysequalität, keine Selbstbespiegelung.</em></span></span>
+        <span class="metric-chip" tabindex="0"><span class="metric-label">Gegenfälle</span><span class="metric-popover"><span class="metric-pop-kicker">Validität</span><strong>Widerspruch prüft die Deutung.</strong><span class="metric-explain">Abweichende Fälle zeigen, ob eine Kategorie zu glatt, zu breit oder wirklich tragfähig ist.</span><span class="metric-mini metric-mini--countercase"><i></i><i></i><i></i></span><em>Falle: Nur passende Evidenz auswählen schwächt die Aussage.</em></span></span>
+        <span class="metric-chip" tabindex="0"><span class="metric-label">Triangulation</span><span class="metric-popover"><span class="metric-pop-kicker">Validität</span><strong>Mehrere Perspektiven prüfen denselben Befund.</strong><span class="metric-explain">Datenquellen, Methoden, Forschende oder Theorien werden kombiniert, um eine Deutung robuster zu machen.</span><span class="metric-mini metric-mini--triangulation"><i></i><i></i><i></i></span><em>Falle: Mehr Material hilft nur, wenn es gezielt integriert wird.</em></span></span>
+      </div>
+    </div>
+  </div>
+  <div class="quality-detail-answer"><strong>Antwortsatz:</strong> Qualitative Güte ist keine Frage von n allein, sondern der transparenten Kette von Fall, Material, Code und Deutung.</div>
+  <div class="deck-pagenum">20 / 37</div>
+</section>
+
+<section class="slide soft two-col-slab exhibit-slab" data-screen-label="Anwendung · Interview" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="20">
+  <div>
+    <div class="deck-eyebrow accent">ANWENDUNG · METHODE A</div>
+    <h2 class="deck-h2">Interviews machen Begriffe sichtbar, die ein Fragebogen noch nicht kennt.</h2>
+    <p class="deck-body" style="margin-top: 32px;">
+      Zwölf Pendler:innen aus dem Großraum Hamburg, je 60 Minuten, halbstandardisierter Leitfaden. Fünf Themenblöcke, viel Raum für eigene Begriffe. Audioaufnahme, Transkript, kodierende Auswertung nach Mayring.
+    </p>
+    <div class="tag-row">
+      <span class="tag metric-chip" data-explain="qualSampleSize" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Fallauswahl · n = 12<span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Fallzahl im qualitativen Design</strong><span class="metric-explain">n steht hier für Materialtiefe, Kontrast und Sättigungsprüfung, nicht für Marktanteile oder Power.</span><span class="metric-mini metric-mini--saturation"><i></i><i></i><i></i></span><em>Falle: Kleine qualitative n nicht in Prozentzahlen übersetzen.</em></span></span>
+      <span class="tag metric-chip" data-explain="guide" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Instrument · Leitfaden<span class="metric-popover"><span class="metric-pop-kicker">Interview</span><strong>Leitfaden</strong><span class="metric-explain">Ein Leitfaden hält Themen vergleichbar und lässt trotzdem Raum für eigene Begriffe.</span><span class="metric-mini metric-mini--transparency"><i></i><i></i><i></i></span><em>Falle: Zu starre Fragen produzieren Bestätigung statt Exploration.</em></span></span>
+      <span class="tag metric-chip" data-explain="saturation" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Güte · Sättigung<span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Sättigung</strong><span class="metric-explain">Sättigung liegt vor, wenn zusätzliche Fälle kaum neue Kategorien oder Mechanismen liefern.</span><span class="metric-mini metric-mini--saturation"><i></i><i></i><i></i></span><em>Falle: Sättigung ist zu begründen, nicht als fixe Zahl zu behaupten.</em></span></span>
+      <span class="tag metric-chip" data-explain="mayring" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Auswertung · Mayring<span class="metric-popover"><span class="metric-pop-kicker">Codierung</span><strong>Mayring</strong><span class="metric-explain">Qualitative Inhaltsanalyse arbeitet regelgeleitet: Material wird paraphrasiert, verdichtet und Kategorien zugeordnet.</span><span class="metric-mini metric-mini--codes-items"><i></i><i></i><i></i></span><em>Falle: Regelgeleitet heißt nicht mechanisch; Kategorien müssen inhaltlich begründet werden.</em></span></span>
+    </div>
+    <div class="claim-foot">ENTSCHEIDUNGSWERT · BEGRIFF FINDEN, DEN DER FRAGEBOGEN NICHT KANNTE</div>
+  </div>
+  <div class="slab-card">
+    <div class="slab-card-inner">
+      <div class="deck-eyebrow">KODIERKETTE · TRANSKRIPT B07, ZEILE 142</div>
+      <div class="coding-chain">
+        <div><span>Zitat</span><q>Ich plane jeden Morgen eine halbe Stunde Puffer ein.</q></div>
+        <div><span>Paraphrase</span><b>Puffer als Schutz vor Bahnrisiko.</b></div>
+        <div><span>Code</span><b>Pufferzeit</b></div>
+        <div><span>Kategorie</span><b>antizipierter Kontrollverlust</b></div>
+        <div class="is-decision"><span>Designhypothese</span><b>Vertrauen vor der Störung aufbauen.</b></div>
+      </div>
+      <div class="coding-result">Wiederkehrend in 8/12 Interviews · kein Marktanteil, sondern belastbarer Suchbegriff für Design und Fragebogen.</div>
+      <div class="slab-card-rule">ENTSCHEIDUNG · VERTRAUEN VOR DER STÖRUNG AUFBAUEN</div>
+    </div>
+  </div>
+  <div class="deck-pagenum">21 / 37</div>
+</section>
+
+<section class="slide soft two-col-slab exhibit-slab" data-screen-label="Anwendung · Ethnographie" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="21">
+  <div>
+    <div class="deck-eyebrow accent">ANWENDUNG · METHODE B</div>
+    <h2 class="deck-h2">Ethnographie zeigt, wie Informationen im Nutzungskontext verarbeitet werden.</h2>
+    <p class="deck-body" style="margin-top: 32px;">
+      Zwei Forschende verbringen sieben Tage an den Bahnhöfen Hamburg Hbf und Lübeck Hbf. Sie reisen mit, sie warten, sie reden. Feldtagebuch, Fotos, kurze Standgespräche. Ziel: das Erleben am Ort des Erlebens dokumentieren.
+    </p>
+    <div class="tag-row">
+      <span class="tag metric-chip" data-explain="ethnography" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Zugang · teilnehmend<span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Ethnographie</strong><span class="metric-explain">Feldbeobachtung zeigt, wie Menschen im realen Kontext handeln, improvisieren und Bedeutung herstellen.</span><span class="metric-pop-position"><b>Warum hier?</b><span>rechts oben, weil der Zugang im Feld liegt und die Falltiefe aus beobachtetem Kontext entsteht.</span></span><span class="metric-mini metric-mini--field"><i></i><i></i><i></i></span><em>Falle: Beobachtung braucht Trennung von Feldnotiz und Interpretation.</em></span></span>
+      <span class="tag metric-chip" data-explain="fieldnote" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Dokumentation · Feldtagebuch<span class="metric-popover"><span class="metric-pop-kicker">Ethnographie</span><strong>Feldtagebuch</strong><span class="metric-explain">Feldnotizen trennen Beobachtung, Kontext und analytische Memos über das Geschehen vor Ort.</span><span class="metric-mini metric-mini--audit"><i></i><i></i><i></i></span><em>Falle: Nachträgliche Erinnerung ist schwächer als zeitnahe Dokumentation.</em></span></span>
+      <span class="tag metric-chip" data-explain="goalong" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Methode · Go-along<span class="metric-popover"><span class="metric-pop-kicker">Ethnographie</span><strong>Go-along</strong><span class="metric-explain">Forschende begleiten Menschen im Nutzungskontext und fragen direkt an konkreten Situationen nach.</span><span class="metric-pop-position"><b>Warum hier?</b><span>rechts oben-mittig, weil der Zugang im Feld stattfindet, aber durch Nachfragen stärker interaktiv ist als reine Beobachtung.</span></span><span class="metric-mini metric-mini--field"><i></i><i></i><i></i></span><em>Falle: Nähe zum Feld muss reflexiv dokumentiert werden.</em></span></span>
+    </div>
+    <div class="claim-foot">ENTSCHEIDUNGSWERT · BEOBACHTUNG UND INTERPRETATION SAUBER TRENNEN</div>
+  </div>
+  <div class="slab-card">
+    <div class="slab-card-inner">
+      <div class="deck-eyebrow">FELDNOTIZ · DI 18.04. · 07:42 · HH HBF</div>
+      <h3 class="deck-h3">Feldnotiz plus analytisches Memo.</h3>
+      <div class="fieldnote-object">
+        <div class="fieldnote-row"><span>07:42</span><b>Blick zur Anzeigetafel</b><em>acht Reisende bleiben stehen</em></div>
+        <div class="fieldnote-row"><span>07:43</span><b>Handyvergleich</b><em>DB Navigator wird parallel geprüft</em></div>
+        <div class="fieldnote-row"><span>07:45</span><b>Gang zum Service-Point</b><em>„Wartet der Zug oder nicht?“</em></div>
+        <div class="fieldnote-memo"><span>Memo</span><b>Offizielle Information reicht nicht für Entscheidungssicherheit.</b></div>
+      </div>
+      <div class="slab-card-rule">ENTSCHEIDUNG · INFORMATIONSSYSTEM IST TAFEL PLUS HANDY PLUS SERVICE-POINT</div>
+    </div>
+  </div>
+  <div class="deck-pagenum">22 / 37</div>
+</section>
+
+<section class="slide white two-col-slab exhibit-slab" data-screen-label="Anwendung · Inhaltsanalyse" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="22">
+  <div>
+    <div class="deck-eyebrow accent">ANWENDUNG · METHODE C</div>
+    <h2 class="deck-h2">Inhaltsanalyse macht wiederkehrende Problemframes prüfbar.</h2>
+    <p class="deck-body" style="margin-top: 32px;">
+      5.400 Bewertungen aus Trustpilot, App-Stores und Bahn-Foren. Qualitative Inhaltsanalyse mit deduktivem Kategoriensystem, induktiver Erweiterung, doppelter Kodierung. Cohens κ als Gütemaß.
+    </p>
+    <div class="tag-row">
+      <span class="tag metric-chip" tabindex="0"><span class="metric-label">Korpus · N = 5.400</span><span class="metric-popover"><span class="metric-pop-kicker">Inhaltsanalyse</span><strong>Großer Korpus, nicht automatisch repräsentativ.</strong><span class="metric-explain">Viele Texte erhöhen Musterbreite. Entscheidend ist aber, aus welchen Plattformen, Zeiträumen und Situationen sie stammen.</span><span class="metric-mini metric-mini--text-corpus"><i></i><i></i><i></i></span><em>Falle: Onlinebewertungen sind häufig selbstselektiert.</em></span></span>
+      <span class="tag metric-chip" tabindex="0"><span class="metric-label">Codebildung · ded./ind.</span><span class="metric-popover"><span class="metric-pop-kicker">Inhaltsanalyse</span><strong>Theorie trifft Material.</strong><span class="metric-explain">Deduktive Codes kommen aus Theorie oder Fragestellung; induktive Codes entstehen aus überraschenden Mustern im Text.</span><span class="metric-mini metric-mini--deductive-inductive"><i></i><i></i><i></i></span><em>Falle: Induktiv heißt nicht regellos; deduktiv heißt nicht blind.</em></span></span>
+      <span class="tag metric-chip" tabindex="0"><span class="metric-label">Reliabilität · Doppelkodierung</span><span class="metric-popover"><span class="metric-pop-kicker">Inhaltsanalyse</span><strong>Zwei Personen prüfen dasselbe Codebuch.</strong><span class="metric-explain">Ein Teil des Materials wird unabhängig codiert, um die Anwendung der Kategorien reliabel zu prüfen.</span><span class="metric-mini metric-mini--double-coding"><i></i><i></i><i></i></span><em>Falle: Übereinstimmung prüft Anwendung, nicht automatisch theoretische Qualität.</em></span></span>
+      <span class="tag metric-chip" tabindex="0"><span class="metric-label">Güte · κ = 0,79</span><span class="metric-popover"><span class="metric-pop-kicker">Inhaltsanalyse</span><strong>Ordentliche zufallskorrigierte Übereinstimmung.</strong><span class="metric-explain">Kappa korrigiert beobachtete Übereinstimmung um Zufallstreffer. 0,79 ist in vielen Kontexten gut vertretbar.</span><span class="metric-mini metric-mini--kappa-score"><i></i><i></i><i></i></span><em>Falle: Kappa ist kein Wahrheitsmaß und keine Validitätsgarantie.</em></span></span>
+    </div>
+    <div class="claim-foot">ENTSCHEIDUNGSWERT · ERKENNEN, WELCHE SPRACHE IM MARKT DOMINIERT</div>
+  </div>
+  <div class="slab-card">
+    <div class="slab-card-inner">
+      <div class="deck-eyebrow">KODIERERGEBNIS · TOP 5 · CODIERTE SEGMENTE</div>
+      <h3 class="deck-h3">Was die Reisenden selbst zum Thema machen.</h3>
+      <div class="coding-proof">
+        <q>Bei Störung weiß niemand, was wirklich gilt.</q>
+        <span class="code-tag">unklare Autorität</span>
+        <span class="code-tag code-tag--accent">Störungsinformation</span>
+      </div>
+      <div class="category-bars">
+        <div class="category-bar is-primary"><span class="category-rank">01</span><span class="category-label">Information bei Störung</span><span class="category-track"><i style="width:100%"></i></span><span class="category-share">31%</span></div>
+        <div class="category-bar"><span class="category-rank">02</span><span class="category-label">Personalverhalten</span><span class="category-track"><i style="width:71%"></i></span><span class="category-share">22%</span></div>
+        <div class="category-bar"><span class="category-rank">03</span><span class="category-label">Sauberkeit</span><span class="category-track"><i style="width:45%"></i></span><span class="category-share">14%</span></div>
+        <div class="category-bar"><span class="category-rank">04</span><span class="category-label">Sitzplatzreservierung</span><span class="category-track"><i style="width:39%"></i></span><span class="category-share">12%</span></div>
+        <div class="category-bar"><span class="category-rank">05</span><span class="category-label">App-Buchungsprozess</span><span class="category-track"><i style="width:29%"></i></span><span class="category-share">9%</span></div>
+      </div>
+      <div class="slab-card-rule">BASIS · CODIERTE SEGMENTE; MEHRFACHKODIERUNG MÖGLICH; Κ = 0,79 AUF DOPPELKODIERUNG</div>
+    </div>
+  </div>
+  <div class="deck-pagenum">23 / 37</div>
+</section>
+
+<section class="slide white compare" data-screen-label="Stärken &amp; Grenzen qualitativ" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="23">
+  <div>
+    <div class="deck-eyebrow">BILANZ · QUALITATIV</div>
+    <h2 class="deck-h2" style="font-size: 72px;">Qualitativ liefert Begriffe und Mechanismen, keine Marktgrößen.</h2>
+  </div>
+  <div class="qual-balance-grid">
+    <div class="qual-strength-panel">
+      <div class="head">STÄRKE · AUSSAGE WIRD BEGRIFF</div>
+      <q>Ich weiß nicht, ob ich es schaffe.</q>
+      <div class="qual-chain-mini"><span>Zitat</span><i>→</i><span>Code</span><i>→</i><span>Mechanismus</span><i>→</i><span>Designbegriff</span></div>
+      <b class="metric-chip" data-explain="category" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Kontrollverlust<span class="metric-popover"><span class="metric-pop-kicker">Auswertung</span><strong>Kategorie</strong><span class="metric-explain">Kategorien bündeln Codes zu einem interpretierbaren Muster oder Mechanismus.</span><span class="metric-mini metric-mini--cluster"><i></i><i></i><i></i></span><em>Falle: Kategorien sind schwach, wenn sie nur sammeln und nichts erklären.</em></span></b>
+    </div>
+    <div class="qual-warning-panel">
+      <div class="head accent">GRENZE · FALSCHE ABLEITUNG</div>
+      <div class="warning-metric metric-chip" data-explain="qualSampleSize" tabindex="0" aria-haspopup="dialog" aria-expanded="false">n = 12 <span>≠</span> 31%<span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Fallzahl im qualitativen Design</strong><span class="metric-explain">n steht hier für Materialtiefe, Kontrast und Sättigungsprüfung, nicht für Marktanteile oder Power.</span><span class="metric-mini metric-mini--saturation"><i></i><i></i><i></i></span><em>Falle: Kleine qualitative n nicht in Prozentzahlen übersetzen.</em></span></div>
+      <p>Aus Interviews entstehen Begriffe, Typen und Hypothesen. Keine Marktanteile.</p>
+    </div>
+  </div>
+  <div class="compare-takeaway"><strong>Regel:</strong> Qualitativ zum Benennen und Erklären; quantitativ zum Schätzen und Verallgemeinern.</div>
+  <div class="deck-pagenum">24 / 37</div>
+</section>
+
+<section class="slide dark gridbg-dark section-divider section-divider--proof" data-screen-label="Akt 03 · Lösung prüfen" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="24">
+  <div class="section-numeral">03</div>
+  <div class="section-title-block">
+    <div class="deck-eyebrow accent">AKT 03 · MIXED METHODS</div>
+    <h2 class="deck-h2">Methoden <em>kombinieren</em>.</h2>
+  </div>
+  <div class="section-proof-strip">
+    <div class="proof-chip"><span>QUANT</span><b>53%</b></div>
+    <div class="proof-chip"><span>QUAL</span><b>Angst</b></div>
+    <div class="proof-chip"><span>TEST</span><b>−18 pp</b></div>
+    <div class="proof-chip"><span>ENTSCHEID</span><b>Go</b></div>
+  </div>
+  <div class="deck-pagenum">25 / 37</div>
+</section>
+
+<section class="slide white two-col-slab exhibit-slab" data-screen-label="Warum eine Methode nicht reicht" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="25">
+  <div>
+    <div class="deck-eyebrow">MIXED METHODS · MOTIVATION</div>
+    <h2 class="deck-h2">Mixed Methods verbindet Reichweite und Erklärung.</h2>
+    <p class="deck-body" style="margin-top: 32px;">
+      Wer eine Lösung einführen will, muss zweierlei wissen: <em>Was erleben unsere Reisenden wirklich?</em> und <em>Wirkt die Lösung im Großen?</em> Mixed Methods kombiniert beide Logiken kontrolliert, nicht als bunter Methodenmix, sondern als bewusstes Design.
+    </p>
+    <div class="claim-foot">POINT · MIXED METHODS IST KEIN MEHR DAVON, SONDERN EINE GEPLANTE VERKNÜPFUNG</div>
+  </div>
+  <div class="slab-card">
+    <div class="slab-card-inner">
+      <div class="deck-eyebrow">DEFINITION · CRESWELL &amp; PLANO CLARK</div>
+      <h3 class="deck-h3">Integration ist der eigentliche methodische Schritt.</h3>
+      <div class="mm-joint-display">
+        <div class="joint-head metric-chip" data-explain="mechanism" tabindex="0" aria-haspopup="dialog" aria-expanded="false">QUAL-Befund<span class="metric-popover"><span class="metric-pop-kicker">Qual-Grenze</span><strong>Mechanismus</strong><span class="metric-explain">Der Mechanismus erklärt, warum ein beobachtetes Muster entsteht.</span><span class="metric-mini metric-mini--pattern-mechanism"><i></i><i></i><i></i></span><em>Falle: Mechanismen lassen sich selten direkt aus Mittelwerten ablesen.</em></span></div><div class="joint-head metric-chip" data-explain="marketSize" tabindex="0" aria-haspopup="dialog" aria-expanded="false">QUANT-Befund<span class="metric-popover"><span class="metric-pop-kicker">Quant-Grenze</span><strong>Marktgröße</strong><span class="metric-explain">Quantitative Daten schätzen Reichweite, Häufigkeit und Priorität eines Problems.</span><span class="metric-mini metric-mini--sample"><i></i><i></i><i></i></span><em>Falle: Größe ohne validen Begriff kann präzise in die falsche Richtung führen.</em></span></div><div class="joint-head metric-chip" data-explain="jointDisplay" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Integrationsfrage<span class="metric-popover"><span class="metric-pop-kicker">Mixed Methods</span><strong>Joint Display</strong><span class="metric-explain">Eine gemeinsame Matrix führt Zahl, Zitat, Interpretation und Entscheidung zusammen.</span><span class="metric-mini metric-mini--joint-display"><i></i><i></i><i></i></span><em>Falle: Nebeneinanderstellen ist noch keine Integration.</em></span></div><div class="joint-head metric-chip" data-explain="metaInference" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Meta-Inferenz<span class="metric-popover"><span class="metric-pop-kicker">Mixed Methods</span><strong>Meta-Inferenz</strong><span class="metric-explain">Die stärkere Aussage entsteht aus der Verbindung beider Evidenzen.</span><span class="metric-mini metric-mini--meta-inference"><i></i><i></i><i></i></span><em>Falle: Widersprüche müssen erklärt, nicht wegmoderiert werden.</em></span></div>
+        <div><span>QUAL</span><b class="metric-chip" data-explain="mechanism" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Anschlussangst<span class="metric-popover"><span class="metric-pop-kicker">Qual-Grenze</span><strong>Mechanismus</strong><span class="metric-explain">Der Mechanismus erklärt, warum ein beobachtetes Muster entsteht.</span><span class="metric-mini metric-mini--pattern-mechanism"><i></i><i></i><i></i></span><em>Falle: Mechanismen lassen sich selten direkt aus Mittelwerten ablesen.</em></span></b></div>
+        <div><span>QUANT</span><b class="metric-chip" data-explain="riskDifference" tabindex="0" aria-haspopup="dialog" aria-expanded="false">−18 pp Bahnsteig<span class="metric-popover"><span class="metric-pop-kicker">Effekt</span><strong>Prozentpunktdifferenz</strong><span class="metric-explain">Differenz zweier Anteile: 32% Verweildauer Bahnsteig &gt; 4 min in der Kontrolle minus 14% im Treatment ergibt −18 pp.</span><span class="metric-mini metric-mini--pvalue"><i></i><i></i><i></i></span><em>Falle: Prozentpunkte nicht mit Prozentveränderung verwechseln.</em></span></b></div>
+        <div><span>MERGE</span><b class="metric-chip" data-explain="jointDisplay" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Passt Mechanismus zum Effekt?<span class="metric-popover"><span class="metric-pop-kicker">Mixed Methods</span><strong>Joint Display</strong><span class="metric-explain">Eine gemeinsame Matrix führt Zahl, Zitat, Interpretation und Entscheidung zusammen.</span><span class="metric-mini metric-mini--joint-display"><i></i><i></i><i></i></span><em>Falle: Nebeneinanderstellen ist noch keine Integration.</em></span></b></div>
+        <div class="is-decision"><span>ENTSCHEIDUNG</span><b class="metric-chip" data-explain="decisionArtifact" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Ausrollen oder iterieren<span class="metric-popover"><span class="metric-pop-kicker">Transfer</span><strong>Decision Artifact</strong><span class="metric-explain">Das Ergebnis wird so übersetzt, dass es eine Entscheidung, Regel, Priorisierung oder Intervention trägt.</span><span class="metric-mini metric-mini--fit"><i></i><i></i><i></i></span><em>Falle: Forschung endet nicht beim Befund, wenn eine Handlungsentscheidung offen ist.</em></span></b></div>
+      </div>
+      <div class="slab-card-rule">CRESWELL &amp; PLANO CLARK · 2017</div>
+    </div>
+  </div>
+  <div class="deck-pagenum">26 / 37</div>
+</section>
+
+<section class="slide white mm-design-slide mm-joined-slide" data-screen-label="Mixed Methods · Design und Güte" data-deck-slide="26" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text">
+  <div class="mm-design-head">
+    <div class="deck-eyebrow">MIXED METHODS · DESIGN UND GÜTE</div>
+    <h2 class="deck-h2">Mixed-Methods-Designs unterscheiden sich durch ihre Integrationsstelle.</h2>
+    <div class="mm-design-thesis"><strong>Leitfrage:</strong> Welche Verknüpfung braucht die Frage, und woran wird sie belastbar?</div>
+  </div>
+  <div class="mm-design-grid">
+    <article class="mm-design-card">
+      <div class="pattern-head metric-chip" tabindex="0"><span class="metric-label">01 · explorativ-sequentiell</span><span class="metric-popover"><span class="metric-pop-kicker">Mixed Methods</span><strong>Erst verstehen, dann messen.</strong><span class="metric-explain">Qualitative Ergebnisse liefern Begriffe, Hypothesen oder Items, die anschließend quantitativ geprüft werden.</span><span class="metric-mini metric-mini--exploratory-seq"><i></i><i></i><i></i></span><em>Falle: Die quantitative Phase muss wirklich aus der qualitativen Phase gebaut sein.</em></span></div>
+      <h3>QUAL → QUANT</h3>
+      <p><strong>Wann wählen?</strong> Wenn Sprache, Dimensionen oder Items noch fehlen.</p>
+      <div class="mm-design-flow"><span>Erleben</span><i>→</i><span>Kategorie</span><i>→</i><span>Messung</span></div>
+      <div class="mm-design-use"><span>Integrationsstelle</span><b class="integration-label metric-chip" tabindex="0"><span class="metric-label">BUILD · Codes → Skala</span><span class="metric-popover"><span class="metric-pop-kicker">Integration</span><strong>Qualitative Codes werden messbar.</strong><span class="metric-explain">Aus Sprache und Kategorien entstehen Items, Skalen oder Hypothesen für die quantitative Phase.</span><span class="metric-mini metric-mini--build"><i></i><i></i><i></i></span><em>Falle: Items nicht nur wörtlich übernehmen; Konstrukt prüfen.</em></span></b><em>Qualitative Vorarbeit legt fest, was anschließend quantitativ gemessen wird.</em></div>
+      <div class="mm-design-quality"><span>Gütefrage</span><b>Deckt das Item den Bedeutungsraum der Reisenden ab?</b><div><span class="metric-chip" tabindex="0"><span class="metric-label">Inhaltsvalidität</span><span class="metric-popover"><span class="metric-pop-kicker">Build</span><strong>Deckt die Messung den Bedeutungsraum ab?</strong><span class="metric-explain">Expertise, Theorie und qualitative Evidenz prüfen, ob die Items das Konstrukt vollständig und passend erfassen.</span><span class="metric-mini metric-mini--content-validity"><i></i><i></i><i></i></span><em>Falle: Cronbachs Alpha ersetzt keine Inhaltsvalidität.</em></span></span></div></div>
+    </article>
+    <article class="mm-design-card is-focus">
+      <div class="pattern-head metric-chip" tabindex="0"><span class="metric-label">02 · erklärend-sequentiell</span><span class="metric-popover"><span class="metric-pop-kicker">Mixed Methods</span><strong>Erst Muster messen, dann erklären.</strong><span class="metric-explain">Quantitative Ergebnisse zeigen ein Muster; qualitative Daten erklären Mechanismus, Kontext oder unerwartete Abweichung.</span><span class="metric-mini metric-mini--explanatory-seq"><i></i><i></i><i></i></span><em>Falle: Quali darf nicht nur nachträgliche Illustration sein.</em></span></div>
+      <h3>QUANT → QUAL</h3>
+      <p><strong>Wann wählen?</strong> Wenn ein gemessenes Muster eine Warum-Erklärung braucht.</p>
+      <div class="mm-design-flow"><span>Muster</span><i>→</i><span>Fallauswahl</span><i>→</i><span>Mechanismus</span></div>
+      <div class="mm-design-use"><span>Integrationsstelle</span><b class="integration-label metric-chip" tabindex="0"><span class="metric-label">EXPLAIN · Muster → Interview</span><span class="metric-popover"><span class="metric-pop-kicker">Integration</span><strong>Zahl wird durch Mechanismus erklärt.</strong><span class="metric-explain">Ein auffälliges Muster wird gezielt in Interviews oder Beobachtungen aufgeklärt.</span><span class="metric-mini metric-mini--explain-mm"><i></i><i></i><i></i></span><em>Falle: Nicht jedes Muster braucht Quali; relevant ist die blockierende Warum-Frage.</em></span></b><em>Das quantitative Ergebnis bestimmt, welche Fälle qualitativ vertieft werden.</em></div>
+      <div class="mm-design-quality"><span>Gütefrage</span><b>Erklärt der Mechanismus das gemessene Muster?</b><div><span class="metric-chip" tabindex="0"><span class="metric-label">Meta-Inferenz</span><span class="metric-popover"><span class="metric-pop-kicker">Explain</span><strong>Die gemeinsame Schlussfolgerung.</strong><span class="metric-explain">Die eigentliche Aussage entsteht aus der Integration beider Evidenzen, nicht aus einer Methode allein.</span><span class="metric-mini metric-mini--meta-inference"><i></i><i></i><i></i></span><em>Falle: Widersprüche nicht glätten, sondern auswerten.</em></span></span></div></div>
+    </article>
+    <article class="mm-design-card">
+      <div class="pattern-head metric-chip" tabindex="0"><span class="metric-label">03 · konvergent-parallel</span><span class="metric-popover"><span class="metric-pop-kicker">Mixed Methods</span><strong>Zwei Datenarten laufen parallel.</strong><span class="metric-explain">Qualitative und quantitative Evidenz werden getrennt erhoben und anschließend systematisch zusammengeführt.</span><span class="metric-mini metric-mini--convergent"><i></i><i></i><i></i></span><em>Falle: Parallel ist erst Mixed Methods, wenn die Befunde integriert werden.</em></span></div>
+      <h3>QUAL + QUANT → Entscheidung</h3>
+      <p><strong>Wann wählen?</strong> Wenn beide Perspektiven gleichzeitig entscheidungsrelevant sind.</p>
+      <div class="mm-design-flow"><span>Zahl</span><i>+</i><span>Zitat</span><i>→</i><span>Meta-Inferenz</span></div>
+      <div class="mm-design-use"><span>Integrationsstelle</span><b class="integration-label metric-chip" tabindex="0"><span class="metric-label">MERGE · Zahl + Zitat</span><span class="metric-popover"><span class="metric-pop-kicker">Integration</span><strong>Befunde werden nebeneinander entscheidbar.</strong><span class="metric-explain">Zahl und Material werden in einem Joint Display zusammengeführt, um Übereinstimmung oder Spannung sichtbar zu machen.</span><span class="metric-mini metric-mini--merge"><i></i><i></i><i></i></span><em>Falle: Nebeneinanderstellen ist noch keine Integration.</em></span></b><em>Beide Befunde werden in einer gemeinsamen Entscheidung gelesen.</em></div>
+      <div class="mm-design-quality"><span>Gütefrage</span><b>Tragen beide Evidenzen dieselbe Empfehlung?</b><div><span class="metric-chip" tabindex="0"><span class="metric-label">Joint Display</span><span class="metric-popover"><span class="metric-pop-kicker">Merge</span><strong>Integration wird sichtbar gemacht.</strong><span class="metric-explain">Tabelle oder Matrix zeigt quantitative Befunde, qualitative Evidenz und Konsequenz in einer gemeinsamen Struktur.</span><span class="metric-mini metric-mini--joint-display"><i></i><i></i><i></i></span><em>Falle: Ein Joint Display ist analytisch, nicht nur dekorativ.</em></span></span><span class="metric-chip" tabindex="0"><span class="metric-label">Triangulation</span><span class="metric-popover"><span class="metric-pop-kicker">Merge</span><strong>Mehrere Evidenzen prüfen denselben Befund.</strong><span class="metric-explain">Verschiedene Datenarten stützen, relativieren oder widersprechen einander und erhöhen so die Interpretationsqualität.</span><span class="metric-mini metric-mini--triangulation"><i></i><i></i><i></i></span><em>Falle: Mehr Daten helfen nur mit klarer Integrationslogik.</em></span></span></div></div>
+    </article>
+  </div>
+  <div class="mm-design-bridge"><strong>Antwortsatz:</strong> Mixed Methods ist nicht mehr Methoden, sondern eine begründete Integration, deren Güte an der Verknüpfung geprüft wird.</div>
+  <div class="deck-pagenum">27 / 37</div>
+</section>
 <section class="slide white two-col-slab exhibit-slab" data-screen-label="Anwendung · Experiment" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="13">
   <div>
     <div class="deck-eyebrow accent">ANWENDUNG · METHODE D</div>
@@ -5982,388 +6310,9 @@
       <div class="slab-card-rule">ENTSCHEIDUNG · TREATMENT AUSROLLEN, WEIL BAHNSTEIG-VERWEILDAUER DEUTLICH SINKT</div>
     </div>
   </div>
-  <div class="deck-pagenum">16 / 38</div>
+  <div class="deck-pagenum">28 / 37</div>
 </section>
 
-<section class="slide white compare" data-screen-label="Stärken &amp; Grenzen quantitativ" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="14">
-  <div>
-    <div class="deck-eyebrow">BILANZ · QUANTITATIV</div>
-    <h2 class="deck-h2" style="font-size: 72px;">Was Zahlen <em>leisten</em>, und was sie <em>nicht</em> leisten.</h2>
-  </div>
-  <div class="quant-balance-grid">
-    <div class="quant-proof-panel">
-      <div class="head">WAS QUANT STARK MACHT</div>
-      <div class="quant-proof-value metric-chip" data-explain="sampleSize" tabindex="0" aria-haspopup="dialog" aria-expanded="false">n = 2.500<span class="metric-popover"><span class="metric-pop-kicker">Stichprobe</span><strong>Fallzahl n</strong><span class="metric-explain">Die Fallzahl bestimmt Präzision und Power, aber nicht automatisch Repräsentativität.</span><span class="metric-mini metric-mini--sample"><i></i><i></i><i></i></span><em>Falle: Großes n korrigiert keinen systematischen Bias.</em></span></div>
-      <div class="quant-proof-bars">
-        <div><span>Anschlussinfo</span><i style="width:42%"></i><b class="metric-chip" data-explain="bottom2Anschluss" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Bottom-2 42%</b></div>
-        <div><span>Pünktlichkeit</span><i style="width:36%"></i><b class="metric-chip" data-explain="bottom2Punkt" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Bottom-2 36%</b></div>
-        <div><span>Komfort</span><i style="width:12%"></i><b class="metric-chip" data-explain="bottom2Komfort" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Bottom-2 12%</b></div>
-      </div>
-      <p>Wenn Begriffe bekannt sind, macht quantitative Forschung Größe, Stabilität, Segmentunterschiede und Effekte entscheidbar.</p>
-    </div>
-    <div class="quant-blindspot-panel">
-      <div class="head accent">WAS OFFEN BLEIBT</div>
-      <div class="blackbox-question metric-chip" data-explain="mechanism" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Warum sind 42 % unzufrieden mit Anschlussinfo?<span class="metric-popover"><span class="metric-pop-kicker">Qual-Grenze</span><strong>Mechanismus</strong><span class="metric-explain">Der Mechanismus erklärt, warum ein beobachtetes Muster entsteht.</span><span class="metric-mini metric-mini--pattern-mechanism"><i></i><i></i><i></i></span><em>Falle: Mechanismen lassen sich selten direkt aus Mittelwerten ablesen.</em></span></div>
-      <div class="blackbox-core metric-chip" data-explain="mechanism" tabindex="0" aria-haspopup="dialog" aria-expanded="false">?<span class="metric-popover"><span class="metric-pop-kicker">Qual-Grenze</span><strong>Mechanismus</strong><span class="metric-explain">Der Mechanismus erklärt, warum ein beobachtetes Muster entsteht.</span><span class="metric-mini metric-mini--pattern-mechanism"><i></i><i></i><i></i></span><em>Falle: Mechanismen lassen sich selten direkt aus Mittelwerten ablesen.</em></span></div>
-      <p>Der Score zeigt die Lage. Er benennt noch nicht den Mechanismus, der das Erlebnis erzeugt.</p>
-    </div>
-  </div>
-  <div class="compare-takeaway"><strong>Regel:</strong> Begriff bekannt → quantitativ entscheiden. Begriff offen → qualitativ rekonstruieren.</div>
-  <div class="deck-pagenum">17 / 38</div>
-</section>
-
-<section class="slide soft activation" data-screen-label="Murmelgruppe · Was Zahlen nicht zeigen" data-activation="true" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="15">
-  <div class="slide-pad slide-content">
-    <div class="deck-eyebrow accent">MURMELGRUPPE · 90 SEKUNDEN · MIT SITZNACHBAR:IN</div>
-    <h2 class="deck-h2 activation-q">Eine Kennzahl zeigt das Ausmaß, aber nicht die Ursache.</h2>
-    <div class="activation-gap-board">
-      <div class="score-card">
-        <div class="score-label">Quantitatives Signal</div>
-        <div class="score-value">3,4 <span>/ 7</span></div>
-        <div class="score-scale"><i></i><i></i><i></i><i class="active"></i><i></i><i></i><i></i></div>
-      </div>
-      <div class="gap-arrow">?</div>
-      <div class="missing-context-card">
-        <div class="score-label">Drei mögliche Mechanismen</div>
-        <div class="mechanism-options">
-          <div><b>Erwartung</b><span>Versprochen war ein sicherer Anschluss.</span></div>
-          <div class="is-alert"><b>Informationsbruch</b><span>Unklar, ob der zweite Zug wartet.</span></div>
-          <div><b>Kontrollverlust</b><span>Rennen, warten oder neu planen?</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="activation-hint">Aufgabe: Welchen Mechanismus prüfen wir zuerst, und mit welcher qualitativen Evidenz?</div>
-  </div>
-  <div class="deck-pagenum">18 / 38</div>
-</section>
-
-<section class="slide navy section-divider section-divider--qual" data-screen-label="Akt 02 · Erlebnis verstehen" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="16">
-  <div class="section-numeral">02</div>
-  <div class="section-title-block">
-    <div class="deck-eyebrow accent">AKT 02 · QUALITATIV</div>
-    <h2 class="deck-h2">Erlebnis <em>verstehen</em>.</h2>
-  </div>
-  <div class="section-proof-object">
-    <div><span>Signal</span><b>3,4 / 7</b></div>
-    <i>→</i>
-    <q>Ich weiß nicht, ob ich es schaffe.</q>
-    <i>→</i>
-    <div><span>Code</span><b>Kontrollverlust</b></div>
-  </div>
-  <div class="deck-pagenum">19 / 38</div>
-</section>
-
-<section class="slide white" data-screen-label="Was qualitativ leistet" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="17">
-  <div class="slide-pad slide-content leisten">
-    <div class="deck-eyebrow">QUALITATIVE MARKTFORSCHUNG</div>
-    <h2 class="deck-h2">Qualitativ rekonstruiert, wie Reisende Unsicherheit deuten.</h2>
-    <div class="qual-evidence-chain qual-audit-trail">
-      <div class="qual-evidence-step">
-        <div class="evidence-head metric-chip" data-explain="quote" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Original<span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Ankerzitat</strong><span class="metric-explain">Ein Originalausschnitt zeigt, woran eine Kategorie im Material festgemacht wird.</span><span class="metric-mini metric-mini--quote"><i></i><i></i><i></i></span><em>Falle: Ein gutes Zitat ersetzt keine systematische Codierung.</em></span></div>
-        <div class="quote-fragment">„Ich weiß nicht, ob ich es schaffe.“</div>
-      </div>
-      <div class="qual-evidence-step">
-        <div class="evidence-head metric-chip" data-explain="invivo" tabindex="0" aria-haspopup="dialog" aria-expanded="false">In-vivo-Code<span class="metric-popover"><span class="metric-pop-kicker">Codierung</span><strong>In-vivo-Code</strong><span class="metric-explain">Begriffe aus dem Material werden übernommen, damit die Sprache der Befragten sichtbar bleibt.</span><span class="metric-mini metric-mini--quote"><i></i><i></i><i></i></span><em>Falle: Ein O-Ton ist noch keine fertige analytische Kategorie.</em></span></div>
-        <div class="code-pill metric-chip" data-explain="invivo" tabindex="0" aria-haspopup="dialog" aria-expanded="false">„schaffe ich es?“<span class="metric-popover"><span class="metric-pop-kicker">Codierung</span><strong>In-vivo-Code</strong><span class="metric-explain">Begriffe aus dem Material werden übernommen, damit die Sprache der Befragten sichtbar bleibt.</span><span class="metric-mini metric-mini--quote"><i></i><i></i><i></i></span><em>Falle: Ein O-Ton ist noch keine fertige analytische Kategorie.</em></span></div>
-      </div>
-      <div class="qual-evidence-step">
-        <div class="evidence-head metric-chip" data-explain="analyticCode" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Analytischer Code<span class="metric-popover"><span class="metric-pop-kicker">Codierung</span><strong>Analytischer Code</strong><span class="metric-explain">Ein analytischer Code verdichtet mehrere Textstellen zu einem erklärenden Konzept.</span><span class="metric-mini metric-mini--codes-items"><i></i><i></i><i></i></span><em>Falle: Codes dürfen nicht nur Etiketten sein; sie brauchen eine Regel.</em></span></div>
-        <div class="code-pill metric-chip" data-explain="analyticCode" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Anschlussangst<span class="metric-popover"><span class="metric-pop-kicker">Codierung</span><strong>Analytischer Code</strong><span class="metric-explain">Ein analytischer Code verdichtet mehrere Textstellen zu einem erklärenden Konzept.</span><span class="metric-mini metric-mini--codes-items"><i></i><i></i><i></i></span><em>Falle: Codes dürfen nicht nur Etiketten sein; sie brauchen eine Regel.</em></span></div>
-        <small>Unsicherheit über eigene Handlungsoption.</small>
-      </div>
-      <div class="qual-evidence-step">
-        <div class="evidence-head metric-chip" data-explain="category" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Kategorie<span class="metric-popover"><span class="metric-pop-kicker">Auswertung</span><strong>Kategorie</strong><span class="metric-explain">Kategorien bündeln Codes zu einem interpretierbaren Muster oder Mechanismus.</span><span class="metric-mini metric-mini--cluster"><i></i><i></i><i></i></span><em>Falle: Kategorien sind schwach, wenn sie nur sammeln und nichts erklären.</em></span></div>
-        <div class="category-chip metric-chip" data-explain="category" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Kontrollverlust<span class="metric-popover"><span class="metric-pop-kicker">Auswertung</span><strong>Kategorie</strong><span class="metric-explain">Kategorien bündeln Codes zu einem interpretierbaren Muster oder Mechanismus.</span><span class="metric-mini metric-mini--cluster"><i></i><i></i><i></i></span><em>Falle: Kategorien sind schwach, wenn sie nur sammeln und nichts erklären.</em></span></div>
-      </div>
-      <div class="qual-evidence-step insight-card">
-        <div class="evidence-head">Designbegriff</div>
-        <div class="metric-chip" data-explain="designConcept" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Entscheidungssicherheit statt nur Zeitinformation.<span class="metric-popover"><span class="metric-pop-kicker">Transfer</span><strong>Designbegriff</strong><span class="metric-explain">Aus der Analyse entsteht ein Begriff, der Produkt- oder Servicegestaltung steuern kann.</span><span class="metric-mini metric-mini--build"><i></i><i></i><i></i></span><em>Falle: Transfer braucht Evidenzkette von Material über Code zur Entscheidung.</em></span></div>
-      </div>
-    </div>
-    <div class="exhibit-takeaway"><strong>Qualitätssignal:</strong> 12 Interviews · 47 codierte Segmente · 2 Gegenfälle geprüft.</div>
-  </div>
-  <div class="deck-pagenum">20 / 38</div>
-</section>
-
-<section class="slide white pillars qual-methods-slide" data-screen-label="Methodenlandkarte qualitativ" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="18">
-  <div class="pillars-head">
-    <div class="deck-eyebrow">METHODENLANDKARTE · QUALITATIV</div>
-    <h2 class="deck-h2">Jede qualitative Methode hat einen Schwerpunkt zwischen Datenzugang und Erkenntnisziel.</h2>
-  </div>
-  <div class="qual-method-map">
-    <div class="method-axis-x"><span class="metric-chip" data-explain="axisActive" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>aktiv erhoben</b>Gespräch · Aufgabe · Gruppe</span><span class="metric-chip popover-align-right" data-explain="axisObserved" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>vorliegend / beobachtet</b>Feld · Text · Dokument</span></div>
-    <div class="method-axis-y"><span class="metric-chip" data-explain="axisDepth" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>hohe Falltiefe</b>Kontext nah verstehen</span><span class="metric-chip popover-above" data-explain="axisBreadth" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>hohe Vergleichbarkeit</b>Muster über Fälle prüfen</span></div>
-    <div class="method-quadrant method-quadrant--tl metric-chip" data-explain="quadrantTL" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Erzählen lassen</div>
-    <div class="method-quadrant method-quadrant--tr metric-chip popover-align-right" data-explain="quadrantTR" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Feldnah beobachten</div>
-    <div class="method-quadrant method-quadrant--bl metric-chip" data-explain="quadrantBL" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Interaktion vergleichen</div>
-    <div class="method-quadrant method-quadrant--br metric-chip popover-align-right popover-above" data-explain="quadrantBR" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Material codieren</div>
-    <div class="method-dot method-dot--interview popover-align-left metric-chip" style="left:21%; top:28%;" data-explain="interview" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Interview</b><span>erzählen lassen</span><small>Erleben → Code</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Interview</strong><span class="metric-explain">Interviews machen Begriffe, Motive und Deutungen sichtbar, die im Fragebogen noch fehlen.</span><span class="metric-pop-position"><b>Warum hier?</b><span>links oben, weil aktiv erhobene Interaktion und hohe Falltiefe zusammenkommen.</span></span><span class="metric-mini metric-mini--quote"><i></i><i></i><i></i></span><em>Falle: Interviews liefern Mechanismen und Hypothesen, keine Marktanteile.</em></span></div>
-    <div class="method-dot method-dot--critical popover-align-left metric-chip" style="left:21%; top:45%;" data-explain="criticalIncident" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Critical Incident</b><span>Schlüsselmoment</span><small>Ereignis → Auslöser</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Critical Incident</strong><span class="metric-explain">Die Methode sammelt besonders positive oder negative Schlüsselerlebnisse und rekonstruiert Auslöser, Ablauf und Konsequenz.</span><span class="metric-pop-position"><b>Warum hier?</b><span>links mittig, weil konkrete Episoden tief rekonstruiert und anschließend über Fälle verglichen werden.</span></span><span class="metric-mini metric-mini--countercase"><i></i><i></i><i></i></span><em>Falle: Extreme Ereignisse sind analytisch stark, aber nicht automatisch typisch.</em></span></div>
-    <div class="method-dot method-dot--diary metric-chip" style="left:41%; top:28%;" data-explain="diaryStudy" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Tagebuchstudie</b><span>über Zeit erfassen</span><small>Moment → Muster</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Tagebuchstudie</strong><span class="metric-explain">Teilnehmende dokumentieren Erlebnisse nah am Moment. Dadurch werden Routinen, Auslöser und Veränderungen über Zeit sichtbar.</span><span class="metric-pop-position"><b>Warum hier?</b><span>oben links-mittig, weil Erleben aktiv erhoben wird, aber stärker über Zeit als in einem Einzelinterview.</span></span><span class="metric-mini metric-mini--audit"><i></i><i></i><i></i></span><em>Falle: Tagebücher brauchen klare Prompts; sonst entstehen sehr ungleich tiefe Einträge.</em></span></div>
-    <div class="method-dot method-dot--goalong metric-chip" style="left:60%; top:31%;" data-explain="goalong" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Go-along</b><span>begleiten</span><small>Situation → Nachfrage</small><span class="metric-popover"><span class="metric-pop-kicker">Ethnographie</span><strong>Go-along</strong><span class="metric-explain">Forschende begleiten Menschen im Nutzungskontext und fragen direkt an konkreten Situationen nach.</span><span class="metric-pop-position"><b>Warum hier?</b><span>rechts oben-mittig, weil der Zugang im Feld stattfindet, aber durch Nachfragen stärker interaktiv ist als reine Beobachtung.</span></span><span class="metric-mini metric-mini--field"><i></i><i></i><i></i></span><em>Falle: Nähe zum Feld muss reflexiv dokumentiert werden.</em></span></div>
-    <div class="method-dot method-dot--ethno popover-align-right metric-chip" style="left:80%; top:29%;" data-explain="ethnography" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Ethnographie</b><span>beobachten</span><small>Feldnotiz → Touchpoint</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Ethnographie</strong><span class="metric-explain">Feldbeobachtung zeigt, wie Menschen im realen Kontext handeln, improvisieren und Bedeutung herstellen.</span><span class="metric-pop-position"><b>Warum hier?</b><span>rechts oben, weil der Zugang im Feld liegt und die Falltiefe aus beobachtetem Kontext entsteht.</span></span><span class="metric-mini metric-mini--field"><i></i><i></i><i></i></span><em>Falle: Beobachtung braucht Trennung von Feldnotiz und Interpretation.</em></span></div>
-    <div class="method-dot method-dot--fokus popover-align-left popover-above metric-chip" style="left:23%; top:64%;" data-explain="focusgroup" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Fokusgruppe</b><span>aushandeln</span><small>Sprache / Konfliktlinie</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Fokusgruppe</strong><span class="metric-explain">In der Gruppendiskussion wird sichtbar, welche Sprache, Konflikte und geteilten Deutungen entstehen.</span><span class="metric-pop-position"><b>Warum hier?</b><span>links unten, weil Interaktion erhoben wird, aber der Vergleich von Deutungen wichtiger ist als Einzelfalltiefe.</span></span><span class="metric-mini metric-mini--consensus"><i></i><i></i><i></i></span><em>Falle: Dominante Stimmen können scheinbaren Konsens erzeugen.</em></span></div>
-    <div class="method-dot method-dot--thinkaloud popover-above metric-chip" style="left:43%; top:63%;" data-explain="thinkAloud" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Think-aloud</b><span>Nutzung erklären</span><small>Task → Barriere</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Think-aloud</strong><span class="metric-explain">Menschen bearbeiten eine Aufgabe und sprechen laut mit, was sie wahrnehmen, erwarten und nicht verstehen.</span><span class="metric-pop-position"><b>Warum hier?</b><span>links unten-mittig, weil die Interaktion erhoben wird, aber meist mehrere Aufgaben oder Barrieren verglichen werden.</span></span><span class="metric-mini metric-mini--field"><i></i><i></i><i></i></span><em>Falle: Lautes Denken verändert die Situation; es zeigt Nutzungsbarrieren, keine natürlichen Häufigkeiten.</em></span></div>
-    <div class="method-dot method-dot--servqual popover-above metric-chip" style="left:42%; top:84%;" data-explain="servqual" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>SERVQUAL</b><span>Grenzfall Skala</span><small>Dimension → Messung</small><span class="metric-popover"><span class="metric-pop-kicker">Grenzfall</span><strong>SERVQUAL</strong><span class="metric-explain">SERVQUAL ist primär eine standardisierte Skala zu Servicequalität, nicht qualitative Forschung im engeren Sinn.</span><span class="metric-pop-position"><b>Warum hier?</b><span>unten links als Brücke zur Quantifizierung: erhobene Antworten, große Vergleichsbreite, aber qualitative Vorarbeit für die Dimensionen.</span></span><span class="metric-mini metric-mini--validity"><i></i><i></i><i></i></span><em>Falle: Die Dimensionen wirken objektiv, müssen aber für den Kontext inhaltlich validiert werden.</em></span></div>
-    <div class="method-dot method-dot--netno popover-above metric-chip" style="left:62%; top:69%;" data-explain="netnography" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Netnographie</b><span>Online-Feld lesen</span><small>Community → Frame</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Netnographie</strong><span class="metric-explain">Online-Communities, Foren und Social-Media-Spuren werden als kulturelles Feld gelesen und codiert.</span><span class="metric-pop-position"><b>Warum hier?</b><span>rechts unten-mittig, weil vorhandene Online-Spuren feldnah gelesen und zugleich als Korpus verglichen werden.</span></span><span class="metric-mini metric-mini--text-corpus"><i></i><i></i><i></i></span><em>Falle: Online-Stimmen sind oft selbstselektiert und brauchen Kontextprüfung.</em></span></div>
-    <div class="method-dot method-dot--document popover-align-right popover-above metric-chip" style="left:80%; top:67%;" data-explain="documentAnalysis" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Dokumentenanalyse</b><span>Material prüfen</span><small>Regelwerk → Deutung</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Dokumentenanalyse</strong><span class="metric-explain">Vorhandenes Material wie Beschwerden, Leitfäden oder Serviceprotokolle wird systematisch auf Deutungsmuster geprüft.</span><span class="metric-pop-position"><b>Warum hier?</b><span>rechts unten, weil die Daten bereits vorliegen und über Materialtypen hinweg verglichen werden.</span></span><span class="metric-mini metric-mini--audit"><i></i><i></i><i></i></span><em>Falle: Dokumente zeigen Organisationslogik, aber nicht automatisch gelebte Praxis.</em></span></div>
-    <div class="method-dot method-dot--content popover-align-right popover-above metric-chip" style="left:80%; top:86%;" data-explain="contentAnalysis" tabindex="0" aria-haspopup="dialog" aria-expanded="false"><b>Inhaltsanalyse</b><span>codieren</span><small>Textkorpus → Kategorie</small><span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Inhaltsanalyse</strong><span class="metric-explain">Texte werden systematisch codiert, damit wiederkehrende Frames und Kategorien prüfbar werden.</span><span class="metric-pop-position"><b>Warum hier?</b><span>rechts unten, weil vorhandenes Material über viele Fälle hinweg codiert und vergleichbar gemacht wird.</span></span><span class="metric-mini metric-mini--deductive-inductive"><i></i><i></i><i></i></span><em>Falle: Große Textmengen sind nicht automatisch repräsentativ.</em></span></div>
-  </div>
-  <div class="map-reading-hint">
-    <span class="map-reading-hint-kicker">Lesehilfe</span>
-    <span class="map-reading-hint-body"><b>x-Achse</b> · Datenzugang, aktiv erhoben (links) versus feld- oder textbasiert vorliegend (rechts). <b>y-Achse</b> · Erkenntnisziel, hohe Falltiefe (oben) versus hohe Vergleichbarkeit über Fälle (unten). Jede Methode sitzt an ihrem typischen Schwerpunkt, die Quadranten sind Tendenzen, keine Schubladen.</span>
-  </div>
-  <div class="deck-pagenum">21 / 38</div>
-</section>
-
-<section class="slide white quality-detail-slide" data-screen-label="Gütemaße qualitativ" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="19">
-  <div class="quality-detail-head">
-    <div class="deck-eyebrow">GÜTEMASSE · QUALITATIVE METHODEN</div>
-    <h2 class="deck-h2">Qualitative Güte verlangt eine nachvollziehbar entstandene Deutung.</h2>
-  </div>
-  <div class="quality-detail-grid four">
-    <div class="quality-detail-card dark">
-      <div class="quality-detail-key">01 · Fallauswahl</div>
-      <div class="quality-detail-title">Warum diese Fälle?</div>
-      <div class="quality-detail-text">Fälle werden nach Erkenntniswert, Kontrast und Mechanismusvariation ausgewählt.</div>
-      <div class="quality-detail-metrics">
-        <span class="metric-chip" tabindex="0"><span class="metric-label">Theoretical Sampling</span><span class="metric-popover"><span class="metric-pop-kicker">Fallauswahl</span><strong>Fälle werden nach Erkenntniswert gewählt.</strong><span class="metric-explain">Nicht statistische Repräsentativität steht im Vordergrund, sondern Kontrast, Variation und theoretische Schärfung.</span><span class="metric-mini metric-mini--theoretical"><i></i><i></i><i></i></span><em>Falle: Convenience Sampling nicht nachträglich als Theorie verkaufen.</em></span></span>
-        <span class="metric-chip" data-explain="fallkontrast" tabindex="0"><span class="metric-label">Fallkontrast</span></span>
-        <span class="metric-chip" tabindex="0"><span class="metric-label">Sättigung</span><span class="metric-popover"><span class="metric-pop-kicker">Fallauswahl</span><strong>Neue Fälle bringen kaum neue Einsicht.</strong><span class="metric-explain">Sättigung heißt: Zusätzliche Interviews oder Texte verändern Kategorien und Mechanismusverständnis kaum noch.</span><span class="metric-mini metric-mini--saturation"><i></i><i></i><i></i></span><em>Falle: kein fixer n-Wert; Sättigung muss am Material begründet werden.</em></span></span>
-      </div>
-    </div>
-    <div class="quality-detail-card">
-      <div class="quality-detail-key">02 · Auswertung</div>
-      <div class="quality-detail-title">Wie wird aus Material eine Kategorie?</div>
-      <div class="quality-detail-text">Codierregeln, Ankerzitate und Auswertungsschritte machen die Interpretation prüfbar.</div>
-      <div class="quality-detail-metrics">
-        <span class="metric-chip" tabindex="0"><span class="metric-label">Transparenz</span><span class="metric-popover"><span class="metric-pop-kicker">Auswertung</span><strong>Der Weg zur Aussage ist sichtbar.</strong><span class="metric-explain">Leitfaden, Codierregeln, Auswertungsschritte und Entscheidungen werden so dokumentiert, dass andere sie prüfen können.</span><span class="metric-mini metric-mini--transparency"><i></i><i></i><i></i></span><em>Falle: Nur Ergebnisse zeigen ist keine transparente Analyse.</em></span></span>
-        <span class="metric-chip" tabindex="0"><span class="metric-label">Ankerzitate</span><span class="metric-popover"><span class="metric-pop-kicker">Auswertung</span><strong>Zitat belegt Kategorie.</strong><span class="metric-explain">Konkrete Textstellen zeigen, warum eine Deutung plausibel ist und wie Material in Kategorien überführt wurde.</span><span class="metric-mini metric-mini--quote"><i></i><i></i><i></i></span><em>Falle: Ein starkes Zitat ersetzt keine systematische Auswertung.</em></span></span>
-        <span class="metric-chip" tabindex="0"><span class="metric-label">Audit Trail</span><span class="metric-popover"><span class="metric-pop-kicker">Auswertung</span><strong>Analyseentscheidungen bleiben nachvollziehbar.</strong><span class="metric-explain">Memos, Codebuch-Versionen und dokumentierte Änderungen zeigen, wie die Interpretation entstanden ist.</span><span class="metric-mini metric-mini--audit"><i></i><i></i><i></i></span><em>Falle: Dokumentiertes Chaos ist noch kein guter Audit Trail.</em></span></span>
-      </div>
-    </div>
-    <div class="quality-detail-card">
-      <div class="quality-detail-key">03 · Codierung</div>
-      <div class="quality-detail-title">Wird der Leitfaden gleich angewendet?</div>
-      <div class="quality-detail-text">Bei codiertem Text kann Intercoder-Reliabilität zeigen, ob Kategorien verlässlich nutzbar sind.</div>
-      <div class="quality-detail-metrics">
-        <span class="metric-chip" data-explain="percentAgreement" tabindex="0"><span class="metric-label">Prozentuale Übereinstimmung</span></span>
-        <span class="metric-chip" tabindex="0"><span class="metric-label">Cohen’s κ</span><span class="metric-popover"><span class="metric-pop-kicker">Codierung</span><strong>Zufallskorrigierte Übereinstimmung zweier Coder.</strong><span class="metric-explain">κ zeigt, ob ein Codebuch von zwei Personen konsistent angewendet wird.</span><span class="metric-mini metric-mini--kappa"><i></i><i></i><i></i></span><em>Falle: Hohes κ macht Kategorien nicht automatisch inhaltlich gut.</em></span></span>
-        <span class="metric-chip" tabindex="0"><span class="metric-label">Krippendorffs α</span><span class="metric-popover"><span class="metric-pop-kicker">Codierung</span><strong>Reliabilität für mehrere Coder und Datentypen.</strong><span class="metric-explain">α ist flexibler als κ, etwa bei mehreren Codern, fehlenden Werten und unterschiedlichen Skalenniveaus.</span><span class="metric-mini metric-mini--krippendorff"><i></i><i></i><i></i></span><em>Falle: Reliabilität ersetzt keine Validierung der Deutung.</em></span></span>
-      </div>
-    </div>
-    <div class="quality-detail-card">
-      <div class="quality-detail-key">04 · Validität</div>
-      <div class="quality-detail-title">Ist die Deutung plausibel?</div>
-      <div class="quality-detail-text">Gegenfälle, Reflexivität und Triangulation schützen vor zu glatter Interpretation.</div>
-      <div class="quality-detail-metrics">
-        <span class="metric-chip" tabindex="0"><span class="metric-label">Reflexivität</span><span class="metric-popover"><span class="metric-pop-kicker">Validität</span><strong>Die eigene Rolle wird mitgedacht.</strong><span class="metric-explain">Vorannahmen, Intervieweffekte und Interpretationsposition werden sichtbar gemacht, statt als neutral unsichtbar zu bleiben.</span><span class="metric-mini metric-mini--reflexivity"><i></i><i></i><i></i></span><em>Falle: Reflexivität ist Analysequalität, keine Selbstbespiegelung.</em></span></span>
-        <span class="metric-chip" tabindex="0"><span class="metric-label">Gegenfälle</span><span class="metric-popover"><span class="metric-pop-kicker">Validität</span><strong>Widerspruch prüft die Deutung.</strong><span class="metric-explain">Abweichende Fälle zeigen, ob eine Kategorie zu glatt, zu breit oder wirklich tragfähig ist.</span><span class="metric-mini metric-mini--countercase"><i></i><i></i><i></i></span><em>Falle: Nur passende Evidenz auswählen schwächt die Aussage.</em></span></span>
-        <span class="metric-chip" tabindex="0"><span class="metric-label">Triangulation</span><span class="metric-popover"><span class="metric-pop-kicker">Validität</span><strong>Mehrere Perspektiven prüfen denselben Befund.</strong><span class="metric-explain">Datenquellen, Methoden, Forschende oder Theorien werden kombiniert, um eine Deutung robuster zu machen.</span><span class="metric-mini metric-mini--triangulation"><i></i><i></i><i></i></span><em>Falle: Mehr Material hilft nur, wenn es gezielt integriert wird.</em></span></span>
-      </div>
-    </div>
-  </div>
-  <div class="quality-detail-answer"><strong>Antwortsatz:</strong> Qualitative Güte ist keine Frage von n allein, sondern der transparenten Kette von Fall, Material, Code und Deutung.</div>
-  <div class="deck-pagenum">22 / 38</div>
-</section>
-
-<section class="slide soft two-col-slab exhibit-slab" data-screen-label="Anwendung · Interview" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="20">
-  <div>
-    <div class="deck-eyebrow accent">ANWENDUNG · METHODE A</div>
-    <h2 class="deck-h2">Interviews machen Begriffe sichtbar, die ein Fragebogen noch nicht kennt.</h2>
-    <p class="deck-body" style="margin-top: 32px;">
-      Zwölf Pendler:innen aus dem Großraum Hamburg, je 60 Minuten, halbstandardisierter Leitfaden. Fünf Themenblöcke, viel Raum für eigene Begriffe. Audioaufnahme, Transkript, kodierende Auswertung nach Mayring.
-    </p>
-    <div class="tag-row">
-      <span class="tag metric-chip" data-explain="qualSampleSize" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Fallauswahl · n = 12<span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Fallzahl im qualitativen Design</strong><span class="metric-explain">n steht hier für Materialtiefe, Kontrast und Sättigungsprüfung, nicht für Marktanteile oder Power.</span><span class="metric-mini metric-mini--saturation"><i></i><i></i><i></i></span><em>Falle: Kleine qualitative n nicht in Prozentzahlen übersetzen.</em></span></span>
-      <span class="tag metric-chip" data-explain="guide" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Instrument · Leitfaden<span class="metric-popover"><span class="metric-pop-kicker">Interview</span><strong>Leitfaden</strong><span class="metric-explain">Ein Leitfaden hält Themen vergleichbar und lässt trotzdem Raum für eigene Begriffe.</span><span class="metric-mini metric-mini--transparency"><i></i><i></i><i></i></span><em>Falle: Zu starre Fragen produzieren Bestätigung statt Exploration.</em></span></span>
-      <span class="tag metric-chip" data-explain="saturation" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Güte · Sättigung<span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Sättigung</strong><span class="metric-explain">Sättigung liegt vor, wenn zusätzliche Fälle kaum neue Kategorien oder Mechanismen liefern.</span><span class="metric-mini metric-mini--saturation"><i></i><i></i><i></i></span><em>Falle: Sättigung ist zu begründen, nicht als fixe Zahl zu behaupten.</em></span></span>
-      <span class="tag metric-chip" data-explain="mayring" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Auswertung · Mayring<span class="metric-popover"><span class="metric-pop-kicker">Codierung</span><strong>Mayring</strong><span class="metric-explain">Qualitative Inhaltsanalyse arbeitet regelgeleitet: Material wird paraphrasiert, verdichtet und Kategorien zugeordnet.</span><span class="metric-mini metric-mini--codes-items"><i></i><i></i><i></i></span><em>Falle: Regelgeleitet heißt nicht mechanisch; Kategorien müssen inhaltlich begründet werden.</em></span></span>
-    </div>
-    <div class="claim-foot">ENTSCHEIDUNGSWERT · BEGRIFF FINDEN, DEN DER FRAGEBOGEN NICHT KANNTE</div>
-  </div>
-  <div class="slab-card">
-    <div class="slab-card-inner">
-      <div class="deck-eyebrow">KODIERKETTE · TRANSKRIPT B07, ZEILE 142</div>
-      <div class="coding-chain">
-        <div><span>Zitat</span><q>Ich plane jeden Morgen eine halbe Stunde Puffer ein.</q></div>
-        <div><span>Paraphrase</span><b>Puffer als Schutz vor Bahnrisiko.</b></div>
-        <div><span>Code</span><b>Pufferzeit</b></div>
-        <div><span>Kategorie</span><b>antizipierter Kontrollverlust</b></div>
-        <div class="is-decision"><span>Designhypothese</span><b>Vertrauen vor der Störung aufbauen.</b></div>
-      </div>
-      <div class="coding-result">Wiederkehrend in 8/12 Interviews · kein Marktanteil, sondern belastbarer Suchbegriff für Design und Fragebogen.</div>
-      <div class="slab-card-rule">ENTSCHEIDUNG · VERTRAUEN VOR DER STÖRUNG AUFBAUEN</div>
-    </div>
-  </div>
-  <div class="deck-pagenum">23 / 38</div>
-</section>
-
-<section class="slide soft two-col-slab exhibit-slab" data-screen-label="Anwendung · Ethnographie" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="21">
-  <div>
-    <div class="deck-eyebrow accent">ANWENDUNG · METHODE B</div>
-    <h2 class="deck-h2">Ethnographie zeigt, wie Informationen im Nutzungskontext verarbeitet werden.</h2>
-    <p class="deck-body" style="margin-top: 32px;">
-      Zwei Forschende verbringen sieben Tage an den Bahnhöfen Hamburg Hbf und Lübeck Hbf. Sie reisen mit, sie warten, sie reden. Feldtagebuch, Fotos, kurze Standgespräche. Ziel: das Erleben am Ort des Erlebens dokumentieren.
-    </p>
-    <div class="tag-row">
-      <span class="tag metric-chip" data-explain="ethnography" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Zugang · teilnehmend<span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Ethnographie</strong><span class="metric-explain">Feldbeobachtung zeigt, wie Menschen im realen Kontext handeln, improvisieren und Bedeutung herstellen.</span><span class="metric-pop-position"><b>Warum hier?</b><span>rechts oben, weil der Zugang im Feld liegt und die Falltiefe aus beobachtetem Kontext entsteht.</span></span><span class="metric-mini metric-mini--field"><i></i><i></i><i></i></span><em>Falle: Beobachtung braucht Trennung von Feldnotiz und Interpretation.</em></span></span>
-      <span class="tag metric-chip" data-explain="fieldnote" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Dokumentation · Feldtagebuch<span class="metric-popover"><span class="metric-pop-kicker">Ethnographie</span><strong>Feldtagebuch</strong><span class="metric-explain">Feldnotizen trennen Beobachtung, Kontext und analytische Memos über das Geschehen vor Ort.</span><span class="metric-mini metric-mini--audit"><i></i><i></i><i></i></span><em>Falle: Nachträgliche Erinnerung ist schwächer als zeitnahe Dokumentation.</em></span></span>
-      <span class="tag metric-chip" data-explain="goalong" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Methode · Go-along<span class="metric-popover"><span class="metric-pop-kicker">Ethnographie</span><strong>Go-along</strong><span class="metric-explain">Forschende begleiten Menschen im Nutzungskontext und fragen direkt an konkreten Situationen nach.</span><span class="metric-pop-position"><b>Warum hier?</b><span>rechts oben-mittig, weil der Zugang im Feld stattfindet, aber durch Nachfragen stärker interaktiv ist als reine Beobachtung.</span></span><span class="metric-mini metric-mini--field"><i></i><i></i><i></i></span><em>Falle: Nähe zum Feld muss reflexiv dokumentiert werden.</em></span></span>
-    </div>
-    <div class="claim-foot">ENTSCHEIDUNGSWERT · BEOBACHTUNG UND INTERPRETATION SAUBER TRENNEN</div>
-  </div>
-  <div class="slab-card">
-    <div class="slab-card-inner">
-      <div class="deck-eyebrow">FELDNOTIZ · DI 18.04. · 07:42 · HH HBF</div>
-      <h3 class="deck-h3">Feldnotiz plus analytisches Memo.</h3>
-      <div class="fieldnote-object">
-        <div class="fieldnote-row"><span>07:42</span><b>Blick zur Anzeigetafel</b><em>acht Reisende bleiben stehen</em></div>
-        <div class="fieldnote-row"><span>07:43</span><b>Handyvergleich</b><em>DB Navigator wird parallel geprüft</em></div>
-        <div class="fieldnote-row"><span>07:45</span><b>Gang zum Service-Point</b><em>„Wartet der Zug oder nicht?“</em></div>
-        <div class="fieldnote-memo"><span>Memo</span><b>Offizielle Information reicht nicht für Entscheidungssicherheit.</b></div>
-      </div>
-      <div class="slab-card-rule">ENTSCHEIDUNG · INFORMATIONSSYSTEM IST TAFEL PLUS HANDY PLUS SERVICE-POINT</div>
-    </div>
-  </div>
-  <div class="deck-pagenum">24 / 38</div>
-</section>
-
-<section class="slide white two-col-slab exhibit-slab" data-screen-label="Anwendung · Inhaltsanalyse" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="22">
-  <div>
-    <div class="deck-eyebrow accent">ANWENDUNG · METHODE C</div>
-    <h2 class="deck-h2">Inhaltsanalyse macht wiederkehrende Problemframes prüfbar.</h2>
-    <p class="deck-body" style="margin-top: 32px;">
-      5.400 Bewertungen aus Trustpilot, App-Stores und Bahn-Foren. Qualitative Inhaltsanalyse mit deduktivem Kategoriensystem, induktiver Erweiterung, doppelter Kodierung. Cohens κ als Gütemaß.
-    </p>
-    <div class="tag-row">
-      <span class="tag metric-chip" tabindex="0"><span class="metric-label">Korpus · N = 5.400</span><span class="metric-popover"><span class="metric-pop-kicker">Inhaltsanalyse</span><strong>Großer Korpus, nicht automatisch repräsentativ.</strong><span class="metric-explain">Viele Texte erhöhen Musterbreite. Entscheidend ist aber, aus welchen Plattformen, Zeiträumen und Situationen sie stammen.</span><span class="metric-mini metric-mini--text-corpus"><i></i><i></i><i></i></span><em>Falle: Onlinebewertungen sind häufig selbstselektiert.</em></span></span>
-      <span class="tag metric-chip" tabindex="0"><span class="metric-label">Codebildung · ded./ind.</span><span class="metric-popover"><span class="metric-pop-kicker">Inhaltsanalyse</span><strong>Theorie trifft Material.</strong><span class="metric-explain">Deduktive Codes kommen aus Theorie oder Fragestellung; induktive Codes entstehen aus überraschenden Mustern im Text.</span><span class="metric-mini metric-mini--deductive-inductive"><i></i><i></i><i></i></span><em>Falle: Induktiv heißt nicht regellos; deduktiv heißt nicht blind.</em></span></span>
-      <span class="tag metric-chip" tabindex="0"><span class="metric-label">Reliabilität · Doppelkodierung</span><span class="metric-popover"><span class="metric-pop-kicker">Inhaltsanalyse</span><strong>Zwei Personen prüfen dasselbe Codebuch.</strong><span class="metric-explain">Ein Teil des Materials wird unabhängig codiert, um die Anwendung der Kategorien reliabel zu prüfen.</span><span class="metric-mini metric-mini--double-coding"><i></i><i></i><i></i></span><em>Falle: Übereinstimmung prüft Anwendung, nicht automatisch theoretische Qualität.</em></span></span>
-      <span class="tag metric-chip" tabindex="0"><span class="metric-label">Güte · κ = 0,79</span><span class="metric-popover"><span class="metric-pop-kicker">Inhaltsanalyse</span><strong>Ordentliche zufallskorrigierte Übereinstimmung.</strong><span class="metric-explain">Kappa korrigiert beobachtete Übereinstimmung um Zufallstreffer. 0,79 ist in vielen Kontexten gut vertretbar.</span><span class="metric-mini metric-mini--kappa-score"><i></i><i></i><i></i></span><em>Falle: Kappa ist kein Wahrheitsmaß und keine Validitätsgarantie.</em></span></span>
-    </div>
-    <div class="claim-foot">ENTSCHEIDUNGSWERT · ERKENNEN, WELCHE SPRACHE IM MARKT DOMINIERT</div>
-  </div>
-  <div class="slab-card">
-    <div class="slab-card-inner">
-      <div class="deck-eyebrow">KODIERERGEBNIS · TOP 5 · CODIERTE SEGMENTE</div>
-      <h3 class="deck-h3">Was die Reisenden selbst zum Thema machen.</h3>
-      <div class="coding-proof">
-        <q>Bei Störung weiß niemand, was wirklich gilt.</q>
-        <span class="code-tag">unklare Autorität</span>
-        <span class="code-tag code-tag--accent">Störungsinformation</span>
-      </div>
-      <div class="category-bars">
-        <div class="category-bar is-primary"><span class="category-rank">01</span><span class="category-label">Information bei Störung</span><span class="category-track"><i style="width:100%"></i></span><span class="category-share">31%</span></div>
-        <div class="category-bar"><span class="category-rank">02</span><span class="category-label">Personalverhalten</span><span class="category-track"><i style="width:71%"></i></span><span class="category-share">22%</span></div>
-        <div class="category-bar"><span class="category-rank">03</span><span class="category-label">Sauberkeit</span><span class="category-track"><i style="width:45%"></i></span><span class="category-share">14%</span></div>
-        <div class="category-bar"><span class="category-rank">04</span><span class="category-label">Sitzplatzreservierung</span><span class="category-track"><i style="width:39%"></i></span><span class="category-share">12%</span></div>
-        <div class="category-bar"><span class="category-rank">05</span><span class="category-label">App-Buchungsprozess</span><span class="category-track"><i style="width:29%"></i></span><span class="category-share">9%</span></div>
-      </div>
-      <div class="slab-card-rule">BASIS · CODIERTE SEGMENTE; MEHRFACHKODIERUNG MÖGLICH; Κ = 0,79 AUF DOPPELKODIERUNG</div>
-    </div>
-  </div>
-  <div class="deck-pagenum">25 / 38</div>
-</section>
-
-<section class="slide white compare" data-screen-label="Stärken &amp; Grenzen qualitativ" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="23">
-  <div>
-    <div class="deck-eyebrow">BILANZ · QUALITATIV</div>
-    <h2 class="deck-h2" style="font-size: 72px;">Qualitativ liefert Begriffe und Mechanismen, keine Marktgrößen.</h2>
-  </div>
-  <div class="qual-balance-grid">
-    <div class="qual-strength-panel">
-      <div class="head">STÄRKE · AUSSAGE WIRD BEGRIFF</div>
-      <q>Ich weiß nicht, ob ich es schaffe.</q>
-      <div class="qual-chain-mini"><span>Zitat</span><i>→</i><span>Code</span><i>→</i><span>Mechanismus</span><i>→</i><span>Designbegriff</span></div>
-      <b class="metric-chip" data-explain="category" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Kontrollverlust<span class="metric-popover"><span class="metric-pop-kicker">Auswertung</span><strong>Kategorie</strong><span class="metric-explain">Kategorien bündeln Codes zu einem interpretierbaren Muster oder Mechanismus.</span><span class="metric-mini metric-mini--cluster"><i></i><i></i><i></i></span><em>Falle: Kategorien sind schwach, wenn sie nur sammeln und nichts erklären.</em></span></b>
-    </div>
-    <div class="qual-warning-panel">
-      <div class="head accent">GRENZE · FALSCHE ABLEITUNG</div>
-      <div class="warning-metric metric-chip" data-explain="qualSampleSize" tabindex="0" aria-haspopup="dialog" aria-expanded="false">n = 12 <span>≠</span> 31%<span class="metric-popover"><span class="metric-pop-kicker">Qualitativ</span><strong>Fallzahl im qualitativen Design</strong><span class="metric-explain">n steht hier für Materialtiefe, Kontrast und Sättigungsprüfung, nicht für Marktanteile oder Power.</span><span class="metric-mini metric-mini--saturation"><i></i><i></i><i></i></span><em>Falle: Kleine qualitative n nicht in Prozentzahlen übersetzen.</em></span></div>
-      <p>Aus Interviews entstehen Begriffe, Typen und Hypothesen. Keine Marktanteile.</p>
-    </div>
-  </div>
-  <div class="compare-takeaway"><strong>Regel:</strong> Qualitativ zum Benennen und Erklären; quantitativ zum Schätzen und Verallgemeinern.</div>
-  <div class="deck-pagenum">26 / 38</div>
-</section>
-
-<section class="slide dark gridbg-dark section-divider section-divider--proof" data-screen-label="Akt 03 · Lösung prüfen" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="24">
-  <div class="section-numeral">03</div>
-  <div class="section-title-block">
-    <div class="deck-eyebrow accent">AKT 03 · MIXED METHODS</div>
-    <h2 class="deck-h2">Methoden <em>kombinieren</em>.</h2>
-  </div>
-  <div class="section-proof-strip">
-    <div class="proof-chip"><span>QUANT</span><b>63%</b></div>
-    <div class="proof-chip"><span>QUAL</span><b>Angst</b></div>
-    <div class="proof-chip"><span>TEST</span><b>−18 pp</b></div>
-    <div class="proof-chip"><span>ENTSCHEID</span><b>Go</b></div>
-  </div>
-  <div class="deck-pagenum">27 / 38</div>
-</section>
-
-<section class="slide white two-col-slab exhibit-slab" data-screen-label="Warum eine Methode nicht reicht" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="25">
-  <div>
-    <div class="deck-eyebrow">MIXED METHODS · MOTIVATION</div>
-    <h2 class="deck-h2">Mixed Methods verbindet Reichweite und Erklärung.</h2>
-    <p class="deck-body" style="margin-top: 32px;">
-      Wer eine Lösung einführen will, muss zweierlei wissen: <em>Was erleben unsere Reisenden wirklich?</em> und <em>Wirkt die Lösung im Großen?</em> Mixed Methods kombiniert beide Logiken kontrolliert, nicht als bunter Methodenmix, sondern als bewusstes Design.
-    </p>
-    <div class="claim-foot">POINT · MIXED METHODS IST KEIN MEHR DAVON, SONDERN EINE GEPLANTE VERKNÜPFUNG</div>
-  </div>
-  <div class="slab-card">
-    <div class="slab-card-inner">
-      <div class="deck-eyebrow">DEFINITION · CRESWELL &amp; PLANO CLARK</div>
-      <h3 class="deck-h3">Integration ist der eigentliche methodische Schritt.</h3>
-      <div class="mm-joint-display">
-        <div class="joint-head metric-chip" data-explain="mechanism" tabindex="0" aria-haspopup="dialog" aria-expanded="false">QUAL-Befund<span class="metric-popover"><span class="metric-pop-kicker">Qual-Grenze</span><strong>Mechanismus</strong><span class="metric-explain">Der Mechanismus erklärt, warum ein beobachtetes Muster entsteht.</span><span class="metric-mini metric-mini--pattern-mechanism"><i></i><i></i><i></i></span><em>Falle: Mechanismen lassen sich selten direkt aus Mittelwerten ablesen.</em></span></div><div class="joint-head metric-chip" data-explain="marketSize" tabindex="0" aria-haspopup="dialog" aria-expanded="false">QUANT-Befund<span class="metric-popover"><span class="metric-pop-kicker">Quant-Grenze</span><strong>Marktgröße</strong><span class="metric-explain">Quantitative Daten schätzen Reichweite, Häufigkeit und Priorität eines Problems.</span><span class="metric-mini metric-mini--sample"><i></i><i></i><i></i></span><em>Falle: Größe ohne validen Begriff kann präzise in die falsche Richtung führen.</em></span></div><div class="joint-head metric-chip" data-explain="jointDisplay" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Integrationsfrage<span class="metric-popover"><span class="metric-pop-kicker">Mixed Methods</span><strong>Joint Display</strong><span class="metric-explain">Eine gemeinsame Matrix führt Zahl, Zitat, Interpretation und Entscheidung zusammen.</span><span class="metric-mini metric-mini--joint-display"><i></i><i></i><i></i></span><em>Falle: Nebeneinanderstellen ist noch keine Integration.</em></span></div><div class="joint-head metric-chip" data-explain="metaInference" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Meta-Inferenz<span class="metric-popover"><span class="metric-pop-kicker">Mixed Methods</span><strong>Meta-Inferenz</strong><span class="metric-explain">Die stärkere Aussage entsteht aus der Verbindung beider Evidenzen.</span><span class="metric-mini metric-mini--meta-inference"><i></i><i></i><i></i></span><em>Falle: Widersprüche müssen erklärt, nicht wegmoderiert werden.</em></span></div>
-        <div><span>QUAL</span><b class="metric-chip" data-explain="mechanism" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Anschlussangst<span class="metric-popover"><span class="metric-pop-kicker">Qual-Grenze</span><strong>Mechanismus</strong><span class="metric-explain">Der Mechanismus erklärt, warum ein beobachtetes Muster entsteht.</span><span class="metric-mini metric-mini--pattern-mechanism"><i></i><i></i><i></i></span><em>Falle: Mechanismen lassen sich selten direkt aus Mittelwerten ablesen.</em></span></b></div>
-        <div><span>QUANT</span><b class="metric-chip" data-explain="riskDifference" tabindex="0" aria-haspopup="dialog" aria-expanded="false">−18 pp Bahnsteig<span class="metric-popover"><span class="metric-pop-kicker">Effekt</span><strong>Prozentpunktdifferenz</strong><span class="metric-explain">Differenz zweier Anteile: 32% Verweildauer Bahnsteig &gt; 4 min in der Kontrolle minus 14% im Treatment ergibt −18 pp.</span><span class="metric-mini metric-mini--pvalue"><i></i><i></i><i></i></span><em>Falle: Prozentpunkte nicht mit Prozentveränderung verwechseln.</em></span></b></div>
-        <div><span>MERGE</span><b class="metric-chip" data-explain="jointDisplay" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Passt Mechanismus zum Effekt?<span class="metric-popover"><span class="metric-pop-kicker">Mixed Methods</span><strong>Joint Display</strong><span class="metric-explain">Eine gemeinsame Matrix führt Zahl, Zitat, Interpretation und Entscheidung zusammen.</span><span class="metric-mini metric-mini--joint-display"><i></i><i></i><i></i></span><em>Falle: Nebeneinanderstellen ist noch keine Integration.</em></span></b></div>
-        <div class="is-decision"><span>ENTSCHEIDUNG</span><b class="metric-chip" data-explain="decisionArtifact" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Ausrollen oder iterieren<span class="metric-popover"><span class="metric-pop-kicker">Transfer</span><strong>Decision Artifact</strong><span class="metric-explain">Das Ergebnis wird so übersetzt, dass es eine Entscheidung, Regel, Priorisierung oder Intervention trägt.</span><span class="metric-mini metric-mini--fit"><i></i><i></i><i></i></span><em>Falle: Forschung endet nicht beim Befund, wenn eine Handlungsentscheidung offen ist.</em></span></b></div>
-      </div>
-      <div class="slab-card-rule">CRESWELL &amp; PLANO CLARK · 2017</div>
-    </div>
-  </div>
-  <div class="deck-pagenum">28 / 38</div>
-</section>
-
-<section class="slide white mm-design-slide mm-joined-slide" data-screen-label="Mixed Methods · Design und Güte" data-deck-slide="26" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text">
-  <div class="mm-design-head">
-    <div class="deck-eyebrow">MIXED METHODS · DESIGN UND GÜTE</div>
-    <h2 class="deck-h2">Mixed-Methods-Designs unterscheiden sich durch ihre Integrationsstelle.</h2>
-    <div class="mm-design-thesis"><strong>Leitfrage:</strong> Welche Verknüpfung braucht die Frage, und woran wird sie belastbar?</div>
-  </div>
-  <div class="mm-design-grid">
-    <article class="mm-design-card">
-      <div class="pattern-head metric-chip" tabindex="0"><span class="metric-label">01 · explorativ-sequentiell</span><span class="metric-popover"><span class="metric-pop-kicker">Mixed Methods</span><strong>Erst verstehen, dann messen.</strong><span class="metric-explain">Qualitative Ergebnisse liefern Begriffe, Hypothesen oder Items, die anschließend quantitativ geprüft werden.</span><span class="metric-mini metric-mini--exploratory-seq"><i></i><i></i><i></i></span><em>Falle: Die quantitative Phase muss wirklich aus der qualitativen Phase gebaut sein.</em></span></div>
-      <h3>QUAL → QUANT</h3>
-      <p><strong>Wann wählen?</strong> Wenn Sprache, Dimensionen oder Items noch fehlen.</p>
-      <div class="mm-design-flow"><span>Erleben</span><i>→</i><span>Kategorie</span><i>→</i><span>Messung</span></div>
-      <div class="mm-design-use"><span>Integrationsstelle</span><b class="integration-label metric-chip" tabindex="0"><span class="metric-label">BUILD · Codes → Skala</span><span class="metric-popover"><span class="metric-pop-kicker">Integration</span><strong>Qualitative Codes werden messbar.</strong><span class="metric-explain">Aus Sprache und Kategorien entstehen Items, Skalen oder Hypothesen für die quantitative Phase.</span><span class="metric-mini metric-mini--build"><i></i><i></i><i></i></span><em>Falle: Items nicht nur wörtlich übernehmen; Konstrukt prüfen.</em></span></b><em>Qualitative Vorarbeit legt fest, was anschließend quantitativ gemessen wird.</em></div>
-      <div class="mm-design-quality"><span>Gütefrage</span><b>Deckt das Item den Bedeutungsraum der Reisenden ab?</b><div><span class="metric-chip" tabindex="0"><span class="metric-label">Inhaltsvalidität</span><span class="metric-popover"><span class="metric-pop-kicker">Build</span><strong>Deckt die Messung den Bedeutungsraum ab?</strong><span class="metric-explain">Expertise, Theorie und qualitative Evidenz prüfen, ob die Items das Konstrukt vollständig und passend erfassen.</span><span class="metric-mini metric-mini--content-validity"><i></i><i></i><i></i></span><em>Falle: Cronbachs Alpha ersetzt keine Inhaltsvalidität.</em></span></span></div></div>
-    </article>
-    <article class="mm-design-card is-focus">
-      <div class="pattern-head metric-chip" tabindex="0"><span class="metric-label">02 · erklärend-sequentiell</span><span class="metric-popover"><span class="metric-pop-kicker">Mixed Methods</span><strong>Erst Muster messen, dann erklären.</strong><span class="metric-explain">Quantitative Ergebnisse zeigen ein Muster; qualitative Daten erklären Mechanismus, Kontext oder unerwartete Abweichung.</span><span class="metric-mini metric-mini--explanatory-seq"><i></i><i></i><i></i></span><em>Falle: Quali darf nicht nur nachträgliche Illustration sein.</em></span></div>
-      <h3>QUANT → QUAL</h3>
-      <p><strong>Wann wählen?</strong> Wenn ein gemessenes Muster eine Warum-Erklärung braucht.</p>
-      <div class="mm-design-flow"><span>Muster</span><i>→</i><span>Fallauswahl</span><i>→</i><span>Mechanismus</span></div>
-      <div class="mm-design-use"><span>Integrationsstelle</span><b class="integration-label metric-chip" tabindex="0"><span class="metric-label">EXPLAIN · Muster → Interview</span><span class="metric-popover"><span class="metric-pop-kicker">Integration</span><strong>Zahl wird durch Mechanismus erklärt.</strong><span class="metric-explain">Ein auffälliges Muster wird gezielt in Interviews oder Beobachtungen aufgeklärt.</span><span class="metric-mini metric-mini--explain-mm"><i></i><i></i><i></i></span><em>Falle: Nicht jedes Muster braucht Quali; relevant ist die blockierende Warum-Frage.</em></span></b><em>Das quantitative Ergebnis bestimmt, welche Fälle qualitativ vertieft werden.</em></div>
-      <div class="mm-design-quality"><span>Gütefrage</span><b>Erklärt der Mechanismus das gemessene Muster?</b><div><span class="metric-chip" tabindex="0"><span class="metric-label">Meta-Inferenz</span><span class="metric-popover"><span class="metric-pop-kicker">Explain</span><strong>Die gemeinsame Schlussfolgerung.</strong><span class="metric-explain">Die eigentliche Aussage entsteht aus der Integration beider Evidenzen, nicht aus einer Methode allein.</span><span class="metric-mini metric-mini--meta-inference"><i></i><i></i><i></i></span><em>Falle: Widersprüche nicht glätten, sondern auswerten.</em></span></span></div></div>
-    </article>
-    <article class="mm-design-card">
-      <div class="pattern-head metric-chip" tabindex="0"><span class="metric-label">03 · konvergent-parallel</span><span class="metric-popover"><span class="metric-pop-kicker">Mixed Methods</span><strong>Zwei Datenarten laufen parallel.</strong><span class="metric-explain">Qualitative und quantitative Evidenz werden getrennt erhoben und anschließend systematisch zusammengeführt.</span><span class="metric-mini metric-mini--convergent"><i></i><i></i><i></i></span><em>Falle: Parallel ist erst Mixed Methods, wenn die Befunde integriert werden.</em></span></div>
-      <h3>QUAL + QUANT → Entscheidung</h3>
-      <p><strong>Wann wählen?</strong> Wenn beide Perspektiven gleichzeitig entscheidungsrelevant sind.</p>
-      <div class="mm-design-flow"><span>Zahl</span><i>+</i><span>Zitat</span><i>→</i><span>Meta-Inferenz</span></div>
-      <div class="mm-design-use"><span>Integrationsstelle</span><b class="integration-label metric-chip" tabindex="0"><span class="metric-label">MERGE · Zahl + Zitat</span><span class="metric-popover"><span class="metric-pop-kicker">Integration</span><strong>Befunde werden nebeneinander entscheidbar.</strong><span class="metric-explain">Zahl und Material werden in einem Joint Display zusammengeführt, um Übereinstimmung oder Spannung sichtbar zu machen.</span><span class="metric-mini metric-mini--merge"><i></i><i></i><i></i></span><em>Falle: Nebeneinanderstellen ist noch keine Integration.</em></span></b><em>Beide Befunde werden in einer gemeinsamen Entscheidung gelesen.</em></div>
-      <div class="mm-design-quality"><span>Gütefrage</span><b>Tragen beide Evidenzen dieselbe Empfehlung?</b><div><span class="metric-chip" tabindex="0"><span class="metric-label">Joint Display</span><span class="metric-popover"><span class="metric-pop-kicker">Merge</span><strong>Integration wird sichtbar gemacht.</strong><span class="metric-explain">Tabelle oder Matrix zeigt quantitative Befunde, qualitative Evidenz und Konsequenz in einer gemeinsamen Struktur.</span><span class="metric-mini metric-mini--joint-display"><i></i><i></i><i></i></span><em>Falle: Ein Joint Display ist analytisch, nicht nur dekorativ.</em></span></span><span class="metric-chip" tabindex="0"><span class="metric-label">Triangulation</span><span class="metric-popover"><span class="metric-pop-kicker">Merge</span><strong>Mehrere Evidenzen prüfen denselben Befund.</strong><span class="metric-explain">Verschiedene Datenarten stützen, relativieren oder widersprechen einander und erhöhen so die Interpretationsqualität.</span><span class="metric-mini metric-mini--triangulation"><i></i><i></i><i></i></span><em>Falle: Mehr Daten helfen nur mit klarer Integrationslogik.</em></span></span></div></div>
-    </article>
-  </div>
-  <div class="mm-design-bridge"><strong>Antwortsatz:</strong> Mixed Methods ist nicht mehr Methoden, sondern eine begründete Integration, deren Güte an der Verknüpfung geprüft wird.</div>
-  <div class="deck-pagenum">29 / 38</div>
-</section>
 <section class="slide soft activation" data-screen-label="Murmelgruppe · Widerspruch QUAL/QUANT" data-activation="true" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text">
   <div class="slide-pad slide-content">
     <div class="deck-eyebrow accent">MURMELGRUPPE · 90 SEKUNDEN · MIT SITZNACHBAR:IN</div>
@@ -6375,7 +6324,7 @@
       <span class="metric-chip muster-chip" data-explain="widerspruchMuster" tabindex="0"><span class="metric-label">Musterantwort</span></span>
     </div>
   </div>
-  <div class="deck-pagenum">30 / 38</div>
+  <div class="deck-pagenum">29 / 37</div>
 </section>
 
 
@@ -6384,7 +6333,7 @@
     <div class="deck-eyebrow accent">ANWENDUNG · DESIGN 02 · ERKLÄREND-SEQUENTIELL</div>
     <h2 class="deck-h2">Die Kombination verbindet Muster, Mechanismus und Wirkung.</h2>
     <p class="deck-body" style="margin-top: 32px;">
-      Schritt 1, quantitatives Tracking, zeigt eine Abbruchquote von 63% am Umstiegsbildschirm. Schritt 2, zwölf Tiefeninterviews, erklärt <em>warum</em>: Reisende verstehen nicht, ob der zweite Zug noch erreicht wird. Schritt 3 ist der A/B-Test, der das überarbeitete Design prüft.
+      Schritt 1, quantitatives Tracking, zeigt eine Abbruchquote von 53% am Umstiegsbildschirm. Schritt 2, zwölf Tiefeninterviews, erklärt <em>warum</em>: Reisende verstehen nicht, ob der zweite Zug noch erreicht wird. Schritt 3 ist der A/B-Test, der das überarbeitete Design prüft.
     </p>
     <div class="tag-row">
       <span class="tag metric-chip" data-explain="explanatorySequential" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Integration · QUANT → QUAL<span class="metric-popover"><span class="metric-pop-kicker">Mixed Methods</span><strong>Erklärend-sequentiell</strong><span class="metric-explain">Erst wird ein Muster quantitativ gefunden, danach qualitativ erklärt und gezielt vertieft.</span><span class="metric-mini metric-mini--explanatory-seq"><i></i><i></i><i></i></span><em>Falle: Die qualitative Phase darf nicht nur Illustration nach dem Ergebnis sein.</em></span></span>
@@ -6400,7 +6349,7 @@
       <div class="evidence-pipeline">
         <div class="evidence-stage evidence-stage--quant">
           <div class="stage-label metric-chip" data-explain="marketSize" tabindex="0" aria-haspopup="dialog" aria-expanded="false">QUANT<span class="metric-popover"><span class="metric-pop-kicker">Quant-Grenze</span><strong>Marktgröße</strong><span class="metric-explain">Quantitative Daten schätzen Reichweite, Häufigkeit und Priorität eines Problems.</span><span class="metric-mini metric-mini--sample"><i></i><i></i><i></i></span><em>Falle: Größe ohne validen Begriff kann präzise in die falsche Richtung führen.</em></span></div>
-          <strong>63%</strong>
+          <strong>53%</strong>
           <span>Abbruch am Umstiegsbildschirm</span>
         </div>
         <div class="pipeline-arrow">→</div>
@@ -6419,7 +6368,7 @@
       <div class="slab-card-rule">ENTSCHEIDUNG · REDESIGN AUSROLLEN, WEIL SIGNAL, MECHANISMUS UND EFFEKT ZUSAMMENPASSEN</div>
     </div>
   </div>
-  <div class="deck-pagenum">31 / 38</div>
+  <div class="deck-pagenum">30 / 37</div>
 </section>
 
 
@@ -6436,7 +6385,7 @@
     </div>
     <div class="exhibit-takeaway"><strong>Arbeitsregel:</strong> Erst Unsicherheit benennen, dann Methode wählen. Nicht umgekehrt.</div>
   </div>
-  <div class="deck-pagenum">32 / 38</div>
+  <div class="deck-pagenum">31 / 37</div>
 </section>
 
 <section class="slide dark quote" data-screen-label="Recap &amp; Transferfrage" data-activation="true" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text">
@@ -6448,7 +6397,7 @@
     <div class="recap-arrow">→</div>
     <div class="recap-step"><span>03</span><div class="recap-verb">Prüfen</div><p>Intervention testen.</p><div class="recap-proof">−18 pp Bahnsteig</div></div>
   </div>
-  <div class="deck-pagenum">33 / 38</div>
+  <div class="deck-pagenum">32 / 37</div>
 </section>
 
 <section class="slide white" data-screen-label="Literatur &amp; Ausblick" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text">
@@ -6484,7 +6433,7 @@
     </div>
     <div class="exhibit-takeaway"><strong>Schlussanker:</strong> Methode ist kein Werkzeugkoffer. Methode ist die begründete Übersetzung einer Managementfrage in Evidenz.</div>
   </div>
-  <div class="deck-pagenum">34 / 38</div>
+  <div class="deck-pagenum">33 / 37</div>
 </section>
 
 <section class="slide m-slide soft" data-screen-label="Eigenes Beispiel · Paid Search Evidenzproblem" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text">
@@ -6561,7 +6510,7 @@
         <div class="sparse-question metric-chip" data-explain="cvr_en" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Wie schätzt man die Conversion-Wahrscheinlichkeit, bevor direkte Evidenz ausreicht?<span class="metric-popover"><span class="metric-pop-kicker">Paid Search</span><strong>Conversion Rate</strong><span class="metric-explain">CVR ist die Wahrscheinlichkeit, dass aus einem Klick eine gewünschte Handlung wird.</span><span class="metric-mini metric-mini--posterior"><i></i><i></i><i></i></span><em>Falle: Bei wenigen Klicks ist die beobachtete CVR extrem instabil.</em></span></div>
       </div>
     </div>
-    <div class="m-footer"><div>Evidenzproblem: dünnes Keyword-Verhalten unter ökonomischem Entscheidungsdruck</div><div>35 / 38</div></div>
+    <div class="m-footer"><div>Evidenzproblem: dünnes Keyword-Verhalten unter ökonomischem Entscheidungsdruck</div><div>34 / 37</div></div>
   </section>
 
 <section class="slide white two-col-slab exhibit-slab bayes-slide" data-screen-label="Methodenexkurs · Bayes für Conversion Rates" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text">
@@ -6633,7 +6582,7 @@
       <div class="slab-card-rule">HIERARCHISCHER GEDANKE · α UND β WERDEN AUS DEM POOL VERGLEICHBARER KEYWORDS GEWONNEN; DIE FOLIE ZEIGT DAS LOKALE BETA-BINOMIAL-UPDATE FÜR EINE BID CELL</div>
     </div>
   </div>
-  <div class="deck-pagenum">36 / 38</div>
+  <div class="deck-pagenum">35 / 37</div>
 </section>
 
 <section class="slide m-slide" data-screen-label="Eigenes Beispiel · Paid Search Methode" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text">
@@ -6699,7 +6648,7 @@
         </div>
       </div>
     </div>
-    <div class="m-footer"><div>Dünne Keyword-Daten → prognostizierte CVR → automatisiertes Bidding</div><div>37 / 38</div></div>
+    <div class="m-footer"><div>Dünne Keyword-Daten → prognostizierte CVR → automatisiertes Bidding</div><div>36 / 37</div></div>
   </section>
 
 <section class="slide m-slide soft" data-screen-label="Eigenes Beispiel · Karrierebogen" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text">
@@ -6708,7 +6657,7 @@
     <p class="m-subtitle">Die Linie von Leuphana bis HdM erklärt die Haltung hinter dieser Vorlesung: Marketingevidenz wird zu Software, Organisationen und Lehre.</p>
 
     <div class="career-bridge">
-      <div class="career-map">
+      <div class="career-map" style="grid-template-columns: repeat(4, 1fr);">
         <div class="career-step">
           <div>
             <div class="career-year">EU-Innovationskontext</div>
@@ -6741,14 +6690,6 @@
           </div>
           <div class="panel-label">Praxisbeleg</div>
         </div>
-        <div class="career-step">
-          <div>
-            <div class="career-year">akademische Agenda</div>
-            <div class="career-title">Professur<br>Digital Marketing</div>
-            <p class="career-text">An der HdM Stuttgart fließt Gründungspraxis in Forschung und Lehre zurück.</p>
-          </div>
-          <div class="panel-label">und der Weg geht weiter</div>
-        </div>
       </div>
 
       <div class="transfer-photo">
@@ -6767,7 +6708,7 @@
       </div>
 
     </div>
-    <div class="m-footer"><div>Leuphana → EXIST → Adference → Exit → HdM Stuttgart</div><div>38 / 38</div></div>
+    <div class="m-footer"><div>Leuphana → EXIST → Adference → Exit → HdM Stuttgart</div><div>37 / 37</div></div>
   </section>
 
 <section class="slide dark gridbg-dark section-divider combined-transition" data-screen-label="Bridge · Colloquium" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="32">
@@ -6854,7 +6795,7 @@
         <div class="sparse-question metric-chip" data-explain="cvr_en" tabindex="0" aria-haspopup="dialog" aria-expanded="false">How do we estimate conversion probability before direct evidence is sufficient?<span class="metric-popover"><span class="metric-pop-kicker">Paid Search</span><strong>Conversion Rate</strong><span class="metric-explain">CVR ist die Wahrscheinlichkeit, dass aus einem Klick eine gewünschte Handlung wird.</span><span class="metric-mini metric-mini--posterior"><i></i><i></i><i></i></span><em>Falle: Bei wenigen Klicks ist die beobachtete CVR extrem instabil.</em></span></div>
       </div>
     </div>
-    <div class="m-footer"><div>Evidence problem: sparse keyword-level behavior under economic decision pressure</div><div>02 / 15</div></div>
+    <div class="m-footer"><div>Evidence problem: sparse keyword-level behavior under economic decision pressure</div><div>01 / 12</div></div>
   </section>
 
 <section class="slide m-slide" data-screen-label="Paid Search Procedure" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="36">
@@ -6920,7 +6861,7 @@
         </div>
       </div>
     </div>
-    <div class="m-footer"><div>Sparse keyword data → predicted CVR → automated bidding</div><div>03 / 15</div></div>
+    <div class="m-footer"><div>Sparse keyword data → predicted CVR → automated bidding</div><div>02 / 12</div></div>
   </section>
 
 <section class="slide m-slide soft" data-screen-label="Entrepreneurial Transfer" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="37">
@@ -6929,7 +6870,7 @@
     <p class="m-subtitle">The Leuphana-to-HdM line explains the habit behind the deck: marketing evidence becomes software, organizations and teaching.</p>
 
     <div class="career-bridge">
-      <div class="career-map">
+      <div class="career-map" style="grid-template-columns: repeat(4, 1fr);">
         <div class="career-step">
           <div>
             <div class="career-year">EU innovation context</div>
@@ -6962,14 +6903,6 @@
           </div>
           <div class="panel-label">practice proof</div>
         </div>
-        <div class="career-step">
-          <div>
-            <div class="career-year">academic agenda</div>
-            <div class="career-title">Digital Marketing Professorship</div>
-            <p class="career-text">At HdM Stuttgart, venture practice feeds research and teaching.</p>
-          </div>
-          <div class="panel-label">then the journey continues</div>
-        </div>
       </div>
 
       <div class="transfer-photo">
@@ -6988,7 +6921,7 @@
       </div>
 
     </div>
-    <div class="m-footer"><div>Leuphana → EXIST → Adference → Exit → HdM Stuttgart</div><div>04 / 15</div></div>
+    <div class="m-footer"><div>Leuphana → EXIST → Adference → Exit → HdM Stuttgart</div><div>03 / 12</div></div>
   </section>
 <section class="slide dark gridbg-dark section-divider combined-transition" data-screen-label="Act 2 · Current Research Semester" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text">
   <div class="section-divider-inner">
@@ -7035,11 +6968,11 @@
 
     <div class="portfolio-footer"><span style="color: var(--red); font-weight: 700;">★</span> Two additional outputs sit outside the SVRN library: the <em>Open Paper Machine</em>, an open-sourced agent pipeline on GitHub, and the position paper <em>From Creator to Orchestrator</em>, co-authored with B. Funk.</div>
 
-    <div class="m-footer"><div>Positions · Market Analyses · Studies · all on AI in service markets</div><div>01 / 12</div></div>
+    <div class="m-footer"><div>Positions · Market Analyses · Studies · all on AI in service markets</div><div>04 / 12</div></div>
   </section>
 <section class="slide m-slide soft" data-screen-label="Copilot Fallacy" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="41">
     <div class="kicker"><span class="red">SPOTLIGHT 01</span> · THE COPILOT FALLACY · INVESTMENT BANKING · SPRINGER SUBMISSION</div>
-    <h1 class="m-title wide">$200 bn spent on enterprise AI per year, yet ~70 % of initiatives fail. The <em>Copilot Fallacy</em> names why.</h1>
+    <h1 class="m-title wide">$200 bn spent on enterprise AI per year, yet ~70 % of initiatives fail. The <em>Copilot Fallacy</em> names why (at least in investment banking).</h1>
     <p class="m-subtitle">Organisations treat AI as software to license rather than as intelligence requiring fundamental redesign of professional work. The paper diagnoses this failure pattern and proposes the Three-Pillar Framework as the corrective, grounded in Work Design Theory (Parker &amp; Grote 2019) and Dynamic Capabilities (Teece 2007).</p>
 
     <div class="copilot-board">
@@ -7104,7 +7037,7 @@
 
       <div class="copilot-panel dark">
         <div class="panel-label">Method base</div>
-        <div class="copilot-panel-title">PRISMA SLR + Gioia field study.</div>
+        <div class="copilot-panel-title"><span class="metric-chip popover-above popover-pin-above" tabindex="0" aria-haspopup="dialog" aria-expanded="false">PRISMA SLR<span class="metric-popover"><span class="metric-pop-kicker">Method · transparent literature review</span><strong>PRISMA 2020 Systematic Literature Review</strong><span class="metric-explain">PRISMA = Preferred Reporting Items for Systematic Reviews and Meta-Analyses, 2020 update. Search strategy, databases, journals and inclusion / exclusion criteria are documented up front. The full path from identification through screening to inclusion is reported as a flow diagram. Reproducible, not just exhaustive.</span><span class="metric-mini metric-mini--text-corpus"><i></i><i></i><i></i></span><em>Here: 47 papers from 4 databases + 18 from 6 specialist journals, 2019 – 2026.</em></span></span> + <span class="metric-chip popover-above popover-pin-above" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Gioia field study<span class="metric-popover"><span class="metric-pop-kicker">Method · inductive qualitative theory building</span><strong>Gioia Field Study</strong><span class="metric-explain">Gioia, Corley &amp; Hamilton (2013): structured qualitative method for grounded theory from interviews. Three coding levels: <strong>1st-order codes</strong> stay in informants' own language. <strong>2nd-order themes</strong> aggregate codes into researcher-named constructs. <strong>Aggregate dimensions</strong> integrate themes into theory. Signature: the published <em>Data Structure</em> walks from raw quotes to dimensions. Makes the interpretive chain inspectable.</span><span class="metric-mini metric-mini--pattern-mechanism"><i></i><i></i><i></i></span><em>Here: 23 interviews · 150k words → 45 first-order codes → 14 second-order themes → 5 aggregate dimensions + 2 emergent.</em></span></span>.</div>
         <div class="pillar-map">
           <div class="pillar-row">
             <div class="pillar-key">65</div>
@@ -7131,7 +7064,7 @@
         </div>
       </div>
     </div>
-    <div class="m-footer"><div>Springer submission · Industry 5.0 framing · 3 pillars + 2 emergent dimensions · Practitioner-oriented framework foregrounding work design over technology selection</div><div>07 / 12</div></div>
+    <div class="m-footer"><div>Springer submission · Industry 5.0 framing · 3 pillars + 2 emergent dimensions · Practitioner-oriented framework foregrounding work design over technology selection</div><div>05 / 12</div></div>
   </section>
 <section class="slide m-slide soft" data-screen-label="IR AI-Readiness · Theory" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="44">
     <div class="kicker"><span class="red">SPOTLIGHT 02 · A</span> · IR AI-READINESS · SIGNALING THEORY EXTENSION</div>
@@ -7208,54 +7141,57 @@
         </div>
       </div>
     </div>
-    <div class="m-footer"><div>Signal transmission readiness: discoverability + accessibility + machine readability, framed within Signaling Theory</div><div>11 / 16</div></div>
+    <div class="m-footer"><div>Signal transmission readiness: discoverability + accessibility + machine readability, framed within Signaling Theory</div><div>06 / 12</div></div>
   </section>
 <section class="slide m-slide soft" data-screen-label="IR AI-Readiness · HDAX Evidence" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="45">
-    <div class="kicker"><span class="red">SPOTLIGHT 02 · B</span> · IR AI-READINESS · HDAX EMPIRICAL BASELINE</div>
-    <h1 class="m-title wide">Germany's largest listed companies are not prepared for AI-mediated investor communication. <em>No HDAX firm is A-tier.</em></h1>
-    <p class="m-subtitle">First empirical baseline of IR AI-readiness for a major stock-market index. 122 HDAX firms attempted, 101 analysed across 72 checks. Assessment built on Claude Sonnet 4.6, cross-validated with five additional frontier LLMs at mean Spearman ρ = 0.875.</p>
+    <div class="kicker"><span class="red">SPOTLIGHT 02 · B</span> · IR AI-READINESS · HDAX EMPIRICAL BASELINE · <a href="https://svrn-alpha.com/research/hdax-ir-ai-readiness-en.html" target="_blank" rel="noopener" style="color: var(--red); text-decoration: underline; font-weight: 700;">OPEN FULL STUDY ↗</a></div>
+    <h1 class="m-title wide">101 HDAX firms · 11 categories · zero <em>A-tier</em>.</h1>
+    <p class="m-subtitle">Automated crawling plus AI-powered scoring across 122 firms, 101 analysed. The collapse happens at the two categories that decide whether AI agents can retrieve the signal at all.</p>
 
-    <div class="ir-agent-board">
+    <div class="ir-agent-board" style="grid-template-columns: 0.92fr 1.5fr 0.95fr;">
       <div class="ir-panel">
         <div>
-          <div class="panel-label">sample &amp; method</div>
-          <div class="ir-panel-title">122 attempted. 21 blocked at the door. 101 fully analysed.</div>
-          <p class="ir-panel-text">Crawler hits the IR landing page and up to 15 IR subpages with a standard non-deceptive user agent, no JS rendering, no browser emulation. The 17.2 % crawl failure is itself evidence of low readiness.</p>
+          <div class="panel-label">methodology</div>
+          <div class="ir-panel-title">11 categories, automated + reproducible.</div>
         </div>
-        <div class="ir-metrics">
-          <div class="ir-metric red"><div class="ir-metric-num">17.2 %</div><div class="ir-metric-text"><strong>blocked before measurement</strong>Adidas, Deutsche Post DHL, Merck, ThyssenKrupp, Volkswagen, Zalando among the 21 unreachable firms.</div></div>
-          <div class="ir-metric"><div class="ir-metric-num">72</div><div class="ir-metric-text"><strong>checks per company</strong>11 dimensions, 3 to 12 checks each, scored 0 to 1 with evidence text for post-hoc audit.</div></div>
-          <div class="ir-metric"><div class="ir-metric-num">6 × LLM</div><div class="ir-metric-text"><strong>cross-model validation</strong>Claude 4.6 plus GPT-5.4, Grok 4.20, DeepSeek v3.2, Qwen 3.6+, Gemini 3.1. Mean ρ = 0.875 on 1.080 re-scored checks.</div></div>
-        </div>
+        <ul style="list-style: none; padding: 0; margin: 12px 0 0 0; display: grid; gap: 7px;">
+          <li style="font-size: 12px; line-height: 1.3; color: var(--muted);"><strong style="color: var(--ink); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;">Discoverability</strong> · Can agents find and crawl the site?</li>
+          <li style="font-size: 12px; line-height: 1.3; color: var(--muted);"><strong style="color: var(--ink); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;">Static Content</strong> · Content without JavaScript?</li>
+          <li style="font-size: 12px; line-height: 1.3; color: var(--muted);"><strong style="color: var(--ink); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;">JS Rendering</strong> · Dynamic rendering supported?</li>
+          <li style="font-size: 12px; line-height: 1.3; color: var(--muted);"><strong style="color: var(--ink); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;">Data Accessibility</strong> · Downloadable .xlsx, llm.txt available?</li>
+          <li style="font-size: 12px; line-height: 1.3; color: var(--muted);"><strong style="color: var(--ink); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;">Navigation</strong> · Can a bot navigate the page?</li>
+          <li style="font-size: 12px; line-height: 1.3; color: var(--muted);"><strong style="color: var(--ink); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;">Performance</strong> · Load times and efficiency.</li>
+          <li style="font-size: 12px; line-height: 1.3; color: var(--muted);"><strong style="color: var(--ink); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;">Anti-Bot &amp; Access</strong> · Bots blocked or hindered?</li>
+          <li style="font-size: 12px; line-height: 1.3; color: var(--muted);"><strong style="color: var(--ink); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;">Content Quality</strong> · Signal-to-noise ratio.</li>
+          <li style="font-size: 12px; line-height: 1.3; color: var(--muted);"><strong style="color: var(--red); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;">Machine-Readable Std.</strong> · Schema.org, JSON-LD, semantic HTML.</li>
+          <li style="font-size: 12px; line-height: 1.3; color: var(--muted);"><strong style="color: var(--red); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;">IR-Specific Practices</strong> · IR best-practice patterns.</li>
+          <li style="font-size: 12px; line-height: 1.3; color: var(--muted);"><strong style="color: var(--ink); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;">LLM Comprehension</strong> · Can LLMs interpret the content?</li>
+        </ul>
+        <div class="transmission-gate" style="font-size: 13px; line-height: 1.25;">Cross-validation: Claude Sonnet 4.6 plus GPT-5.4, Grok 4.20, DeepSeek v3.2, Qwen 3.6+, Gemini 3.1. Mean Spearman ρ = 0,875 on 1.080 re-scored checks.</div>
       </div>
 
       <div class="ir-panel">
         <div>
-          <div class="panel-label red">overall score</div>
-          <div class="ir-panel-title">Mean 62.0 / 100. Zero A-tier. Three out of four firms in Tier C.</div>
+          <div class="panel-label red">scores per category</div>
+          <div class="ir-panel-title">Two categories below 60. The structural gap is at the bottom of the chart.</div>
         </div>
-        <div class="ir-metrics">
-          <div class="ir-metric red"><div class="ir-metric-num">62.0</div><div class="ir-metric-text"><strong>mean AI-readiness</strong>SD = 6.0, range 53 to 78, IQR = 10. Compressed band, no breakaway leaders.</div></div>
-          <div class="ir-metric"><div class="ir-metric-num">0</div><div class="ir-metric-text"><strong>A-tier firms (85+)</strong>Top score is 78 (Carl Zeiss Meditec, Daimler Truck, KION, Scout24, Siemens Healthineers, Volkswagen Group).</div></div>
-          <div class="ir-metric"><div class="ir-metric-num">7.9 %</div><div class="ir-metric-text"><strong>Tier B (70 to 84)</strong>Eight companies show foundational readiness.</div></div>
-          <div class="ir-metric red"><div class="ir-metric-num">75.2 %</div><div class="ir-metric-text"><strong>Tier C (55 to 69)</strong>Plus 16.8 % in Tier D. 100 % of firms score zero in at least one category.</div></div>
-        </div>
+        <div style="margin-top: 16px; padding: 8px 4px 0;"><svg viewBox="0 0 620 360" xmlns="http://www.w3.org/2000/svg" style="display:block; width:100%; height:auto;"><text x="168" y="14" font-family="DM Mono, monospace" font-size="10" fill="#94a3b8" letter-spacing="0.08em">MEAN SCORE PER CATEGORY · 0 – 100</text><line x1="168.0" y1="28" x2="168.0" y2="340" stroke="#e2e8f0" stroke-width="0.8"/><text x="168.0" y="354" font-family="DM Mono, monospace" font-size="10" fill="#94a3b8" text-anchor="middle">0</text><line x1="268.5" y1="28" x2="268.5" y2="340" stroke="#e2e8f0" stroke-width="0.8"/><text x="268.5" y="354" font-family="DM Mono, monospace" font-size="10" fill="#94a3b8" text-anchor="middle">25</text><line x1="369.0" y1="28" x2="369.0" y2="340" stroke="#e2e8f0" stroke-width="0.8"/><text x="369.0" y="354" font-family="DM Mono, monospace" font-size="10" fill="#94a3b8" text-anchor="middle">50</text><line x1="469.5" y1="28" x2="469.5" y2="340" stroke="#e2e8f0" stroke-width="0.8"/><text x="469.5" y="354" font-family="DM Mono, monospace" font-size="10" fill="#94a3b8" text-anchor="middle">75</text><line x1="570.0" y1="28" x2="570.0" y2="340" stroke="#e2e8f0" stroke-width="0.8"/><text x="570.0" y="354" font-family="DM Mono, monospace" font-size="10" fill="#94a3b8" text-anchor="middle">100</text><text x="160.0" y="47.2" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#0f172a" text-anchor="end">Anti-Bot &amp; Access</text><rect x="168" y="34.1" width="345.3" height="18.2" fill="#475569" rx="2"/><text x="519.3" y="47.2" font-family="DM Mono, monospace" font-size="12" font-weight="500" fill="#0f172a">85.9</text><text x="160.0" y="77.6" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#0f172a" text-anchor="end">Static Content</text><rect x="168" y="64.5" width="336.1" height="18.2" fill="#475569" rx="2"/><text x="510.1" y="77.6" font-family="DM Mono, monospace" font-size="12" font-weight="500" fill="#0f172a">83.6</text><text x="160.0" y="108.0" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#0f172a" text-anchor="end">Performance</text><rect x="168" y="94.9" width="333.3" height="18.2" fill="#475569" rx="2"/><text x="507.3" y="108.0" font-family="DM Mono, monospace" font-size="12" font-weight="500" fill="#0f172a">82.9</text><text x="160.0" y="138.4" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#0f172a" text-anchor="end">Navigation</text><rect x="168" y="125.3" width="322.4" height="18.2" fill="#475569" rx="2"/><text x="496.4" y="138.4" font-family="DM Mono, monospace" font-size="12" font-weight="500" fill="#0f172a">80.2</text><text x="160.0" y="168.8" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#0f172a" text-anchor="end">JS Rendering</text><rect x="168" y="155.7" width="277.8" height="18.2" fill="#475569" rx="2"/><text x="451.8" y="168.8" font-family="DM Mono, monospace" font-size="12" font-weight="500" fill="#0f172a">69.1</text><text x="160.0" y="199.2" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#0f172a" text-anchor="end">Content Quality</text><rect x="168" y="186.1" width="276.6" height="18.2" fill="#475569" rx="2"/><text x="450.6" y="199.2" font-family="DM Mono, monospace" font-size="12" font-weight="500" fill="#0f172a">68.8</text><text x="160.0" y="229.6" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#0f172a" text-anchor="end">Discoverability</text><rect x="168" y="216.5" width="273.8" height="18.2" fill="#475569" rx="2"/><text x="447.8" y="229.6" font-family="DM Mono, monospace" font-size="12" font-weight="500" fill="#0f172a">68.1</text><text x="160.0" y="260.0" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#0f172a" text-anchor="end">LLM Comprehension</text><rect x="168" y="246.9" width="266.5" height="18.2" fill="#475569" rx="2"/><text x="440.5" y="260.0" font-family="DM Mono, monospace" font-size="12" font-weight="500" fill="#0f172a">66.3</text><text x="160.0" y="290.4" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#D9272E" text-anchor="end">IR-Specific Practices</text><rect x="168" y="277.3" width="221.5" height="18.2" fill="#D9272E" rx="2"/><text x="395.5" y="290.4" font-family="DM Mono, monospace" font-size="12" font-weight="700" fill="#D9272E">55.1</text><text x="160.0" y="320.8" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#D9272E" text-anchor="end">Machine-Readable Std.</text><rect x="168" y="307.7" width="89.6" height="18.2" fill="#D9272E" rx="2"/><text x="263.6" y="320.8" font-family="DM Mono, monospace" font-size="12" font-weight="700" fill="#D9272E">22.3</text></svg></div>
+        <div class="transmission-gate" style="font-size: 13px; line-height: 1.25;">Only ~10 % of HDAX firms provide an llm.txt file. ~32 % offer some downloadable .xlsx. XBRL / iXBRL links appear at only ~5 %. No firm achieves A-tier (85+).</div>
       </div>
 
       <div class="ir-panel dark">
         <div>
-          <div class="panel-label">dimension profile</div>
-          <div class="ir-panel-title">Foundational web works. AI-specific infrastructure is missing.</div>
-          <p class="ir-panel-text">Strong: Anti-Bot 85.9 · Static Content 83.6 · Performance 82.9. Weak: IR-specific 55.1 · Machine-Readable 22.3 · Programmatic Access 0.0. Only 5 % use XBRL, 9.9 % adopt llms.txt, zero firms expose a functional IR data API.</p>
+          <div class="panel-label">why this is urgent now</div>
+          <div class="ir-panel-title">Three drivers force the issue.</div>
         </div>
         <div class="causal-chain">
-          <div class="causal-step"><div class="causal-num">01</div><div><div class="causal-title">AI invisibility</div><div class="causal-text">Crawlers hit JS barriers, anti-bot walls or PDF-locked data.</div></div></div>
-          <div class="causal-step"><div class="causal-num">02</div><div><div class="causal-title">Narrative loss</div><div class="causal-text">Agents assemble the story from transcripts, press, aggregators and fragments.</div></div></div>
-          <div class="causal-step"><div class="causal-num">03</div><div><div class="causal-title">Market effects</div><div class="causal-text">Asymmetry surfaces in coverage, spreads, ownership and AI citation frequency.</div></div></div>
+          <div class="causal-step"><div class="causal-num">01</div><div><div class="causal-title">AI agents replace the browser</div><div class="causal-text">Institutional investors and research platforms deploy agents that read IR sites automatically. Firms invisible to those agents lose visibility with the audience that decides capital allocation. OpenAI, Anthropic, Google and Perplexity are all shipping agent products for professional use now.</div></div></div>
+          <div class="causal-step"><div class="causal-num">02</div><div><div class="causal-title">Regulatory pressure: CSRD + ESRS</div><div class="causal-text">Mandatory sustainability reporting under CSRD (2025/26) with ESRS produces large volumes of data that must be delivered machine-readable. Firms that cannot deliver structured formats get systematically underrated in ESG ratings, with direct effects on cost of capital.</div></div></div>
+          <div class="causal-step"><div class="causal-num">03</div><div><div class="causal-title">Information asymmetry flips</div><div class="causal-text">Until now the firm controls its equity story through its IR site. AI models already aggregate from thousands of sources. If the firm's own IR site is not an authoritative machine-readable source, third-party sources fill the vacuum with all their biases.</div></div></div>
         </div>
       </div>
     </div>
-    <div class="m-footer"><div>HDAX 2026 baseline: foundational competence achieved, AI-specific transmission infrastructure not yet built</div><div>12 / 17</div></div>
+    <div class="m-footer"><div>HDAX 2026 baseline: foundational competence achieved, AI-specific transmission infrastructure not yet built</div><div>07 / 12</div></div>
   </section>
 <section class="slide m-slide soft" data-screen-label="Transfer · IZU + SVRN Alpha" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="45">
     <div class="kicker"><span class="red">SPOTLIGHT 02 · C</span> · TRANSFER · FROM RESEARCH SEMESTER TO OPERATIONAL VEHICLES</div>
@@ -7300,7 +7236,7 @@
         <div class="transmission-gate">Regional transfer and entrepreneurial practice are one half. The other half is what the research line means for academic work itself, addressed directly by the open-sourced agent pipeline.</div>
       </div>
     </div>
-    <div class="m-footer"><div>Transfer vehicles: IZU Harz for regional industry · SVRN Alpha as AI tech company for institutional finance</div><div>13 / 17</div></div>
+    <div class="m-footer"><div>Transfer vehicles: IZU Harz for regional industry · SVRN Alpha as AI tech company for institutional finance</div><div>08 / 12</div></div>
   </section>
 <section class="slide m-slide soft" data-screen-label="Open Paper Machine Procedure" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="45">
     <div class="kicker"><span class="red">SPOTLIGHT 03</span> · OPEN PAPER MACHINE · ACADEMIC WORKFLOW AS INFRASTRUCTURE</div>
@@ -7376,7 +7312,7 @@
         </div>
       </div>
     </div>
-    <div class="m-footer"><div>Open Paper Machine: commands, agents, skills and verification artifacts</div><div>14 / 17</div></div>
+    <div class="m-footer"><div>Open Paper Machine: commands, agents, skills and verification artifacts</div><div>09 / 12</div></div>
   </section>
 <section class="slide m-slide" data-screen-label="Creator to Orchestrator Paper" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="46">
     <div class="kicker"><span class="red">SPOTLIGHT 04</span> · POSITION PAPER · WITH B. FUNK · SSRN</div>
@@ -7417,7 +7353,7 @@
         <div class="paper-link">Position paper · From Creator to Orchestrator · SSRN abstract_id=6358578</div>
       </div>
     </div>
-    <div class="m-footer"><div>Claim: contribution moves to questions, verification and accountability</div><div>15 / 17</div></div>
+    <div class="m-footer"><div>Claim: contribution moves to questions, verification and accountability</div><div>10 / 12</div></div>
   </section>
 
 
@@ -7438,32 +7374,32 @@
       <div class="masters-grid">
         <div class="master-module">
           <div class="module-num">M5</div>
-          <div class="module-name">Märkte und Marktstrategien</div>
+          <div class="module-name"><a href="https://pubdoc.th-luebeck.de/d8105aa1cd" target="_blank" rel="noopener" class="metric-chip" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Märkte und Marktstrategien<span class="metric-popover"><span class="metric-pop-kicker">Modul M5 · 1. Semester · 5 ECTS · 4 Semesterwochenstunden</span><strong>Where my work connects</strong><span class="metric-explain">Marktstrategien in Suchmaschinen-Auktionsmärkten unter ökonomischem Entscheidungsdruck: Bid-Cell-Logik (Keyword × Anzeige × Kontext als Entscheidungseinheit), Long-Tail-Auktionen, automatisierte Gebotsstrategien aus meiner Dissertation und der Firma Adference. Aktuell: das Copilot-Fallacy-Paper zur Strategie für Sovereign Artificial Intelligence Mastery im Investment Banking als Branchenfall.</span><span class="metric-mini metric-mini--journey-reg"><i></i><i></i><i></i></span><em>PDF des Moduls öffnet im neuen Tab.</em></span></a></div>
           <div class="module-fit">Paid-search strategies under sparse data, bid-cell decisions.</div>
         </div>
         <div class="master-module">
           <div class="module-num">M6</div>
-          <div class="module-name">Empirische Forschungsmethoden</div>
+          <div class="module-name"><a href="https://pubdoc.th-luebeck.de/7f72715154" target="_blank" rel="noopener" class="metric-chip" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Empirische Forschungsmethoden<span class="metric-popover"><span class="metric-pop-kicker">Seminar Empirische Forschungsmethoden · 1. Semester · innerhalb des Moduls „Analyse und Konzepte ökonomischen Denkens"</span><strong>Where my work connects</strong><span class="metric-explain">Bayesianische Inferenz (Beta-Binomial-Konjugat aus der Probevorlesung), hierarchische Modelle aus der Dissertation, Multi-Modell-Delphi mit sechs verschiedenen Large Language Models (HDAX-Studie: Claude Sonnet, GPT, Grok, DeepSeek, Qwen und Gemini, mittlerer Spearman-Korrelationskoeffizient ρ = 0,875), PRISMA-2020 Systematic Literature Review kombiniert mit Gioia-Methodik für qualitative Theoriebildung (Copilot-Fallacy-Paper), sowie Mixed Methods. Direktes Anschlussthema für das Methoden-Seminar.</span><span class="metric-mini metric-mini--hbayes"><i></i><i></i><i></i></span><em>PDF des Moduls öffnet im neuen Tab.</em></span></a></div>
           <div class="module-fit">Bayes, hierarchical models, Delphi, mixed methods.</div>
         </div>
         <div class="master-module">
           <div class="module-num">M10</div>
-          <div class="module-name">Forschungsprojekte</div>
+          <div class="module-name"><a href="https://pubdoc.th-luebeck.de/7a91973dc9" target="_blank" rel="noopener" class="metric-chip" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Forschungsprojekte<span class="metric-popover"><span class="metric-pop-kicker">Modul M10 · 2. und 3. Semester · zweisemestrig · 5 ECTS · 4 Semesterwochenstunden</span><strong>Where my work connects</strong><span class="metric-explain">Studierendenprojekte mit echten Empfängern und Datenpartnern: Servicekontexte der Deutschen Bahn AG, institutionelle Investmentpartner aus dem Umfeld der SVRN Alpha, regionale mittelständische Firmen über das Institut für zukunftsfähige Unternehmensentwicklung (Hochschule Harz). Konkrete Output-Typen: Audits zur Artificial-Intelligence-Readiness der HDAX-Unternehmen (DAX, MDAX und TecDAX zusammen), Marketing-Decision-Designs, Replikationen meiner Studien. Forschungsprojekte als Lehrformat für nachvollziehbare Entscheidungsartefakte, nicht für Hausarbeiten.</span><span class="metric-mini metric-mini--cluster"><i></i><i></i><i></i></span><em>PDF des Moduls öffnet im neuen Tab.</em></span></a></div>
           <div class="module-fit">Student projects as decision artifacts with a real recipient.</div>
         </div>
         <div class="master-module is-bridge">
           <div class="module-num">M13 · BRIDGE</div>
-          <div class="module-name">e-Business Management</div>
+          <div class="module-name"><a href="https://pubdoc.th-luebeck.de/976be8e391" target="_blank" rel="noopener" class="metric-chip" tabindex="0" aria-haspopup="dialog" aria-expanded="false">e-Business Management<span class="metric-popover"><span class="metric-pop-kicker">Modul M13 · 3. Semester · 5 ECTS · 4 Semesterwochenstunden · Brückenmodul</span><strong>Where my work connects</strong><span class="metric-explain">Direkte Brücke zur Dissertation und zur Firma Adference: Paid Search, Bid-Management, Conversion-Tracking und Attribution. Aktuelles modulübergreifendes Forschungsprojekt: Clickstream-Daten als Frühindikator für Unternehmensbewertung, Umsatz und Aktienkurse. Digitales Marketing als Datengrundlage für Implikationen in der Bewertung von Vermögensgegenständen.</span><span class="metric-mini metric-mini--posterior"><i></i><i></i><i></i></span><em>PDF des Moduls öffnet im neuen Tab.</em></span></a></div>
           <div class="module-fit">Clickstream, digital marketing, conversion analytics.</div>
         </div>
         <div class="master-module is-anchor">
           <div class="module-num">M16 · ANCHOR</div>
-          <div class="module-name">Dienstleistungsmanagement</div>
+          <div class="module-name"><a href="https://pubdoc.th-luebeck.de/e8682515c3" target="_blank" rel="noopener" class="metric-chip" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Dienstleistungsmanagement<span class="metric-popover"><span class="metric-pop-kicker">Modul M16 · 3. Semester · 5 ECTS · 4 Semesterwochenstunden · Ankerpunkt für mich</span><strong>Where my work connects</strong><span class="metric-explain">Genau das Feld der Probevorlesung: Service-Eigenschaften (Intangibilität, Heterogenität, Uno-Actu-Prinzip der gleichzeitigen Produktion und Konsumtion, Integrativität des externen Faktors), SERVQUAL als etabliertes Messinstrument für Servicequalität, der Bahnsteig-Fall der Deutschen Bahn als Lehrcase, Mixed Methods für Service Innovation. Ankermodul, weil Service Research mein primäres Anwendungsfeld ist.</span><span class="metric-mini metric-mini--pattern-mechanism"><i></i><i></i><i></i></span><em>PDF des Moduls öffnet im neuen Tab.</em></span></a></div>
           <div class="module-fit">Service research, SERVQUAL, the DB train-station case directly.</div>
         </div>
         <div class="master-module is-anchor is-bridge">
           <div class="module-num">M17 · ANCHOR · BRIDGE</div>
-          <div class="module-name">Methoden der Markt- und Branchenanalysen</div>
+          <div class="module-name"><a href="https://pubdoc.th-luebeck.de/8d512162c7" target="_blank" rel="noopener" class="metric-chip" tabindex="0" aria-haspopup="dialog" aria-expanded="false">Methoden der Markt- und Branchenanalysen<span class="metric-popover"><span class="metric-pop-kicker">Modul M17 · 3. Semester · 5 ECTS · 4 Semesterwochenstunden · Ankerpunkt und Brückenmodul</span><strong>Where my work connects</strong><span class="metric-explain">Multi-Modell-Delphi mit mehreren Large Language Models und PRISMA-2020 Systematic Literature Review (Copilot-Fallacy-Paper), Artificial-Intelligence-Readiness-Audit der HDAX-Unternehmen (DAX, MDAX und TecDAX zusammen) über 101 gelistete Firmen entlang 11 Dimensionen, „When the Middle Disappears" als Branchenanalyse über sieben verschiedene Frontier-Modelle und „When Agents Become the Trading Desk" als Systematic Literature Review über 88 Papers und 29 Multi-Agenten-Systeme. Quantitative, qualitative und Mixed-Methods-Ansätze unter einem Methodendach.</span><span class="metric-mini metric-mini--text-corpus"><i></i><i></i><i></i></span><em>PDF des Moduls öffnet im neuen Tab.</em></span></a></div>
           <div class="module-fit">Multi-LLM Delphi, AI-readiness audits, quant plus qual plus mixed.</div>
         </div>
       </div>
@@ -7472,17 +7408,17 @@
         <div class="bridge-label">CURRENT RESEARCH · CROSS-MODULE</div>
         <div class="bridge-title">Predicting company valuations, revenue and stock prices from <em>clickstream and digital marketing data</em>.</div>
         <div class="bridge-modules">
-          <span class="bridge-pill">M1 · Financial Markets</span>
+          <a href="https://pubdoc.th-luebeck.de/a2de0bb192" target="_blank" rel="noopener" class="bridge-pill metric-chip" tabindex="0" aria-haspopup="dialog" aria-expanded="false">M1 · Financial Markets<span class="metric-popover"><span class="metric-pop-kicker">Contemporary Issues of (Euro Area) Financial Markets · 1. Semester · 5 ECTS · 4 Semesterwochenstunden</span><strong>Where my work connects</strong><span class="metric-explain">Brückenmodul für das aktuelle Forschungsprojekt: Verhaltensdaten aus dem Digital-Marketing-Bereich werden zu Frühindikatoren für Aktienkurse und Unternehmensbewertungen. Verbindet Marketing-Methoden mit Konzepten der Finanzmarktforschung (Marktmikrostruktur, Signalisierungstheorie, Bewertung von Vermögensgegenständen).</span><span class="metric-mini metric-mini--posterior"><i></i><i></i><i></i></span><em>PDF des Moduls öffnet im neuen Tab.</em></span></a>
           <span class="bridge-arrow">+</span>
-          <span class="bridge-pill">M13 · e-Business</span>
+          <a href="https://pubdoc.th-luebeck.de/976be8e391" target="_blank" rel="noopener" class="bridge-pill metric-chip" tabindex="0" aria-haspopup="dialog" aria-expanded="false">M13 · e-Business<span class="metric-popover"><span class="metric-pop-kicker">e-Business Management · 3. Semester · 5 ECTS · 4 Semesterwochenstunden</span><strong>Where my work connects</strong><span class="metric-explain">Datenquelle für das modulübergreifende Forschungsprojekt: Clickstream- und Conversion-Daten, wie sie das e-Business systematisch erzeugt, werden als Prädiktoren für Unternehmensbewertung modelliert.</span><span class="metric-mini metric-mini--cluster"><i></i><i></i><i></i></span><em>PDF des Moduls öffnet im neuen Tab.</em></span></a>
           <span class="bridge-arrow">+</span>
-          <span class="bridge-pill">M17 · Branchenanalysen</span>
+          <a href="https://pubdoc.th-luebeck.de/8d512162c7" target="_blank" rel="noopener" class="bridge-pill metric-chip" tabindex="0" aria-haspopup="dialog" aria-expanded="false">M17 · Branchenanalysen<span class="metric-popover"><span class="metric-pop-kicker">Methoden der Markt- und Branchenanalysen · 3. Semester · 5 ECTS · 4 Semesterwochenstunden</span><strong>Where my work connects</strong><span class="metric-explain">Methodische Klammer des Projekts: Mixed Methods (panelökonometrische Modelle plus qualitative Validierung), Multi-Modell-Delphi mit mehreren Large Language Models für Szenarien, Artificial-Intelligence-Readiness-Diagnostik als Sektor-Lens.</span><span class="metric-mini metric-mini--text-corpus"><i></i><i></i><i></i></span><em>PDF des Moduls öffnet im neuen Tab.</em></span></a>
         </div>
         <div class="bridge-note">The sparse-data Bayesian methods of my dissertation now feed a forecasting context. Marktforschung extends from consumer surveys into asset-pricing implications of digital behavior.</div>
       </div>
     </div>
 
-    <div class="m-footer"><div>Six modules of fit, with two teaching anchors and one cross-module project</div><div>16 / 17</div></div>
+    <div class="m-footer"><div>Six modules of fit, with two teaching anchors and one cross-module project</div><div>11 / 12</div></div>
   </section>
 
 <section class="slide m-slide dark" data-screen-label="Closing Method Agenda" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text">
@@ -7494,7 +7430,7 @@
       <div class="closing-cell"><div class="panel-label">teaching</div><div class="panel-title">Master modules as decision-procedure labs</div><p class="panel-text">Turn empirical methods modules into project labs with real data partners (DB, MPCM, regional service firms). Studierende deliver decision artifacts, not just term papers.</p></div>
       <div class="closing-cell"><div class="panel-label">transfer</div><div class="panel-title">SVRN Alpha as operating laboratory</div><p class="panel-text">Use SVRN Alpha and corporate partnerships (HDAX AI-readability audits, marketing decision design) to keep the research grounded in market reality — same logic as Adference back then.</p></div>
     </div>
-    <div class="m-footer"><div>Thank you · I look forward to your questions.</div><div>17 / 17</div></div>
+    <div class="m-footer"><div>Thank you · I look forward to your questions.</div><div>12 / 12</div></div>
   </section>
 
 <section class="slide dark gridbg-dark section-divider combined-transition" data-screen-label="Backup · Reservefolien" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text">
@@ -7692,7 +7628,7 @@
 </section>
 
 </deck-stage>
-<script src="Probevorlesung/metric-popovers-v2.js?v=explainer-rich35-koll-en"></script>
+<script src="Probevorlesung/metric-popovers-v2.js?v=pin-above"></script>
 
 <script>
 /* ============================================================

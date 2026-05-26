@@ -73,8 +73,8 @@
     tracking: {
       cat: "Beobachtung", name: "Verhaltensspur", mini: "pattern-mechanism",
       tldr: "Was Menschen tun, ist oft etwas anderes als das, was sie sagen, Tracking schließt diese Lücke.",
-      long: "In Befragungen sagen Reisende „die App ist okay“, im Tracking sieht man, dass 63 % nach 8 Sekunden die Buchungsstrecke abbrechen. Verhaltensspuren entstehen non-reaktiv aus Logs, Sensoren oder App-Events; sie sind die Methode der Wahl, wenn das tatsächliche Tun wichtiger ist als die Selbstauskunft. Stärke: hohe Fallzahl, kein Erinnerungsbias, real-time Granularität. Schwäche: Verhalten erklärt sich nicht von selbst, der Warum-Teil bleibt offen und braucht qualitative Vertiefung.",
-      example: "DB Navigator In-App-Tracking: 42.000 Sessions, 30 Tage. Befund: „Umstiegsanzeige verlassen“ in 63 % der Suchen, mittlerer Aufenthalt 11 Sek vor Abbruch.",
+      long: "In Befragungen sagen Reisende „die App ist okay“, im Tracking sieht man, dass 53 % nach 8 Sekunden die Buchungsstrecke abbrechen. Verhaltensspuren entstehen non-reaktiv aus Logs, Sensoren oder App-Events; sie sind die Methode der Wahl, wenn das tatsächliche Tun wichtiger ist als die Selbstauskunft. Stärke: hohe Fallzahl, kein Erinnerungsbias, real-time Granularität. Schwäche: Verhalten erklärt sich nicht von selbst, der Warum-Teil bleibt offen und braucht qualitative Vertiefung.",
+      example: "DB Navigator In-App-Tracking: 42.000 Sessions, 30 Tage. Befund: „Umstiegsanzeige verlassen“ in 53 % der Suchen, mittlerer Aufenthalt 11 Sek vor Abbruch.",
       pitfall: "Falle: Tracking zeigt Symptome, nicht Mechanismen. „Warum bricht ab?“ braucht Think-aloud oder Interview."
     },
     nonreactive: {
@@ -156,7 +156,7 @@
     thinkAloud: {
       cat: "Qualitativ", name: "Think-aloud", mini: "field",
       tldr: "Wenn man wissen will, wo genau und warum Nutzer:innen straucheln, nicht nur dass sie abbrechen.",
-      long: "Tracking zeigt: 63 % brechen nach 11 Sek ab. Think-aloud zeigt das Warum: weil sie nicht verstehen, was sie als Nächstes klicken sollen. Methodisch: Teilnehmende bearbeiten eine Aufgabe (Verbindung buchen) und sprechen laut mit, was sie wahrnehmen, erwarten, nicht verstehen. Das macht Nutzungsbarrieren im Moment der Entscheidung hörbar, auf eine Tiefe, die Befragungen nicht erreichen. Klassisches Usability-Verfahren; im Service-Kontext für App-Buchung, Ticketkauf, Self-Service-Reklamation.",
+      long: "Tracking zeigt: 53 % brechen nach 11 Sek ab. Think-aloud zeigt das Warum: weil sie nicht verstehen, was sie als Nächstes klicken sollen. Methodisch: Teilnehmende bearbeiten eine Aufgabe (Verbindung buchen) und sprechen laut mit, was sie wahrnehmen, erwarten, nicht verstehen. Das macht Nutzungsbarrieren im Moment der Entscheidung hörbar, auf eine Tiefe, die Befragungen nicht erreichen. Klassisches Usability-Verfahren; im Service-Kontext für App-Buchung, Ticketkauf, Self-Service-Reklamation.",
       example: "8 Reisende buchen in der DB Navigator-App eine Umstiegsverbindung. Jeder Schritt wird verbalisiert. Audio + Screen-Capture, 30 min pro Person → 4 dokumentierte Stolperstellen pro Aufgabe.",
       pitfall: "Falle: Lautes Denken verändert die Situation, die Methode zeigt Barrieren, keine natürlichen Häufigkeiten.",
       position: "Position: links unten-mittig, weil die Interaktion erhoben wird, aber meist mehrere Aufgaben oder Barrieren verglichen werden."
@@ -260,7 +260,7 @@
     mechanism: {
       cat: "Qual-Grenze", name: "Mechanismus", mini: "pattern-mechanism",
       tldr: "Quantitative Methoden sagen, dass etwas passiert, Mechanismen sagen warum. Ohne den Warum-Teil kann man nicht intervenieren.",
-      long: "Ein Mechanismus erklärt die Kette „Bedingung → Prozess → Ergebnis“ und macht aus einem Muster eine handelbare Erkenntnis. Quantitative Forschung sagt: „63 % brechen nach 11 Sek ab“, Information, aber noch keine Lösung. Der Mechanismus sagt: „weil sie nicht verstehen, was als Nächstes passiert“ → daraus folgt: zeige es klarer. Erst der Mechanismus erlaubt, eine Intervention zu designen, die genau an dieser Stelle ansetzt.",
+      long: "Ein Mechanismus erklärt die Kette „Bedingung → Prozess → Ergebnis“ und macht aus einem Muster eine handelbare Erkenntnis. Quantitative Forschung sagt: „53 % brechen nach 11 Sek ab“, Information, aber noch keine Lösung. Der Mechanismus sagt: „weil sie nicht verstehen, was als Nächstes passiert“ → daraus folgt: zeige es klarer. Erst der Mechanismus erlaubt, eine Intervention zu designen, die genau an dieser Stelle ansetzt.",
       example: "Anschluss verloren → Informationslücke → Eskalationsangst → Buchungsabbruch. Vier Schritte, jeder ein potenzieller Hebel für Service-Design.",
       pitfall: "Falle: Mittelwerte und Korrelationen zeigen Muster, keine Mechanismen. Letztere brauchen qualitative Tiefe."
     },
@@ -987,7 +987,7 @@
       cat: "Mixed Methods", name: "Merge · Zahl + Zitat", mini: "joint-display",
       tldr: "Im konvergenten Design werden Datenarten in einer Matrix zusammengeführt, pro Frage Zahl + Zitat.",
       long: "Merge ist die Integrationsstelle bei parallelem Mixed-Methods-Design. Joint Display pro Frage: links die Zahl, rechts das Zitat, in der Mitte die Meta-Inferenz.",
-      example: "Frage „Wo bricht Vertrauen?“ → 63% Abbruch nach Umstiegsanzeige + O-Ton „Ich wusste nicht, ob ich es schaffe“ → Mechanismus zum Effekt.",
+      example: "Frage „Wo bricht Vertrauen?“ → 53% Abbruch nach Umstiegsanzeige + O-Ton „Ich wusste nicht, ob ich es schaffe“ → Mechanismus zum Effekt.",
       pitfall: "Falle: Nebeneinanderlegen ist noch keine Integration."
     },
 
@@ -2833,7 +2833,11 @@
 
     var chooseAbove = false;
     if (!sideAttached) {
-      if (popH <= spaceBelow) {
+      /* Opt-in: chip with class .popover-pin-above forces upward direction */
+      var pinAbove = chip.classList.contains("popover-pin-above");
+      if (pinAbove) {
+        chooseAbove = true;
+      } else if (popH <= spaceBelow) {
         /* passt vollständig darunter */
       } else if (popH <= spaceAbove) {
         chooseAbove = true;

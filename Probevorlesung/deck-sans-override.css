@@ -834,6 +834,29 @@
   color: rgba(255,255,255,0.86) !important;
 }
 
+/* Higher contrast for dark IR panels (Theory propositions, HDAX urgency, Transfer SVRN Alpha) */
+.ir-panel.dark .causal-text,
+.ir-panel.dark .ir-panel-text {
+  color: #ffffff !important;
+  font-size: 14px !important;
+  line-height: 1.36 !important;
+}
+
+.ir-panel.dark .causal-title {
+  font-size: 22px !important;
+  line-height: 1.08 !important;
+}
+
+.ir-panel.dark .causal-step {
+  background: rgba(255,255,255,0.10) !important;
+  border-color: rgba(255,255,255,0.28) !important;
+  padding: 13px 14px !important;
+}
+
+.ir-panel.dark .panel-label {
+  color: rgba(255,255,255,0.95) !important;
+}
+
 .method-card-text,
 .method-card .m-body {
   font-size: 18px !important;
